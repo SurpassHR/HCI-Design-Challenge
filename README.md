@@ -19,7 +19,6 @@
 | 源文档快照 | [`docs/00-source/google-doc-snapshot-2026-11-24-v2.md`](docs/00-source/google-doc-snapshot-2026-11-24-v2.md) |
 | Figma 设计稿 | [`design/figma/README.md`](design/figma/README.md) |
 | 设计归档 | [2026-11-25 v2 归档](design/exports/2026-11-25-nutripal-v2/README.md)（当前视觉基线） |
-| v1.1 变更报告 | [对比 v1.0](docs/08-delivery/v1.1-change-report.md) |
 | 用户研究问卷 | [`docs/02-research/questionnaire/questionnaire-v3-participant.md`](docs/02-research/questionnaire/questionnaire-v3-participant.md)（V3 为当前第三版；预测试待完成） |
 | 问卷结果 | [V3 模拟回答归档](data/processed/questionnaire-v3/README.md)（100 条 AI 生成数据，非真实样本） |
 | 菜谱数据 | [TheMealDB Mock 菜谱目录](data/processed/recipe-catalog/README.md)（91 道，供 F02 搜索） |
