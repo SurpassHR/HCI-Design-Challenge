@@ -28,6 +28,8 @@
 
 ## 资料入口
 
+- [潜在用户分析、三张模拟人物卡与健康饮食故事版（HTML）](potential-users/NutriPal-research-and-evaluation.html) · [评论编码样本](potential-users/nutripal_review_sample_30.csv)
+
 - [问卷工作区](questionnaire/README.md)
 - [V3 参与者问卷](questionnaire/questionnaire-v3-participant.md)
 - [V3 修订与设计映射报告](questionnaire/questionnaire-v3-design-report.md)
