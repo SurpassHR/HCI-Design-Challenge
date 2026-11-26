@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - 底部导航和 F04/F05 的开关必须提供可访问名称和键盘操作。
 - `prefers-reduced-motion` 下取消非必要过渡。
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
-- 图标统一使用 Lucide + FoodGlyph；不采用 Figma 中的 emoji。
+- 图标统一使用 Lucide + FoodGlyph + CuisineIcon 专属餐饮线稿；不采用 Figma 中的 emoji。
 
 ### M10 Display and Accessibility Preferences
 

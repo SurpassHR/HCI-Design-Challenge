@@ -30,7 +30,7 @@
 
 | Frame | Status | Main result / intentional deviation |
 | --- | --- | --- |
-| F01 | Passed | Eight cuisines, six diet styles, four fixed avoidances + custom Add; redundant No preference removed; edit mode returns to Me |
+| F01 | Passed | Eight cuisines use bespoke food line icons; six diet styles, four fixed avoidances + custom Add; edit mode returns to Me |
 | F02 | Passed | New hierarchy, gradient summary, 91-recipe mock search, detail sheet, no-match suggestions, recommendation cards and See all; no emoji |
 | F03 | Passed | New week strip, constraint cards, five pantry chips, three meals and shopping entry; swap/edit/regenerate retained |
 | F03b | Passed | New four items and budget, six pantry items, check-off, primary Share and secondary delivery demo |

@@ -617,6 +617,7 @@
 }
 
 .preferences-page {
+  max-width: 390px;
   background: var(--bg);
 }
 
@@ -658,6 +659,7 @@
 }
 
 .nudge-preview-page {
+  max-width: 390px;
   background: linear-gradient(180deg, #ffb36b 0%, #ff6f91 50%, #7b5cff 100%);
 }
 
