@@ -22,6 +22,7 @@
 | 用户研究问卷 | [`docs/02-research/questionnaire/questionnaire-v3-participant.md`](docs/02-research/questionnaire/questionnaire-v3-participant.md)（V3 为当前第三版；预测试待完成） |
 | 问卷结果 | [V3 模拟回答归档](data/processed/questionnaire-v3/README.md)（100 条 AI 生成数据，非真实样本） |
 | 菜谱数据 | [TheMealDB Mock 菜谱目录](data/processed/recipe-catalog/README.md)（91 道，供 F02 搜索） |
+| v1.1 变更报告 | [对比 v1.0](docs/08-delivery/v1.1-change-report.md)（dev 分支待 PR） |
 | 系统设计 | [`docs/04-engineering/system-design.md`](docs/04-engineering/system-design.md) |
 | 模块设计 | [`docs/04-engineering/module-design.md`](docs/04-engineering/module-design.md) |
 | English design docs | [`System Design`](docs/04-engineering/system-design.en.md) · [`Module Design`](docs/04-engineering/module-design.en.md) |

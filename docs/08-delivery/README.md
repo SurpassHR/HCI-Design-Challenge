@@ -21,6 +21,7 @@
 
 ## 当前可复用材料
 
+- v1.1 版本变更报告（对比 v1.0，dev 分支待 PR）：[中文](v1.1-change-report.md) · [English](v1.1-change-report.en.md)
 - 考核要求整理与自查清单：`assessment-brief.md`
 - 问题背景与参考文献：`../01-project-definition/background-and-rationale.md`
 - 选题比较：`../01-project-definition/topic-selection-and-qoc.md`
