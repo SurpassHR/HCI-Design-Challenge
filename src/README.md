@@ -23,7 +23,7 @@ npm run preview
 
 - Full-viewport 390px content column without simulated phone chrome or status bar
 - English and Chinese interface with a persisted language switch in Me
-- Lucide + FoodGlyph + bespoke CuisineIcon vector icons only; no emoji icons
+- Lucide + FoodGlyph vector icons only; no emoji icons
 - Archived 2026-11-25 Figma screens F01–F06, F03b and Me implemented as one interactive v1.1 prototype
 - Global, persisted large-text mode: every explicit and inherited text size receives a 2px boost
 - Fixed mobile zoom: pinch zoom disabled; form controls use at least 16px type to prevent iOS focus zoom

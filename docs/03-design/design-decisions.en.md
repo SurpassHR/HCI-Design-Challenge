@@ -20,7 +20,7 @@
 | D-12 | Bilingual design documentation | Completed | All 14 design/engineering-document pairs have a Chinese default and an English `.en.md` version |
 | D-13 | HCI design-principle mapping | Not started | Post-meeting task: identify which HCI principles apply to research, design, implementation, and iteration |
 | D-14 | Figma visual and interaction fidelity | Completed (v1.1) | All eight screens follow the 2026-11-25 nodes; status-bar/phone chrome is excluded and Me retains v1.0 content by decision |
-| D-15 | Treatment of emoji in the design source | Decided | Emoji are a Figma design defect; the implementation uses Lucide + FoodGlyph + bespoke cuisine line icons and no emoji |
+| D-15 | Treatment of emoji in the design source | Decided | Emoji are a Figma design defect; the implementation uses Lucide + FoodGlyph vector icons and no emoji |
 | D-16 | Large-text accessibility | Decided | Me provides a global Large text toggle; type grows by about 2px, persists and scrolls |
 | D-17 | Me information scope | Decided | Keep the new Figma structure while restoring language, goals, preference summary, nudge preview and privacy content |
 | D-18 | Device chrome | Decided | No simulated status bar, signal/battery or phone frame; keep a web content column |
