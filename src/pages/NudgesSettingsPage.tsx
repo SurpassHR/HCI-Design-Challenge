@@ -1,18 +1,8 @@
 import { useState } from "react";
 import {
-  Apple,
-  Bell,
-  Clock,
-  Droplet,
-  Dumbbell,
-  Lightbulb,
-  MapPin,
-  Moon,
-  Pause,
-  Sparkles,
-  UtensilsCrossed,
-  Wheat,
-} from "lucide-react";
+  FigmaIcon,
+  type FigmaIconName,
+} from "../components/FigmaIcon";
 import { useI18n } from "../i18n/useI18n";
 
 type Frequency = "Fewer" | "Balanced" | "More";
@@ -72,11 +62,11 @@ export function NudgesSettingsPage() {
     Today: "今天",
     "1 week": "1 周",
   };
-  const settingIcons = {
-    moon: Moon,
-    meal: UtensilsCrossed,
-    hydration: Droplet,
-    snack: Apple,
+  const settingIcons: Record<string, FigmaIconName> = {
+    moon: "moon",
+    meal: "plate",
+    hydration: "droplet",
+    snack: "apple",
   };
 
   function toggleCategory(label: string) {
@@ -94,7 +84,7 @@ export function NudgesSettingsPage() {
       <header className="nudges-header">
         <h1 className="heading-with-icon">
           {t("Nudge settings", "提醒设置")}
-          <Bell aria-hidden="true" size={22} />
+          <FigmaIcon name="bell" size={26} />
         </h1>
         <p>{t("You decide when NutriPal speaks up.", "由你决定 NutriPal 何时提醒你。")}</p>
       </header>
@@ -108,7 +98,7 @@ export function NudgesSettingsPage() {
           type="button"
         >
           <span aria-hidden="true" className="setting-icon">
-            <Sparkles size={21} />
+            <FigmaIcon name="sparkle" size={18} />
           </span>
           <span className="setting-copy">
             <strong>{t("Proactive suggestions", "主动建议")}</strong>
@@ -124,7 +114,7 @@ export function NudgesSettingsPage() {
 
         <div className="snooze-row">
           <span className="snooze-label">
-            <Pause aria-hidden="true" size={14} />
+            <FigmaIcon name="pause" size={13} />
             {t("Snooze:", "暂停：")}
           </span>
           <div className="snooze-options">
@@ -166,7 +156,7 @@ export function NudgesSettingsPage() {
       <section className="settings-card settings-card--categories">
         {categories.map((category) => (
           (() => {
-            const Icon = settingIcons[category.icon];
+            const icon = settingIcons[category.icon];
             return (
           <button
             aria-label={isChinese ? category.zhLabel : category.label}
@@ -177,7 +167,7 @@ export function NudgesSettingsPage() {
             type="button"
           >
             <span aria-hidden="true" className="setting-icon">
-              <Icon size={21} />
+              <FigmaIcon name={icon} size={18} />
             </span>
             <span className="setting-copy">
               <strong>{isChinese ? category.zhLabel : category.label}</strong>
@@ -197,23 +187,23 @@ export function NudgesSettingsPage() {
 
       <section className="explanation-card" id="why-last">
         <h2>
-          <Lightbulb aria-hidden="true" size={17} />
+          <FigmaIcon name="bulb" size={17} />
           <span>{t("Why you got the last nudge", "为什么你会收到上一条提醒")}</span>
         </h2>
         <p>
-          <MapPin aria-hidden="true" size={16} />
+          <FigmaIcon name="pin" size={15} />
           {t("You were leaving the gym", "你当时正要离开健身房")}
         </p>
         <p>
-          <Clock aria-hidden="true" size={16} />
+          <FigmaIcon name="clock" size={15} />
           {t("4 hours since your last meal", "距离上一餐已经 4 小时")}
         </p>
         <p>
-          <Dumbbell aria-hidden="true" size={16} />
+          <FigmaIcon name="muscle" size={15} />
           {t("Protein below today’s goal", "今日蛋白质摄入仍低于目标")}
         </p>
         <p>
-          <Wheat aria-hidden="true" size={16} />
+          <FigmaIcon name="rice" size={15} />
           {t("Rice in your pantry expires soon", "食材库里的米饭即将过期")}
         </p>
         <button

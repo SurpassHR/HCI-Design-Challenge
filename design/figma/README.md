@@ -18,7 +18,7 @@
 - 页面：F01–F06、F03b、Me；每屏包含默认字号与大字号变体
 - 组件与 token：10 个组件、17 个变量、2 个变量集合
 - 静态副本、预览图与验收记录：[2026-11-25 归档](../exports/2026-11-25-nutripal-v2/README.md)
-- 实现约定：不显示 Figma 中的状态栏/手机框；F01 菜系 emoji 按 Figma 原样使用，其他 UI 图标沿用 Figma 线框资产。
+- 实现约定：不显示 Figma 中的状态栏/手机框；F01 菜系 emoji 按 Figma 原样使用，F02–F06/F03b 图标从 Figma SVG 节点导出至 public/figma-icons。
 - 本文件记录设计事实源；当前 App 是 v1.1 React 原型，不是 Figma 的逐像素副本。
 
 ## 历史归档（2026-11-24）

@@ -44,6 +44,7 @@
 - `implementation/screens-gallery-large-text.png`：v1.1 大字号总览。
 - `implementation/comparison-gallery.png`：每屏左为 Figma、右为 v1.1 实现。
 - `implementation/F02-search-gallery.png`：Mock 菜谱搜索结果、详情 Sheet 与无匹配建议。
+- F02–F06/F03b 的图标已从 Figma SVG 节点原样导出至 `public/figma-icons/`，映射清单见 `public/figma-icons/manifest.json`。
 - 实现截图不含 Figma 状态栏/手机框，Me 页比设计更长。
 
 ## 屏幕索引

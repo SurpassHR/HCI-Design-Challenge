@@ -346,6 +346,12 @@
   white-space: nowrap;
 }
 
+.figma-icon {
+  display: block;
+  flex: none;
+  object-fit: contain;
+}
+
 .tabbar {
   min-height: 78px;
   margin: 0 10px 10px;

@@ -1,21 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  ChefHat,
-  Clock,
-  Dumbbell,
-  Info,
-  MapPin,
-  Salad,
-  Sparkles,
-  Store,
-  Timer,
-  Wheat,
-} from "lucide-react";
-import {
-  FoodGlyph,
-  type FoodGlyphName,
-} from "../components/FoodGlyph";
+  FigmaIcon,
+  type FigmaIconName,
+} from "../components/FigmaIcon";
+import { glyphToFigmaIcon } from "../components/figma-food-icon";
+import type { FoodGlyphName } from "../domain/food-glyph";
 import { useI18n } from "../i18n/useI18n";
 
 interface LocalizedText {
@@ -66,13 +56,13 @@ const suggestions: Suggestion[] = [
   },
 ];
 
-const contextIcons = {
-  clock: Clock,
-  grain: Wheat,
-  pin: MapPin,
-  protein: Dumbbell,
-  shop: Store,
-  timer: Timer,
+const contextIcons: Record<ContextIcon, FigmaIconName> = {
+  clock: "clock",
+  grain: "rice",
+  pin: "pin",
+  protein: "muscle",
+  shop: "can",
+  timer: "timer",
 };
 
 export function NudgePreviewPage() {
@@ -96,14 +86,17 @@ export function NudgePreviewPage() {
           aria-label={t("NutriPal notification", "NutriPal 通知")}
         >
           <div aria-hidden="true" className="notification-icon">
-            <Salad size={21} />
+            <FigmaIcon name="salad" size={21} />
           </div>
           <div>
             <div className="notification-meta">
               <b>NUTRIPAL</b>
               <span>{t("now", "现在")}</span>
             </div>
-            <h2>{t("Heading home?", "回家了吗？")}</h2>
+            <h2>
+              {t("Heading home?", "回家了吗？")}
+              <FigmaIcon name="runner" size={15} />
+            </h2>
             <p>
               {t(
                 "Dinner in 15 min using your leftover rice — tap for the recipe.",
@@ -118,12 +111,15 @@ export function NudgePreviewPage() {
           aria-label={t("Smart suggestion", "智能建议")}
         >
           <p className="smart-label">
-            <Sparkles aria-hidden="true" size={13} />
+            <FigmaIcon name="sparkle" size={13} />
             {t("Smart suggestion", "智能建议")}
           </p>
           <div className="suggestion-recipe">
             <span aria-hidden="true" className="suggestion-glyph">
-              <FoodGlyph name={suggestion.glyph} size={30} />
+              <FigmaIcon
+                name={glyphToFigmaIcon[suggestion.glyph]}
+                size={32}
+              />
             </span>
             <div>
               <h2>{localize(suggestion.title)}</h2>
@@ -133,10 +129,10 @@ export function NudgePreviewPage() {
           <h3>{t("Because right now…", "因为此刻…")}</h3>
           <div className="context-grid">
             {suggestion.context.map((item) => {
-              const Icon = contextIcons[item.icon];
+              const icon = contextIcons[item.icon];
               return (
                 <span key={item.text.en}>
-                  <Icon aria-hidden="true" size={14} />
+                  <FigmaIcon name={icon} size={12} />
                   {localize(item.text)}
                 </span>
               );
@@ -151,7 +147,7 @@ export function NudgePreviewPage() {
             onClick={() => navigate("/plan")}
             type="button"
           >
-            <ChefHat aria-hidden="true" size={18} />
+            <FigmaIcon name="cook" size={17} />
             {t("Cook this", "做这道菜")}
           </button>
           <div className="suggestion-actions">
@@ -179,7 +175,7 @@ export function NudgePreviewPage() {
             onClick={() => navigate("/nudges/settings#why-last")}
             type="button"
           >
-            <Info aria-hidden="true" size={13} />
+            <span aria-hidden="true">ⓘ</span>
             {t("Why am I seeing this?", "为什么我会看到这个？")}
           </button>
         </section>

@@ -23,7 +23,7 @@
 | AC-09 | 用户进入 Me | 新设置行、语言、今日目标、偏好摘要、预览提醒、隐私说明和大字号开关均存在 |
 | AC-10 | 用户开启 Large text | 根元素 data-text-size=large，设置持久化，8 个路由均可访问 |
 | AC-11 | 用户切换语言 | 中英文界面切换并在刷新后保留 |
-| AC-12 | F01 图标 | 8 个菜系使用 Figma 原样 emoji |
+| AC-12 | Figma 图标 | F01 使用原样 emoji；F02–F06/F03b 使用 Figma 导出 SVG |
 | AC-13 | Mock 菜谱与 CSS 回归 | 中英文/多词搜索通过；所有显式字号跟随大字号 boost |
 
 自动验收文件：[app.acceptance.test.tsx](../../src/acceptance/app.acceptance.test.tsx)。
@@ -35,7 +35,7 @@
 3. F01 自定义忌口验收先因 + Add 无目标而失败；加入 Sheet 与保存逻辑后通过。
 4. F03/F03b 新 fixture 与 Share 主操作验收在更新页面数据和 CTA 后通过。
 5. Me 保留内容验收在恢复语言、目标、偏好摘要、预览提醒和隐私说明后通过。
-6. F01 菜系 emoji 按 Figma 原样落地；旧“禁 emoji”规则已撤销。
+6. F01 emoji 与 F02–F06/F03b SVG 均按 Figma 原样落地；旧“禁 emoji”规则已撤销。
 
 ## 3. 已实现内容
 
@@ -67,7 +67,7 @@ npm run build
 ## 6. 执行基线
 
 - 视觉与文案：以 [2026-11-25 Figma 归档](../../design/exports/2026-11-25-nutripal-v2/README.md) 为基线。
-- 图标：F01 使用 Figma emoji；其他 UI 使用 Figma 对应线框资产，不自行绘制替代 SVG。
+- 图标：F01 使用 Figma emoji；F02–F06/F03b 使用 Figma 导出 SVG（public/figma-icons），不自行绘制替代。
 - 设备外观：不显示状态栏、信号/电池或手机框。
 - 后端：只使用本地 Mock 和预留 Repository/API 契约。
 - 权限与隐私：不请求真实相机、定位或通知权限。

@@ -22,7 +22,7 @@
 | Default-size visuals | Passed for structure, hierarchy, tokens and main controls |
 | Large-text visuals | Passed; global tokens apply and content scrolls |
 | Interaction completeness | Passed: search, custom avoidance, plan, nudges, scan and Me settings have acceptance coverage |
-| Icon system | F01 uses the exact Figma emoji; other UI uses the existing line-icon system |
+| Icon system | F01 uses Figma emoji; F02–F06/F03b use SVG assets exported from Figma with no hand-drawn substitutes |
 | Device chrome | Not implemented by decision |
 | Real external capabilities | Not implemented; Mock/provisional Providers remain |
 
@@ -35,13 +35,13 @@
 | F03 | Passed | New week strip, constraint cards, five pantry chips, three meals and shopping entry; swap/edit/regenerate retained |
 | F03b | Passed | New four items and budget, six pantry items, check-off, primary Share and secondary delivery demo |
 | F04 | Passed | Orange→pink→purple gradient, large clock, notification and suggestion cards, all four actions |
-| F05 | Passed | Figma emoji blocks replaced by vector icons; settings, snooze, frequency, categories and explanation retained |
+| F05 | Passed | Uses Figma-exported bell/sparkle/moon/plate/droplet/apple SVGs; settings and explanation retained |
 | F06 | Passed | Camera/recognition visuals, orange-pink calorie card, portion stepper, macro bars and Log to Dinner |
 | Me | Passed | New setting rows + Accessibility, while restoring v1.0 language, goals, preference summary, nudge preview and privacy |
 
 ## 4. Global interpretations
 
-- **Emoji**: the old “emoji is a defect” decision is withdrawn; F01 cuisines use the exact Figma emoji, while other UI icons follow Figma's line-icon design.
+- **Icon handling**: the old emoji ban is withdrawn; F01 uses Figma emoji, while F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) with no hand-drawn approximations.
 - **Device chrome**: no status bar, signal/battery or phone frame; the web content column is 390px.
 - **Large text**: both sizes use the same component tree through semantic type tokens; clipping in fixed captures is not a requirement.
 - **Large-text completeness**: all 261 directly rendered text nodes across the eight routes increase by 2px with no omissions; the search input grows from 16px to 17px.

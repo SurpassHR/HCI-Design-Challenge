@@ -3,6 +3,9 @@
 }
 
 .home-greeting {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: var(--muted);
   font-size: var(--fs-body);
   font-weight: 800;
@@ -400,6 +403,9 @@
 }
 
 .featured-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 5px 10px;
   border-radius: 99px;
   background: var(--orange);
@@ -418,6 +424,12 @@
 
 .featured-body h3 {
   font-size: var(--fs-section);
+}
+
+.recipe-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .why-card {
@@ -683,6 +695,12 @@
   background: rgb(255 255 255 / 88%);
 }
 
+.notification-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .notification-icon {
   border-radius: 12px;
   background: var(--green);
@@ -915,4 +933,20 @@
   .nudge-preview-inner {
     width: 100%;
   }
+}
+
+.scan-illustration {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.context-grid span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.featured-glyph .figma-icon {
+  filter: drop-shadow(0 10px 16px rgb(31 26 61 / 12%));
 }

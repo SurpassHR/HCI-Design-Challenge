@@ -16,7 +16,7 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 
 ## Confirmed implementation interpretations
 
-- **Use Figma icons as supplied**: F01 cuisine tiles use the Figma emoji (🥟 🍛 🍝 🍣 🌮 🥙 🥧 🍜); other UI icons use Figma's line-icon design. No substitute SVGs are invented.
+- **Use Figma icons as supplied**: F01 cuisine tiles use Figma emoji; F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) for food, notification, setting and status icons. No substitute assets are invented.
 - **No device chrome**: no Figma 9:41 status bar, signal/battery chrome or 44px phone frame. The web prototype uses a content column of at most 390px.
 - **Fixed mobile zoom**: pinch zoom is disabled by requirement (viewport, touch-action and iOS gesture events); single-finger scrolling and input focus remain. Every input uses at least 16px type to prevent iOS focus zoom.
 - **Large text**: the Me toggle applies globally and persists; every explicit font size receives a 2px text boost, inherited text grows with it, and pages scroll instead of reproducing fixed-frame clipping.
@@ -60,7 +60,7 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 - [x] Both default and large-text states work.
 - [x] Key buttons lead to real screens, sheets or documented demo states.
 - [x] Mock data and real capabilities are clearly distinguished.
-- [x] F01 cuisine icons match the Figma emoji; no simulated device chrome.
+- [x] F01 emoji and F02–F06/F03b SVG icons match Figma; no simulated device chrome.
 - [ ] Complete a team click-through review.
 - [ ] Test with at least one target user and record issues.
 

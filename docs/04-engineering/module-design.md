@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - 底部导航和 F04/F05 的开关必须提供可访问名称和键盘操作。
 - `prefers-reduced-motion` 下取消非必要过渡。
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
-- F01 菜系直接使用 Figma emoji；其他 UI 图标按 Figma 线框资产实现，不自行绘制替代图标。
+- F01 菜系使用 Figma emoji；F02–F06/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
 
 ### M10 Display and Accessibility Preferences
 
@@ -434,7 +434,7 @@ interface DisplayPreferenceRepository {
 | Me 页面 | 已作为独立设置页实现；Dietary 行复用 F01 编辑模式 |
 | F01 `+ Add` 无展开稿 | 本地 Sheet 添加自定义食材/过敏原，随偏好保存 |
 | F02 搜索无结果态设计 | 同页过滤，空结果提供清除搜索 |
-| Figma 使用 emoji 图标 | 旧“禁 emoji”决定已撤销；F01 按 Figma 原样使用 |
+| Figma 使用 emoji/SVG 图标 | 旧“禁 emoji”决定已撤销；F01 使用 emoji，其他页使用 Figma 导出 SVG |
 | Figma 状态栏/手机框 | 不实现，保持 Web 内容列 |
 | F02 `See all` 无目标页 | 同页展开更多推荐 |
 | F03 `Edit` 无目标页 | 共享 Bottom Sheet 编辑预算/时间/储藏物 |

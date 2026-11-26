@@ -1,0 +1,342 @@
+{
+  "sourceFile": "QHOOV8NcB4Ev499ycoRtZq",
+  "exportedAt": "2026-11-26T23:06:43.888Z",
+  "icons": [
+    {
+      "slug": "wave",
+      "figmaNodeName": "SVG / 1f44b",
+      "file": "public/figma-icons/wave.svg",
+      "width": 15,
+      "height": 15,
+      "sourceHash": "9dd2a2ccb99340a70f5cbf77cd2de7c24b021355e976ff5eb84b1b583195194c"
+    },
+    {
+      "slug": "avatar",
+      "figmaNodeName": "SVG / 1f9d1-1f3fb",
+      "file": "public/figma-icons/avatar.svg",
+      "width": 24,
+      "height": 24,
+      "sourceHash": "c124661b87f583eac79b3b7dad1467c163b6cfa3f029d1b2d1f7b0ce8b7e1b7f"
+    },
+    {
+      "slug": "sparkle",
+      "figmaNodeName": "SVG / 2728",
+      "file": "public/figma-icons/sparkle.svg",
+      "width": 19,
+      "height": 19,
+      "sourceHash": "6edb1022913ddfccd8a49356fa21fee34024381b04f05b7e8835edb04b9d2216"
+    },
+    {
+      "slug": "chili",
+      "figmaNodeName": "SVG / Chili",
+      "file": "public/figma-icons/chili.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "5174c408356def9cf3d68547c0c85959b8befa53f053c4519baf5363da37efc1"
+    },
+    {
+      "slug": "muscle",
+      "figmaNodeName": "SVG / 1f4aa",
+      "file": "public/figma-icons/muscle.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "437445f2a917a997ee2513c28d3c2752400a5d5049ba23e5d0cfdfc1c2cac3f6"
+    },
+    {
+      "slug": "bowl",
+      "figmaNodeName": "SVG / 1f372",
+      "file": "public/figma-icons/bowl.svg",
+      "width": 64,
+      "height": 64,
+      "sourceHash": "cf56ae0086f652fefbe7292b076629d76440d280c95b6ef00dde217138398db1"
+    },
+    {
+      "slug": "bulb",
+      "figmaNodeName": "SVG / 1f4a1",
+      "file": "public/figma-icons/bulb.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "6823e821a5a78cb82dd895c6b96dc73ca28c30409bc3767b1bf0d34bf1e92cb9"
+    },
+    {
+      "slug": "timer",
+      "figmaNodeName": "SVG / 23f1",
+      "file": "public/figma-icons/timer.svg",
+      "width": 13,
+      "height": 13,
+      "sourceHash": "adc97cac00d2f85bfcf4371905f0b5ce7697164c1dd613b0766cf8f7ea78b10b"
+    },
+    {
+      "slug": "flame",
+      "figmaNodeName": "SVG / 1f525",
+      "file": "public/figma-icons/flame.svg",
+      "width": 13,
+      "height": 13,
+      "sourceHash": "5b09ee9ac9334f4beecd1418475350333108c686b06d51ced23287a508404eb3"
+    },
+    {
+      "slug": "money",
+      "figmaNodeName": "SVG / 1f4b7",
+      "file": "public/figma-icons/money.svg",
+      "width": 13,
+      "height": 13,
+      "sourceHash": "fcc3e4df14db47ba16e6b42c31ccf432660ed49df059388c959e57ac5fbc2f14"
+    },
+    {
+      "slug": "salad",
+      "figmaNodeName": "SVG / 1f957",
+      "file": "public/figma-icons/salad.svg",
+      "width": 34,
+      "height": 34,
+      "sourceHash": "0489e53cf922e1697dc83281489ecbb4d904e9d8c8c496463bb37df614d5bea6"
+    },
+    {
+      "slug": "bento",
+      "figmaNodeName": "SVG / 1f371",
+      "file": "public/figma-icons/bento.svg",
+      "width": 34,
+      "height": 34,
+      "sourceHash": "7a81795bf8ca3ca09de305db66bf80a8739eb954ade5b5aa685f9412ca22fad2"
+    },
+    {
+      "slug": "calendar",
+      "figmaNodeName": "SVG / 1f5d3",
+      "file": "public/figma-icons/calendar.svg",
+      "width": 26,
+      "height": 26,
+      "sourceHash": "80986ae9bbe4c1066939306ab64b89c5b220254c0860ad57de0ce70b856440ce"
+    },
+    {
+      "slug": "ice",
+      "figmaNodeName": "SVG / 1f9ca",
+      "file": "public/figma-icons/ice.svg",
+      "width": 16,
+      "height": 16,
+      "sourceHash": "487adc6c4a5dd2669fdfc81f74d588bfa5091f8c2bcb3550432f8410fe8109f4"
+    },
+    {
+      "slug": "egg-custom",
+      "figmaNodeName": "SVG / Egg",
+      "file": "public/figma-icons/egg-custom.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "d84dfc2b7260bf2d7b038d666afa26b269fee1c95e3b10ae7f280dca45f8fdb3"
+    },
+    {
+      "slug": "leaf",
+      "figmaNodeName": "SVG / 1f96c",
+      "file": "public/figma-icons/leaf.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "a09c46a74830cafe6a56420c074b38bbb16f59ae66ef2aec7130f1360d1e7281"
+    },
+    {
+      "slug": "rice",
+      "figmaNodeName": "SVG / 1f35a",
+      "file": "public/figma-icons/rice.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "38bda19933e9d0614c639b04b53f4898a63bc3aec91a0b6ff198fd1e9a2ff440"
+    },
+    {
+      "slug": "meat",
+      "figmaNodeName": "SVG / 1f357",
+      "file": "public/figma-icons/meat.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "ec2d2ce5332efe220ade095aed9b79e23bd7393e92f12b31628227491c4ec5fe"
+    },
+    {
+      "slug": "tomato",
+      "figmaNodeName": "SVG / 1f345",
+      "file": "public/figma-icons/tomato.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "1bbd2666d64d01d09f5befb627209cd1f0cac4619f41f83fc8952fab4cd0eb93"
+    },
+    {
+      "slug": "fried-egg",
+      "figmaNodeName": "SVG / 1f373",
+      "file": "public/figma-icons/fried-egg.svg",
+      "width": 26,
+      "height": 26,
+      "sourceHash": "40091a4c1673d9b14d946207ab89cb684b0a5c82026bd43bcc23023ed0edc743"
+    },
+    {
+      "slug": "cart",
+      "figmaNodeName": "SVG / 1f6d2",
+      "file": "public/figma-icons/cart.svg",
+      "width": 22,
+      "height": 22,
+      "sourceHash": "14fc634c4b72920e608712230ba87c7be8f61f5918e40ec3d7901d9111b510f6"
+    },
+    {
+      "slug": "runner",
+      "figmaNodeName": "SVG / 1f3c3-200d-2640-fe0f",
+      "file": "public/figma-icons/runner.svg",
+      "width": 15,
+      "height": 15,
+      "sourceHash": "6f265b45dbf2f406564f686acaf3dd7b7a6e0f7f37aa399b26429772c35baa99"
+    },
+    {
+      "slug": "pin",
+      "figmaNodeName": "SVG / 1f4cd",
+      "file": "public/figma-icons/pin.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "6a0736f0900c33f52bf20a2e6ed695920ebd244b92ae8873b874d5cc67df229a"
+    },
+    {
+      "slug": "clock",
+      "figmaNodeName": "SVG / 1f555",
+      "file": "public/figma-icons/clock.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "653feb60f36e2189ed600ad2baf7026298024ff065158d08dd065743751a27dd"
+    },
+    {
+      "slug": "cook",
+      "figmaNodeName": "SVG / 1f469-200d-1f373",
+      "file": "public/figma-icons/cook.svg",
+      "width": 17,
+      "height": 17,
+      "sourceHash": "7fa1ff5955a6f477eea2ed9e1a3be8cc83feee6593b08e88556d87558cb3a9f2"
+    },
+    {
+      "slug": "bell",
+      "figmaNodeName": "SVG / 1f514",
+      "file": "public/figma-icons/bell.svg",
+      "width": 26,
+      "height": 26,
+      "sourceHash": "e9c7f87a7898e5a799894848542457077dd829a2763df81a5ed5c06b01333406"
+    },
+    {
+      "slug": "pause",
+      "figmaNodeName": "SVG / 23f8",
+      "file": "public/figma-icons/pause.svg",
+      "width": 13,
+      "height": 13,
+      "sourceHash": "879776acab6d9555a2021011d1b6f93d45133280a32634854c9033aada506400"
+    },
+    {
+      "slug": "moon",
+      "figmaNodeName": "SVG / 1f319",
+      "file": "public/figma-icons/moon.svg",
+      "width": 18,
+      "height": 18,
+      "sourceHash": "a617ef0e8a6f04fd2a94642ce67b58b2e25091d51fb04e6bd68e6a112b76aa20"
+    },
+    {
+      "slug": "plate",
+      "figmaNodeName": "SVG / 1f37d",
+      "file": "public/figma-icons/plate.svg",
+      "width": 18,
+      "height": 18,
+      "sourceHash": "3a0c9e5a85d99d997e58449464b12cc59a08ba92f076f30d2c2c256eb0b36001"
+    },
+    {
+      "slug": "droplet",
+      "figmaNodeName": "SVG / 1f4a7",
+      "file": "public/figma-icons/droplet.svg",
+      "width": 18,
+      "height": 18,
+      "sourceHash": "2fb7dc591867eee0bdd076377ec1ba39bd0c7ccf2787a27bdce524eae3b4bad5"
+    },
+    {
+      "slug": "apple",
+      "figmaNodeName": "SVG / 1f34e",
+      "file": "public/figma-icons/apple.svg",
+      "width": 18,
+      "height": 18,
+      "sourceHash": "630ff9785767161f9b871be892bffaa4ac6ad7452e20e558cf73a6369437fc6c"
+    },
+    {
+      "slug": "bolt",
+      "figmaNodeName": "SVG / 26a1",
+      "file": "public/figma-icons/bolt.svg",
+      "width": 16,
+      "height": 16,
+      "sourceHash": "974d401206655f45dabd50e0f25fc8c8722455e635006c3984149d67a5d616f6"
+    },
+    {
+      "slug": "noodles",
+      "figmaNodeName": "SVG / 1f35c",
+      "file": "public/figma-icons/noodles.svg",
+      "width": 150,
+      "height": 150,
+      "sourceHash": "c38cf0c25307188e57f5e3a08be9565cb7c8ced002118018f0358f96f6cfc1d7"
+    },
+    {
+      "slug": "pencil",
+      "figmaNodeName": "SVG / 270e",
+      "file": "public/figma-icons/pencil.svg",
+      "width": 13,
+      "height": 13,
+      "sourceHash": "f74fdf4828c260443621c122d550f8a982b05ac3ad64dcb4793ae1dffd6b57d2"
+    },
+    {
+      "slug": "steak",
+      "figmaNodeName": "SVG / 1f969",
+      "file": "public/figma-icons/steak.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "f62e55c5c69e8bd49f4d1701e709f336e180613f965a271a93662ce8b8d84775"
+    },
+    {
+      "slug": "herb",
+      "figmaNodeName": "SVG / 1f33f",
+      "file": "public/figma-icons/herb.svg",
+      "width": 14,
+      "height": 14,
+      "sourceHash": "36f36d8fd79658dec3e57746b589b7bd75607ce517ee2a5d4e1996b36dfbef77"
+    },
+    {
+      "slug": "cheese",
+      "figmaNodeName": "SVG / 1f9c0",
+      "file": "public/figma-icons/cheese.svg",
+      "width": 22,
+      "height": 22,
+      "sourceHash": "092278c78fc7e4003cc3c25956ca21cfb58e2424974e6fe15a86dcd788ec9c8e"
+    },
+    {
+      "slug": "egg",
+      "figmaNodeName": "SVG / 1f95a",
+      "file": "public/figma-icons/egg.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "5cc3730a4c3cd56a4d4de8dfa94eba56e3113d0088e8f38aa6e2faf7bc70db1f"
+    },
+    {
+      "slug": "carrot",
+      "figmaNodeName": "SVG / 1f955",
+      "file": "public/figma-icons/carrot.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "97b24ca070e73f21472863b60260cd9e84312e9a7fc5e828f75cb255fd55d0f4"
+    },
+    {
+      "slug": "can",
+      "figmaNodeName": "SVG / 1f96b",
+      "file": "public/figma-icons/can.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "c2bd0dfb61584369f1b3dc1a687620e013f858cff3e98b49ec31372af3553490"
+    },
+    {
+      "slug": "lemon",
+      "figmaNodeName": "SVG / 1f34b",
+      "file": "public/figma-icons/lemon.svg",
+      "width": 12,
+      "height": 12,
+      "sourceHash": "2da2bb647f2c3cea2d3bdbd727c48fbaf5b1a8760ea26b82fe8b9b11d1135d1f"
+    },
+    {
+      "slug": "scan-frame",
+      "figmaNodeName": "SVG / Scan Frame",
+      "file": "public/figma-icons/scan-frame.svg",
+      "width": 239,
+      "height": 219,
+      "sourceHash": "61fc0ce4036b719be25ab243bb7d18ec643ba8e6039784af21dbc2225c4ba249"
+    }
+  ]
+}

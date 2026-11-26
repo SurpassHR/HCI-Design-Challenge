@@ -1,18 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  CalendarDays,
-  Container,
-  RefreshCw,
-  ShoppingCart,
-  Timer,
-  Wallet,
-} from "lucide-react";
-import {
-  FoodGlyph,
-  type FoodGlyphName,
-} from "../components/FoodGlyph";
+import { FigmaIcon } from "../components/FigmaIcon";
+import { glyphToFigmaIcon } from "../components/figma-food-icon";
+import type { FoodGlyphName } from "../domain/food-glyph";
 import { useI18n } from "../i18n/useI18n";
 
 const week = [
@@ -316,11 +306,11 @@ export function PlanPage() {
           <p className="kicker">{t("Week of 23 Nov", "11 月 23 日当周")}</p>
           <h1 className="heading-with-icon">
             {t("My Meal Plan", "我的餐单")}
-            <CalendarDays aria-hidden="true" size={23} />
+            <FigmaIcon name="calendar" size={26} />
           </h1>
         </div>
         <button className="soft-action" onClick={regeneratePlan} type="button">
-          <RefreshCw aria-hidden="true" size={14} />
+          <span aria-hidden="true">↻</span>
           {t("Regenerate", "重新生成")}
         </button>
       </header>
@@ -348,21 +338,21 @@ export function PlanPage() {
       <div className="constraint-grid">
         <div className="constraint constraint--budget">
           <strong>
-            <Wallet aria-hidden="true" size={15} />
+            <FigmaIcon name="money" size={13} />
             {t("£35/wk", "£35/周")}
           </strong>
           <span>{t("Budget", "每周预算")}</span>
         </div>
         <div className="constraint constraint--time">
           <strong>
-            <Timer aria-hidden="true" size={15} />
+            <FigmaIcon name="timer" size={13} />
             {t("≤ 30 min", "≤ 30 分钟")}
           </strong>
           <span>{t("Cook time", "烹饪时间")}</span>
         </div>
         <div className="constraint constraint--pantry">
           <strong>
-            <Container aria-hidden="true" size={15} />
+            <FigmaIcon name="ice" size={16} />
             {PANTRY_TOTAL} {t("items", "项")}
           </strong>
           <span>{t("Pantry", "食材库")}</span>
@@ -391,7 +381,7 @@ export function PlanPage() {
               onClick={() => togglePantry(item.label)}
               type="button"
             >
-              <FoodGlyph name={item.glyph} size={16} />
+              <FigmaIcon name={glyphToFigmaIcon[item.glyph]} size={14} />
               {isChinese ? item.zh : item.label}
             </button>
           );
@@ -421,7 +411,7 @@ export function PlanPage() {
                 className="meal-icon"
                 style={{ background: meal.tint }}
               >
-                <FoodGlyph name={meal.glyph} size={26} />
+                <FigmaIcon name={glyphToFigmaIcon[meal.glyph]} size={26} />
               </div>
               <div className="meal-copy">
                 <span>{localizeMealTime(meal.time, isChinese)}</span>
@@ -446,14 +436,14 @@ export function PlanPage() {
 
       <Link className="shopping-cta" to="/plan/shopping-list">
         <span aria-hidden="true" className="shopping-cta-icon">
-          <ShoppingCart size={23} />
+          <FigmaIcon name="cart" size={22} />
         </span>
         <span>
           <strong>{t("Shopping list", "购物清单")}</strong>
           <small>{t("Only 4 items to buy · £12.40", "只需购买 4 项 · £12.40")}</small>
         </span>
         <b aria-hidden="true">
-          <ArrowRight size={21} />
+          <span aria-hidden="true">→</span>
         </b>
       </Link>
 

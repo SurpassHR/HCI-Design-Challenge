@@ -1,27 +1,23 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Clock,
   ExternalLink,
-  Flame,
-  Lightbulb,
   LoaderCircle,
   Search,
-  Sparkles,
-  UserRound,
-  Wallet,
   X,
 } from "lucide-react";
 import { useProfile } from "../app/profile-context";
 import {
-  FoodGlyph,
-  type FoodGlyphName,
-} from "../components/FoodGlyph";
+  FigmaIcon,
+  type FigmaIconName,
+} from "../components/FigmaIcon";
+import { glyphToFigmaIcon } from "../components/figma-food-icon";
 import { Sheet } from "../components/ui/Sheet";
 import {
   recipeDatabaseInfo,
   searchRecipes,
 } from "../data/recipe-repository";
+import type { FoodGlyphName } from "../domain/food-glyph";
 import type { Recipe, RecipeSearchResponse } from "../domain/recipe";
 import { useI18n } from "../i18n/useI18n";
 
@@ -182,6 +178,16 @@ type SearchState =
   | { status: "error" }
   | { status: "ready"; response: RecipeSearchResponse };
 
+function tagIcon(label: string): FigmaIconName | undefined {
+  const value = label.toLowerCase();
+  if (value.includes("sichuan") || value.includes("spicy")) return "chili";
+  if (value.includes("protein") || value.includes("omega")) return "muscle";
+  if (value.includes("fish") || value.includes("sushi")) return "bento";
+  if (value.includes("rice")) return "rice";
+  if (value.includes("vegetarian") || value.includes("fresh")) return "leaf";
+  return undefined;
+}
+
 export function HomePage() {
   const { profile } = useProfile();
   const navigate = useNavigate();
@@ -248,7 +254,13 @@ export function HomePage() {
       <header className="home-header">
         <div>
           <p className="home-greeting">
-            {t("Good evening, " + profile.displayName, "晚上好，" + profile.displayName)}
+            <span>
+              {t(
+                "Good evening, " + profile.displayName,
+                "晚上好，" + profile.displayName,
+              )}
+            </span>
+            <FigmaIcon name="wave" size={15} />
           </p>
           <h1>{t("What’s on your plate today?", "今天想吃点什么？")}</h1>
         </div>
@@ -258,7 +270,7 @@ export function HomePage() {
           onClick={() => navigate("/me")}
           type="button"
         >
-          <UserRound aria-hidden="true" size={23} />
+          <FigmaIcon name="avatar" size={27} />
         </button>
       </header>
 
@@ -294,7 +306,6 @@ export function HomePage() {
 
       <section aria-label={t("Dish search", "菜品搜索")} className="dish-search">
         <label className="dish-search__field">
-          <Search aria-hidden="true" size={18} />
           <span className="visually-hidden">
             {t("Search dishes", "搜索菜品")}
           </span>
@@ -340,7 +351,7 @@ export function HomePage() {
           {isSearching ? (
             <Search aria-hidden="true" size={18} />
           ) : (
-            <Sparkles aria-hidden="true" size={18} />
+            <FigmaIcon name="sparkle" size={19} />
           )}
           {isSearching
             ? searchMode === "suggestions"
@@ -448,11 +459,19 @@ export function HomePage() {
             <div className={"featured-hero featured-hero--" + featured.tone}>
               <div className="featured-tags">
                 {featured.tags.map((tag) => (
-                  <span key={tag.en}>{localize(tag)}</span>
+                  <span key={tag.en}>
+                    {tagIcon(tag.en) ? (
+                      <FigmaIcon name={tagIcon(tag.en)!} size={12} />
+                    ) : null}
+                    {localize(tag)}
+                  </span>
                 ))}
               </div>
               <span aria-hidden="true" className="featured-glyph">
-                <FoodGlyph name={featured.glyph} size={54} />
+                <FigmaIcon
+                  name={glyphToFigmaIcon[featured.glyph]}
+                  size={64}
+                />
               </span>
               <div aria-hidden="true" className="plate-shadow" />
             </div>
@@ -460,17 +479,17 @@ export function HomePage() {
               <h3>{localize(featured.title)}</h3>
               <p className="recipe-meta">
                 <span>
-                  <Clock aria-hidden="true" size={14} /> {localize(featured.time)}
+                  <FigmaIcon name="timer" size={13} /> {localize(featured.time)}
                 </span>
                 <span>
-                  <Flame aria-hidden="true" size={14} /> {localize(featured.calories)}
+                  <FigmaIcon name="flame" size={13} /> {localize(featured.calories)}
                 </span>
                 <span>
-                  <Wallet aria-hidden="true" size={14} /> {featured.price}
+                  <FigmaIcon name="money" size={13} /> {featured.price}
                 </span>
               </p>
               <p className="why-card">
-                <Lightbulb aria-hidden="true" size={16} />
+                <FigmaIcon name="bulb" size={14} />
                 <span>
                   <b>{t("Why this?", "为什么推荐？")}</b> {localize(featured.reason)}
                 </span>
@@ -493,7 +512,10 @@ export function HomePage() {
                     type="button"
                   >
                     <span aria-hidden="true" className="mini-card__icon">
-                      <FoodGlyph name={dish.glyph} size={30} />
+                      <FigmaIcon
+                        name={glyphToFigmaIcon[dish.glyph]}
+                        size={34}
+                      />
                     </span>
                     <strong>{localize(dish.title)}</strong>
                     <small>
@@ -541,7 +563,10 @@ function RecipeResults({
           type="button"
         >
           <span aria-hidden="true" className="recipe-result__glyph">
-            <FoodGlyph name={recipe.glyph} size={24} />
+            <FigmaIcon
+              name={glyphToFigmaIcon[recipe.glyph]}
+              size={26}
+            />
           </span>
           <span className="recipe-result__copy">
             <strong>{recipe.title}</strong>
@@ -611,7 +636,10 @@ function RecipeSheet({
       <div className="recipe-detail">
         <div className="recipe-detail__hero">
           <span aria-hidden="true" className="recipe-detail__glyph">
-            <FoodGlyph name={recipe.glyph} size={34} />
+            <FigmaIcon
+              name={glyphToFigmaIcon[recipe.glyph]}
+              size={38}
+            />
           </span>
           <div>
             <strong>{recipe.sourceName}</strong>
@@ -625,19 +653,19 @@ function RecipeSheet({
           <p className="recipe-detail__metrics">
             {recipe.minutes !== undefined ? (
               <span>
-                <Clock aria-hidden="true" size={14} />
+                <FigmaIcon name="timer" size={13} />
                 {recipe.minutes} {t("min", "分钟")}
               </span>
             ) : null}
             {recipe.calories !== undefined ? (
               <span>
-                <Flame aria-hidden="true" size={14} />
+                <FigmaIcon name="flame" size={13} />
                 {recipe.calories} {t("kcal", "千卡")}
               </span>
             ) : null}
             {recipe.price ? (
               <span>
-                <Wallet aria-hidden="true" size={14} />
+                <FigmaIcon name="money" size={13} />
                 {recipe.price}
               </span>
             ) : null}
@@ -655,7 +683,7 @@ function RecipeSheet({
 
         {recipe.reason ? (
           <p className="why-card">
-            <Lightbulb aria-hidden="true" size={16} />
+            <FigmaIcon name="bulb" size={14} />
             <span>{recipe.reason}</span>
           </p>
         ) : null}

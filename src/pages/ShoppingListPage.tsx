@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  ArrowUpRight,
-  ShoppingCart,
-  Sparkles,
-} from "lucide-react";
-import {
-  FoodGlyph,
-  type FoodGlyphName,
-} from "../components/FoodGlyph";
+import { ArrowLeft } from "lucide-react";
+import { FigmaIcon } from "../components/FigmaIcon";
+import { glyphToFigmaIcon } from "../components/figma-food-icon";
+import type { FoodGlyphName } from "../domain/food-glyph";
 import { useI18n } from "../i18n/useI18n";
 
 const shoppingItems: {
@@ -117,7 +111,7 @@ export function ShoppingListPage() {
         <div>
           <h1 className="heading-with-icon">
             {t("Shopping List", "购物清单")}
-            <ShoppingCart aria-hidden="true" size={21} />
+            <FigmaIcon name="cart" size={22} />
           </h1>
           <p>{t("For Tue–Sun · 18 planned meals", "周二至周日 · 已计划 18 餐")}</p>
         </div>
@@ -131,7 +125,7 @@ export function ShoppingListPage() {
             <span>{t("of £35 budget", "占 £35 预算")}</span>
           </p>
           <span className="budget-left">
-            <Sparkles aria-hidden="true" size={13} />
+            <FigmaIcon name="sparkle" size={13} />
             {t("£22.60 left", "剩余 £22.60")}
           </span>
         </div>
@@ -170,7 +164,7 @@ export function ShoppingListPage() {
                 {done ? "✓" : ""}
               </span>
               <span aria-hidden="true" className="check-glyph">
-                <FoodGlyph name={item.glyph} size={24} />
+                <FigmaIcon name={glyphToFigmaIcon[item.glyph]} size={24} />
               </span>
               <span className="check-copy">
                 <strong>{name}</strong>
@@ -188,7 +182,7 @@ export function ShoppingListPage() {
       <div className="pantry-list">
         {pantryItems.map((item) => (
           <span key={item.en}>
-            <FoodGlyph name={item.glyph} size={14} />
+            <FigmaIcon name={glyphToFigmaIcon[item.glyph]} size={12} />
             {isChinese ? item.zh : item.en}
           </span>
         ))}
@@ -196,7 +190,7 @@ export function ShoppingListPage() {
 
       <button className="primary-button shopping-share" onClick={shareList} type="button">
         {t("Share list", "分享清单")}
-        <ArrowUpRight aria-hidden="true" size={18} />
+        <span aria-hidden="true">→</span>
       </button>
       <button
         className="shopping-order-secondary"

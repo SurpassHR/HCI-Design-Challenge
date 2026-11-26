@@ -1,0 +1,35 @@
+import type { FigmaIconName } from "./FigmaIcon";
+import type { FoodGlyphName } from "../domain/food-glyph";
+
+export const glyphToFigmaIcon: Record<FoodGlyphName, FigmaIconName> = {
+  apple: "apple",
+  beans: "bowl",
+  beef: "steak",
+  berries: "apple",
+  bowl: "bowl",
+  carrot: "carrot",
+  cheese: "cheese",
+  chicken: "meat",
+  citrus: "lemon",
+  curry: "bowl",
+  egg: "egg",
+  fish: "bento",
+  grain: "rice",
+  leaf: "leaf",
+  noodles: "noodles",
+  onion: "herb",
+  pancake: "bowl",
+  pasta: "noodles",
+  pie: "bowl",
+  pizza: "bowl",
+  rice: "rice",
+  salad: "salad",
+  sauce: "can",
+  stew: "bowl",
+  sushi: "bento",
+  taco: "bowl",
+  tomato: "tomato",
+  wrap: "bowl",
+  yogurt: "bowl",
+};
+
