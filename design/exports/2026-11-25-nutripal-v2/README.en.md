@@ -23,7 +23,7 @@ Implementation comparison: [default](implementation/screens-gallery.png) · [lar
 - Adds dish search, Try chips and search-state variables to F02.
 - Updates the F03/F03b budget, pantry, meal and shopping fixtures.
 - Introduces the new colour tokens, radii, cards and tab-bar styling.
-- The new Figma uses emoji as illustrative icons. This is treated as a design-source defect: the implementation uses the project's vector icon system (Lucide + FoodGlyph) instead.
+- F01 cuisine icons use the exact Figma emoji (🥟 🍛 🍝 🍣 🌮 🥙 🥧 🍜); no self-drawn SVG substitutes are used.
 
 ## Files
 

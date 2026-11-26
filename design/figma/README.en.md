@@ -18,7 +18,7 @@
 - Screens: F01–F06, F03b and Me; every screen has a large-text variant
 - Components and tokens: 10 components, 17 variables, 2 variable collections
 - Static copy, previews and acceptance record: [2026-11-25 archive](../exports/2026-11-25-nutripal-v2/README.en.md)
-- Implementation conventions: no Figma status bar or phone frame; Figma emoji icons are treated as a design-source defect and are replaced by Lucide + FoodGlyph vector icons.
+- Implementation conventions: no Figma status bar or phone frame; F01 cuisine emoji are used exactly as supplied, while other UI icons follow Figma line assets.
 - This file records the design source of truth; the app is a v1.1 React prototype, not a pixel copy of Figma.
 
 ## Previous archive (2026-11-24)

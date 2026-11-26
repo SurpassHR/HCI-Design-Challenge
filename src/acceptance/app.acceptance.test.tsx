@@ -316,26 +316,23 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     expect(await screen.findByText(/晚上好/)).toBeInTheDocument();
   });
 
-  it("renders every screen without emoji glyphs", async () => {
-    seedOnboardedProfile();
-    const routes = [
-      "/home",
-      "/plan",
-      "/plan/shopping-list",
-      "/nudges/settings",
-      "/nudges/preview",
-      "/me",
-      "/preferences",
-      "/scan",
-    ];
+  it("uses the exact Figma cuisine emojis", async () => {
+    renderApp("/preferences");
 
-    for (const route of routes) {
-      const view = renderApp(route);
-      await screen.findByRole("main");
-      expect(document.querySelector("main")?.textContent ?? "").not.toMatch(
-        /\p{Extended_Pictographic}/u,
-      );
-      view.unmount();
+    const cuisines = [
+      ["Chinese", "🥟"],
+      ["Indian", "🍛"],
+      ["Italian", "🍝"],
+      ["Japanese", "🍣"],
+      ["Mexican", "🌮"],
+      ["Mediterr.", "🥙"],
+      ["British", "🥧"],
+      ["Korean", "🍜"],
+    ] as const;
+
+    for (const [name, emoji] of cuisines) {
+      const tile = await screen.findByRole("button", { name });
+      expect(within(tile).getByText(emoji)).toBeInTheDocument();
     }
   });
 });

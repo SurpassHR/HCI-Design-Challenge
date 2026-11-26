@@ -2,29 +2,25 @@ import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { useProfile } from "../app/profile-context";
-import {
-  FoodGlyph,
-  type FoodGlyphName,
-} from "../components/FoodGlyph";
 import { Chip } from "../components/ui/Chip";
 import { CuisineTile } from "../components/ui/CuisineTile";
 import { Sheet } from "../components/ui/Sheet";
 import { useI18n } from "../i18n/useI18n";
 
 const cuisines = [
-  { value: "Chinese", en: "Chinese", zh: "中式", glyph: "curry" },
-  { value: "Indian", en: "Indian", zh: "印度", glyph: "stew" },
-  { value: "Italian", en: "Italian", zh: "意式", glyph: "pasta" },
-  { value: "Japanese", en: "Japanese", zh: "日式", glyph: "sushi" },
-  { value: "Mexican", en: "Mexican", zh: "墨西哥", glyph: "taco" },
-  { value: "Mediterr.", en: "Mediterr.", zh: "地中海", glyph: "salad" },
-  { value: "British", en: "British", zh: "英式", glyph: "pie" },
-  { value: "Korean", en: "Korean", zh: "韩式", glyph: "noodles" },
+  { value: "Chinese", en: "Chinese", zh: "中式", emoji: "🥟" },
+  { value: "Indian", en: "Indian", zh: "印度", emoji: "🍛" },
+  { value: "Italian", en: "Italian", zh: "意式", emoji: "🍝" },
+  { value: "Japanese", en: "Japanese", zh: "日式", emoji: "🍣" },
+  { value: "Mexican", en: "Mexican", zh: "墨西哥", emoji: "🌮" },
+  { value: "Mediterr.", en: "Mediterr.", zh: "地中海", emoji: "🥙" },
+  { value: "British", en: "British", zh: "英式", emoji: "🥧" },
+  { value: "Korean", en: "Korean", zh: "韩式", emoji: "🍜" },
 ] satisfies {
   value: string;
   en: string;
   zh: string;
-  glyph: FoodGlyphName;
+  emoji: string;
 }[];
 
 const dietStyles = [
@@ -154,7 +150,7 @@ export function PreferencesPage() {
               const selected = selectedCuisines.includes(cuisine.value);
               return (
                 <CuisineTile
-                  icon={<FoodGlyph name={cuisine.glyph} size={27} />}
+                  emoji={cuisine.emoji}
                   key={cuisine.value}
                   label={name}
                   onClick={() =>

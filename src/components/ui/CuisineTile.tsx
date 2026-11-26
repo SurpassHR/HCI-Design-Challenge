@@ -1,14 +1,12 @@
-import type { ReactNode } from "react";
-
 export function CuisineTile({
   label,
   selected,
-  icon,
+  emoji,
   onClick,
 }: {
   label: string;
   selected: boolean;
-  icon: ReactNode;
+  emoji: string;
   onClick: () => void;
 }) {
   return (
@@ -19,11 +17,10 @@ export function CuisineTile({
       onClick={onClick}
       type="button"
     >
-      <span aria-hidden="true" className="ui-cuisine__icon">
-        {icon}
+      <span aria-hidden="true" className="ui-cuisine__emoji">
+        {emoji}
       </span>
       <small>{label}</small>
-      <i aria-hidden="true" className="ui-cuisine__dot" />
     </button>
   );
 }

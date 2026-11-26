@@ -22,7 +22,7 @@
 | Default-size visuals | Passed for structure, hierarchy, tokens and main controls |
 | Large-text visuals | Passed; global tokens apply and content scrolls |
 | Interaction completeness | Passed: search, custom avoidance, plan, nudges, scan and Me settings have acceptance coverage |
-| Icon system | Passed: Lucide + FoodGlyph only, no emoji icons |
+| Icon system | F01 uses the exact Figma emoji; other UI uses the existing line-icon system |
 | Device chrome | Not implemented by decision |
 | Real external capabilities | Not implemented; Mock/provisional Providers remain |
 
@@ -30,8 +30,8 @@
 
 | Frame | Status | Main result / intentional deviation |
 | --- | --- | --- |
-| F01 | Passed | Eight cuisines use project vector icons; updated Figma icons await MCP badge reactivation; six diet styles, fixed avoidances + Add |
-| F02 | Passed | New hierarchy, gradient summary, 91-recipe mock search, detail sheet, no-match suggestions, recommendation cards and See all; no emoji |
+| F01 | Passed | Eight cuisines use the exact Figma emoji and selected/default tile treatments; six diet styles, fixed avoidances + Add |
+| F02 | Passed | New hierarchy, gradient summary, 91-recipe mock search, detail sheet, no-match suggestions, recommendation cards and See all |
 | F03 | Passed | New week strip, constraint cards, five pantry chips, three meals and shopping entry; swap/edit/regenerate retained |
 | F03b | Passed | New four items and budget, six pantry items, check-off, primary Share and secondary delivery demo |
 | F04 | Passed | Orange→pink→purple gradient, large clock, notification and suggestion cards, all four actions |
@@ -41,7 +41,7 @@
 
 ## 4. Global interpretations
 
-- **Emoji**: the design source uses emoji as illustrative icons, treated as a design defect. All are mapped to Lucide/FoodGlyph vector icons.
+- **Emoji**: the old “emoji is a defect” decision is withdrawn; F01 cuisines use the exact Figma emoji, while other UI icons follow Figma's line-icon design.
 - **Device chrome**: no status bar, signal/battery or phone frame; the web content column is 390px.
 - **Large text**: both sizes use the same component tree through semantic type tokens; clipping in fixed captures is not a requirement.
 - **Large-text completeness**: all 261 directly rendered text nodes across the eight routes increase by 2px with no omissions; the search input grows from 16px to 17px.
@@ -56,5 +56,5 @@
 
 ## 6. Conclusion
 
-v1.1 meets the goal of an interactive high-fidelity implementation of the 2026-11-25 Figma structure. Emoji and simulated device chrome are no longer acceptance criteria. Future changes should follow the new archive and the intentional deviations recorded here.
+v1.1 meets the goal of an interactive high-fidelity implementation of the 2026-11-25 Figma structure. F01 uses the Figma emoji; simulated device chrome remains excluded by decision. Future changes should follow the new archive and this audit.
 

@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - Bottom navigation and F04/F05 toggles must have accessible names and keyboard operation.
 - Under `prefers-reduced-motion`, remove unnecessary transitions.
 - Colour contrast must meet WCAG AA; status also uses text or graphics, not colour alone.
-- Icons use Lucide + FoodGlyph only; Figma emoji are not adopted.
+- F01 uses the exact Figma emoji; other UI icons follow Figma's line-icon assets with no self-drawn substitutes.
 
 ### M10 Display and Accessibility Preferences
 
@@ -434,7 +434,7 @@ All modules use `loading / success / empty / error`; pages may add derived state
 | Me screen | Implemented as an independent settings screen; the Dietary row reuses F01 edit mode |
 | F01 `+ Add` has no expanded design | Local sheet adds a custom ingredient/allergen and saves it with preferences |
 | F02 search has no empty-state design | Filter in place; empty results offer clear search |
-| Figma uses emoji icons | Treated as a design-source defect; map to Lucide + FoodGlyph |
+| Figma uses emoji icons | The old no-emoji decision is withdrawn; F01 uses the Figma source as supplied |
 | Figma status bar/phone frame | Not implemented; keep the web content column |
 | F02 `See all` has no destination | Expand more recommendations inline |
 | F03 `Edit` has no destination | Shared Bottom Sheet for budget/time/pantry |

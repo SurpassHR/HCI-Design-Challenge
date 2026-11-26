@@ -23,7 +23,7 @@ See the [Figma prototype fidelity audit](../03-design/figma-implementation-audit
 | AC-09 | User enters Me | New setting rows, language, goals, preference summary, nudge preview, privacy and large-text switch |
 | AC-10 | User enables Large text | Root data-text-size=large, persisted, all eight routes accessible |
 | AC-11 | User switches language | English/Chinese changes and survives refresh |
-| AC-12 | Whole app renders | No emoji icons |
+| AC-12 | F01 icons | Eight cuisines use the exact Figma emoji |
 | AC-13 | Mock recipes and CSS regression | English/Chinese/multi-word search passes; every explicit font size follows the large-text boost |
 
 Acceptance file: [app.acceptance.test.tsx](../../src/acceptance/app.acceptance.test.tsx).
@@ -35,7 +35,7 @@ Acceptance file: [app.acceptance.test.tsx](../../src/acceptance/app.acceptance.t
 3. F01 custom avoidance failed because + Add had no destination; added the sheet and save path.
 4. F03/F03b new fixtures and Share action passed after updating data and CTA behaviour.
 5. Me retention passed after restoring language, goals, preference summary, nudge preview and privacy.
-6. The no-emoji check remains to prevent the Figma source defect from entering production.
+6. F01 cuisine emoji follow Figma exactly; the old no-emoji rule is withdrawn.
 
 ## 3. Implemented
 
@@ -67,7 +67,7 @@ npm run build
 ## 6. Execution baseline
 
 - Visuals and copy: [2026-11-25 Figma archive](../../design/exports/2026-11-25-nutripal-v2/README.en.md).
-- Icons: Lucide + FoodGlyph; Figma emoji are a design defect and are not implemented.
+- Icons: F01 uses Figma emoji; other UI icons use the corresponding Figma line assets without self-drawn substitutes.
 - Device chrome: no status bar, signal/battery or phone frame.
 - Backend: local Mock and reserved Repository/API contracts only.
 - Permissions and privacy: no real camera, location or notification permissions.
