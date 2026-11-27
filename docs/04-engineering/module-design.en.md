@@ -140,7 +140,7 @@ flowchart TB
 
 - Show today’s calorie and protein/carbohydrate/fat summary.
 - Show 1–3 personalised recommendations with a “why recommended” explanation.
-- Provide search through a Supabase-compatible mock with 91 recipes, covering English, Chinese, multi-word, closest-match and no-result suggestion states.
+- Provide search through a Supabase-compatible mock with 91 recipes, ranked by title, then keyword/ingredient, then category/area. Short prefixes such as chi prioritise Chicken/Chilli titles instead of category-only noise.
 - Expand more recommendations on the same page; no new recipe-detail route.
 
 **Interaction rules**
@@ -471,6 +471,7 @@ These decisions keep the first version bounded and avoid hiding missing interact
 10. Mock timeout, empty data, and provider-unavailable states are recoverable and never show fabricated data.
 11. F02 Tofu/Sushi search, empty results and clear search all work.
 12. Me large text persists, and all eight routes work in both sizes.
+13. F02 chi returns only titles containing Chicken/Chilli, not category-only matches such as Mapo Tofu.
 
 ### 7.3 Module definition of done
 
