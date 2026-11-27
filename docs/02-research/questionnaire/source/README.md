@@ -11,6 +11,8 @@ The version order below follows the team's supplied files and clarification, not
 | V2 | [`Nourish_Questionnaire_Revision_CN.docx`](history/V2-Nourish_Questionnaire_Revision_CN.docx) | 22 | `d1fa775a7ce1ff5ad3c651d8ee041894540976de3b32ee33f77f59fa36c32d49` | Second revised version; includes revision report |
 | V3 | [`Nourish_Questionnaire_V3_CN.docx`](Nourish_Questionnaire_V3_CN.docx) | 21 | `cf448b607067036f7c93b8622d6b96dc3b8e935ae6a2fdf2756ca1d5b6025b8d` | Third revised and current version; includes revision report |
 
+The [English participant questionnaire (V2, 22 questions)](history/V2-Nourish_Questionnaire_EN_Final.docx) translates the participant section of the Chinese V2 questionnaire.
+
 Searchable extracts:
 
 - V0: [`V0-健康饮食APP_用户调查问卷_20题.txt`](history/V0-健康饮食APP_用户调查问卷_20题.txt)

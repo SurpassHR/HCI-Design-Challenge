@@ -19,6 +19,11 @@
 - 人工核对记录：源文档未提供。
 - 基础功能结论：待完成分析与用户研究后决定。
 
+## 评论数据
+
+- [五款饮食 App 的评论 CSV](../../../data/processed/competitor-reviews/nutrition_app_reviews_kaggle.csv) 和 [30 条编码样本](../potential-users/nutripal_review_sample_30.csv) 供复核人物卡的研究依据。
+- CSV 从 Mann Acharya 发布的 [180K Health & Fitness App Reviews (23 Apps)](https://www.kaggle.com/datasets/mannacharya/180k-health-and-fitness-app-reviews-23-apps) 筛选五款 App，沿用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。
+
 ## 文件
 
 - [`competitor-matrix.csv`](competitor-matrix.csv)：竞品证据矩阵模板。
