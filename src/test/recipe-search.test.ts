@@ -52,4 +52,35 @@ describe("mock Supabase recipe search", () => {
       suggestions: [],
     });
   });
+
+  it("handles romanisation variants and diacritic-free multilingual names", async () => {
+    const toufu = await searchRecipes("toufu");
+    expect(toufu.mode).toBe("partial");
+    expect(toufu.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Ma Po Tofu",
+    );
+
+    const pabellon = await searchRecipes("pabellon");
+    expect(pabellon.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Arepa Pabellón",
+    );
+
+    const aebleskiver = await searchRecipes("aebleskiver");
+    expect(aebleskiver.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Æbleskiver",
+    );
+
+    const almojabanas = await searchRecipes("almojabanas");
+    expect(almojabanas.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Almojábanas (Colombian Cheese Bread)",
+    );
+
+    const farikal = await searchRecipes("farikal");
+    expect(farikal.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Fårikål (Norwegian National Dish)",
+    );
+
+    const singleChineseCharacter = await searchRecipes("鸡");
+    expect(singleChineseCharacter.recipes.length).toBeGreaterThan(0);
+  });
 });

@@ -23,10 +23,25 @@ const STOPWORDS = new Set([
   "with",
 ]);
 
+const LATIN_FOLDS: Record<string, string> = {
+  ß: "ss",
+  æ: "ae",
+  œ: "oe",
+  ø: "o",
+  đ: "d",
+  ð: "d",
+  ł: "l",
+  þ: "th",
+  ı: "i",
+  ŧ: "t",
+};
+
 export function normalizeRecipeQuery(query: string) {
   return query
-    .normalize("NFKC")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .replace(/[ßæœøđðłþıŧ]/g, (character) => LATIN_FOLDS[character])
     .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
 }
@@ -35,15 +50,70 @@ function words(value: string) {
   return normalizeRecipeQuery(value).split(" ").filter(Boolean);
 }
 
-function tokenHit(value: string, token: string) {
-  const normalized = normalizeRecipeQuery(value);
-  if (!normalized) return false;
+function editDistanceWithin(left: string, right: string, maximum: number) {
+  const leftCharacters = Array.from(left);
+  const rightCharacters = Array.from(right);
 
-  if (/[\u3400-\u9fff]/u.test(token)) {
-    return normalized.includes(token);
+  if (Math.abs(leftCharacters.length - rightCharacters.length) > maximum) {
+    return false;
   }
 
-  return words(normalized).some((word) => word.startsWith(token));
+  let previous = Array.from(
+    { length: rightCharacters.length + 1 },
+    (_, index) => index,
+  );
+
+  for (let leftIndex = 1; leftIndex <= leftCharacters.length; leftIndex += 1) {
+    const current = [leftIndex];
+
+    for (
+      let rightIndex = 1;
+      rightIndex <= rightCharacters.length;
+      rightIndex += 1
+    ) {
+      const substitution =
+        previous[rightIndex - 1] +
+        (leftCharacters[leftIndex - 1] === rightCharacters[rightIndex - 1]
+          ? 0
+          : 1);
+      const insertion = current[rightIndex - 1] + 1;
+      const deletion = previous[rightIndex] + 1;
+      current[rightIndex] = Math.min(substitution, insertion, deletion);
+    }
+
+    previous = current;
+  }
+
+  return previous[rightCharacters.length] <= maximum;
+}
+
+function fuzzyLimit(token: string) {
+  if (token.length >= 7) return 2;
+  return token.length >= 4 ? 1 : 0;
+}
+
+type TokenMatch = "exact" | "fuzzy";
+
+function tokenHit(value: string, token: string): TokenMatch | null {
+  const normalized = normalizeRecipeQuery(value);
+  if (!normalized) return null;
+
+  if (/[\u3400-\u9fff]/u.test(token)) {
+    return normalized.includes(token) ? "exact" : null;
+  }
+
+  const valueWords = words(normalized);
+  if (valueWords.some((word) => word.startsWith(token))) return "exact";
+
+  const maximum = fuzzyLimit(token);
+  if (
+    maximum > 0 &&
+    valueWords.some((word) => editDistanceWithin(word, token, maximum))
+  ) {
+    return "fuzzy";
+  }
+
+  return null;
 }
 
 function queryTokens(normalized: string) {
@@ -51,48 +121,81 @@ function queryTokens(normalized: string) {
     ...new Set(
       normalized
         .split(" ")
-        .filter((token) => token.length > 1 && !STOPWORDS.has(token)),
+        .filter(
+          (token) =>
+            !STOPWORDS.has(token) &&
+            (token.length > 1 || /[\u3400-\u9fff]/u.test(token)),
+        ),
     ),
   ];
 }
 
 function scoreRecipe(recipe: Recipe, tokens: string[]) {
-  const titleText = recipe.title.en + " " + recipe.title.zh;
-  const keywordText = recipe.keywords.join(" ");
-  const ingredientText = recipe.ingredients.join(" ");
-  const metaText = recipe.category + " " + recipe.area;
+  const fields = [
+    {
+      text: recipe.title.en + " " + recipe.title.zh,
+      exactWeight: 100,
+      fuzzyWeight: 55,
+      title: true,
+    },
+    {
+      text: recipe.keywords.join(" "),
+      exactWeight: 40,
+      fuzzyWeight: 22,
+      title: false,
+    },
+    {
+      text: recipe.ingredients.join(" "),
+      exactWeight: 25,
+      fuzzyWeight: 12,
+      title: false,
+    },
+    {
+      text: recipe.category + " " + recipe.area,
+      exactWeight: 10,
+      fuzzyWeight: 5,
+      title: false,
+    },
+    {
+      text: recipe.searchText,
+      exactWeight: 15,
+      fuzzyWeight: 8,
+      title: false,
+    },
+  ];
 
-  let titleHits = 0;
-  let keywordHits = 0;
-  let ingredientHits = 0;
-  let metaHits = 0;
+  let exactHits = 0;
+  let fuzzyHits = 0;
+  let exactTitleHits = 0;
+  let score = recipe.origin === "nutripal" ? 3 : 0;
 
   for (const token of tokens) {
-    if (tokenHit(titleText, token)) {
-      titleHits += 1;
-    } else if (tokenHit(keywordText, token)) {
-      keywordHits += 1;
-    } else if (tokenHit(ingredientText, token)) {
-      ingredientHits += 1;
-    } else if (tokenHit(metaText, token)) {
-      metaHits += 1;
+    const matches = fields.map((field) => ({
+      field,
+      match: tokenHit(field.text, token),
+    }));
+    const exactMatch = matches.find(({ match }) => match === "exact");
+
+    if (exactMatch) {
+      exactHits += 1;
+      if (exactMatch.field.title) exactTitleHits += 1;
+      score += exactMatch.field.exactWeight;
+      continue;
+    }
+
+    const fuzzyMatch = matches.find(({ match }) => match === "fuzzy");
+    if (fuzzyMatch) {
+      fuzzyHits += 1;
+      score += fuzzyMatch.field.fuzzyWeight;
     }
   }
 
   return {
     recipe,
-    titleHits,
-    allInTitle: titleHits === tokens.length,
-    allMatched:
-      titleHits + keywordHits + ingredientHits + metaHits === tokens.length,
-    score:
-      titleHits + keywordHits + ingredientHits + metaHits === 0
-        ? 0
-        : titleHits * 100 +
-          keywordHits * 40 +
-          ingredientHits * 25 +
-          metaHits * 10 +
-          (recipe.origin === "nutripal" ? 3 : 0),
+    allInTitle: exactTitleHits === tokens.length && fuzzyHits === 0,
+    allExact: exactHits === tokens.length,
+    allMatched: exactHits + fuzzyHits === tokens.length,
+    score: exactHits + fuzzyHits === 0 ? 0 : score,
   };
 }
 
@@ -138,9 +241,7 @@ export async function searchRecipes(
       }
     }
 
-    const allMatches = scored
-      .filter((item) => item.allMatched)
-      .sort(byScore);
+    const allMatches = scored.filter((item) => item.allExact).sort(byScore);
 
     if (allMatches.length > 0) {
       return {
