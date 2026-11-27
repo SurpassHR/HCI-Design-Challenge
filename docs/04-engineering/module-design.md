@@ -377,6 +377,7 @@ interface DisplayPreferenceRepository {
 - 底部导航和 F04/F05 的开关必须提供可访问名称和键盘操作。
 - `prefers-reduced-motion` 下取消非必要过渡。
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
+- UI 文字默认 `user-select: none`；输入框、文本域和可编辑区域显式恢复 `text`，保证输入与复制不受影响。
 - 响应式：shell 在所有视口下流体扩展（最大 1200px）；600px 起应用桌面内边距并限宽导航；640px 起 Me 双列；900px 起 Home 双列；底部导航限宽居中；底部 Sheet 手机全宽、宽屏最大 680px。
 - F01 菜系使用 Figma emoji；F02–F06/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
 

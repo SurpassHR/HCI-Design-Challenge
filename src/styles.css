@@ -64,6 +64,8 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
   font-size: calc(16px + var(--text-boost));
   touch-action: pan-x pan-y;
   background:
@@ -81,8 +83,16 @@ body {
 }
 
 button,
-input {
+input,
+textarea {
   font: inherit;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 button {

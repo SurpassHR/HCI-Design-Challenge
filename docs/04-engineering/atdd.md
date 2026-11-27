@@ -25,6 +25,7 @@
 | AC-11 | 用户切换语言 | 中英文界面切换并在刷新后保留 |
 | AC-12 | Figma 图标 | F01 使用原样 emoji；F02–F06/F03b 使用 Figma 导出 SVG |
 | AC-13 | 用户点击 F02 精选卡片 | 打开对应菜谱 Sheet，显示食材与 4 步简单做法；530px 视口全宽，926px 视口限宽 680px；次级推荐卡同样可打开 |
+| AC-14 | 用户拖选或双击界面文字 | 正文、按钮和标签不产生选区；搜索框、文本域和可编辑区域仍可选择文本 |
 | AC-13 | Mock 菜谱与 CSS 回归 | 中英文/多词搜索通过；所有显式字号跟随大字号 boost |
 
 自动验收文件：[app.acceptance.test.tsx](../../src/acceptance/app.acceptance.test.tsx)。

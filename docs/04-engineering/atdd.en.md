@@ -25,6 +25,7 @@ See the [Figma prototype fidelity audit](../03-design/figma-implementation-audit
 | AC-11 | User switches language | English/Chinese changes and survives refresh |
 | AC-12 | Figma icons | F01 uses exact emoji; F02–F06/F03b use Figma-exported SVGs |
 | AC-13 | User clicks an F02 curated card | Opens the matching recipe sheet with ingredients and four simple steps; full width at 530px and capped at 680px at 926px; secondary recommendation cards open it too |
+| AC-14 | User drags or double-clicks UI text | Body copy, buttons and labels produce no selection; search inputs, textareas and editable regions still allow text selection |
 | AC-13 | Mock recipes and CSS regression | English/Chinese/multi-word search passes; every explicit font size follows the large-text boost |
 
 Acceptance file: [app.acceptance.test.tsx](../../src/acceptance/app.acceptance.test.tsx).
