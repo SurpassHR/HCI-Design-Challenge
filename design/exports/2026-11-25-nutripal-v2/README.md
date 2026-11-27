@@ -45,7 +45,7 @@
 - `implementation/comparison-gallery.png`：每屏左为 Figma、右为 v1.1 实现。
 - `implementation/F02-search-gallery.png`：Mock 菜谱搜索结果、详情 Sheet 与无匹配建议。
 - F02–F06/F03b 的图标已从 Figma SVG 节点原样导出至 `public/figma-icons/`，映射清单见 `public/figma-icons/manifest.json`。
-- `implementation/responsive-gallery.png`：926px 桌面视口的响应式布局检查。
+- `implementation/responsive-gallery.png`：926px 桌面视口响应式检查；`responsive-me-660.png` 为 660px 中等宽度 Me 页检查。
 - 实现截图不含 Figma 状态栏/手机框，Me 页比设计更长。
 
 ## 屏幕索引
