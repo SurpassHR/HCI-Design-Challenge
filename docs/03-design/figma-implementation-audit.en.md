@@ -2,8 +2,8 @@
 
 **Language: [中文](figma-implementation-audit.md) | English**
 
-> - Audited release: NutriPal v1.1
-> - Audit date: 2026-11-26
+> - Audited release: NutriPal v1.2
+> - Audit date: 2026-11-27
 > - Visual baseline: [2026-11-25 Figma archive](../../design/exports/2026-11-25-nutripal-v2/README.en.md), file key QHOOV8NcB4Ev499ycoRtZq
 > - Automated acceptance: 25 Vitest/Testing Library tests
 
@@ -57,5 +57,5 @@
 
 ## 6. Conclusion
 
-v1.1 meets the goal of an interactive high-fidelity implementation of the 2026-11-25 Figma structure. F01 uses the Figma emoji; simulated device chrome remains excluded by decision. Future changes should follow the new archive and this audit.
+v1.2 completes the F01–F07 implementation of the 2026-11-25 Figma structure. F01 uses the Figma emoji; simulated device chrome remains excluded by decision. Future changes should follow the new archive and this audit.
 

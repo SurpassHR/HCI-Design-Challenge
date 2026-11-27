@@ -11,7 +11,7 @@
 - 当前视觉事实源：Figma NutriPal – Healthy Eating App (Copy)，文件 key QHOOV8NcB4Ev499ycoRtZq。
 - 8 个核心页面：F01–F06、F03b、Me；另有 F07a–F07l 共 12 个菜谱详情与食材替换状态，均为 390 × 844 Frame。
 - 设计归档：[2026-11-25 归档](../../design/exports/2026-11-25-nutripal-v2/README.md)。
-- 实现版本：NutriPal v1.1；视觉层重设计，数据和 /api/v1 契约保持兼容。
+- 实现版本：NutriPal v1.2；包含 F07 菜谱详情与替换流，数据和 /api/v1 契约保持兼容。
 - Figma 是视觉事实源；工程实现不等于逐像素复制设计稿。
 
 ## 已确认的实现解释

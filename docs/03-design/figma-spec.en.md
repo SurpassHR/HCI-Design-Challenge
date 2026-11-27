@@ -11,7 +11,7 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 - Visual source of truth: Figma NutriPal – Healthy Eating App (Copy), file key QHOOV8NcB4Ev499ycoRtZq.
 - Eight core screens: F01–F06, F03b and Me, plus 12 F07a–F07l recipe-detail and ingredient-swap states at 390 × 844.
 - Design archive: [2026-11-25 archive](../../design/exports/2026-11-25-nutripal-v2/README.en.md).
-- Implementation: NutriPal v1.1; the presentation layer is redesigned while data and /api/v1 contracts remain compatible.
+- Implementation: NutriPal v1.2, including the F07 recipe-detail and swap flow while data and /api/v1 contracts remain compatible.
 - Figma is the visual source of truth; implementation is not a pixel copy.
 
 ## Confirmed implementation interpretations

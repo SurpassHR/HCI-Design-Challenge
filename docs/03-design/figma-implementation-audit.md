@@ -2,8 +2,8 @@
 
 **语言：[中文](figma-implementation-audit.md) | [English](figma-implementation-audit.en.md)**
 
-> - 审计版本：NutriPal v1.1
-> - 审计日期：2026-11-26
+> - 审计版本：NutriPal v1.2
+> - 审计日期：2026-11-27
 > - 视觉基线：[2026-11-25 Figma 归档](../../design/exports/2026-11-25-nutripal-v2/README.md)，文件 key QHOOV8NcB4Ev499ycoRtZq
 > - 自动化验收：25 条 Vitest/Testing Library 测试
 
@@ -57,5 +57,5 @@
 
 ## 6. 结论
 
-v1.1 已达到“按 2026-11-25 Figma 结构完成交互式高保真实现”的目标；F01 使用 Figma emoji，模拟设备外观仍按决策排除。后续改动应以新归档和本审计记录为准。
+v1.2 已完成“按 2026-11-25 Figma 结构实现 F01–F07”的目标；F01 使用 Figma emoji，模拟设备外观仍按决策排除。后续改动应以新归档和本审计记录为准。
 

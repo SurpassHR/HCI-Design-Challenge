@@ -2,7 +2,7 @@
 
 **Language: [中文](module-design.md) | English**
 
-> - Status: design baseline v1.1 (2026-11-26)
+> - Status: design baseline v1.2 (2026-11-27)
 > - Parent design: [System design](system-design.en.md)
 > - Scope: module boundaries, state, interfaces, and acceptance rules; no code implementation.
 
@@ -80,7 +80,7 @@ flowchart TB
 
 **Responsibilities**
 
-- Provide the app frame, bottom navigation, route registration, onboarding guard, global error boundary and offline/mock-data indication. By v1.1 decision, no simulated status bar or phone frame is shown.
+- Provide the app frame, bottom navigation, route registration, onboarding guard, global error boundary and offline/mock-data indication. By established decision, no simulated status bar or phone frame is shown.
 - Maintain the current route and active navigation state; it owns no preference, meal-plan, nudge, or scan data.
 
 **Inputs/outputs**
