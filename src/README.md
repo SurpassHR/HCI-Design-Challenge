@@ -21,7 +21,7 @@ npm run preview
 
 ## Current scope
 
-- Full-viewport 390px content column without simulated phone chrome or status bar
+- 390px design baseline with a fluid content column up to 1200px, without simulated phone chrome or status bar
 - English and Chinese interface with a persisted language switch in Me
 - F01 cuisine icons use the exact Figma emoji; F02–F06/F03b use Figma-exported SVGs from public/figma-icons
 - Archived 2026-11-25 Figma screens F01–F06, F03b and Me implemented as one interactive v1.1 prototype

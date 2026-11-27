@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - Bottom navigation and F04/F05 toggles must have accessible names and keyboard operation.
 - Under `prefers-reduced-motion`, remove unnecessary transitions.
 - Colour contrast must meet WCAG AA; status also uses text or graphics, not colour alone.
-- Responsive: fluid shell from 600px, two-column Me from 640px, two-column Home from 900px, and a bounded centred bottom navigation.
+- Responsive: the shell expands fluidly at every viewport (up to 1200px); desktop padding and bounded navigation start at 600px, two-column Me at 640px and two-column Home at 900px, with a centred bottom navigation.
 - F01 uses Figma emoji; F02–F06/F03b use SVG assets exported from Figma; no self-drawn substitutes.
 
 ### M10 Display and Accessibility Preferences

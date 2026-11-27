@@ -42,7 +42,7 @@
 ## 4. Global interpretations
 
 - **Icon handling**: the old emoji ban is withdrawn; F01 uses Figma emoji, while F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) with no hand-drawn approximations.
-- **Device chrome**: no status bar, signal/battery or phone frame; the web content column is 390px.
+- **Device chrome**: no status bar, signal/battery or phone frame; the web content column uses 390px as its design baseline and expands fluidly up to 1200px.
 - **Large text**: both sizes use the same component tree through semantic type tokens; clipping in fixed captures is not a requirement.
 - **Large-text completeness**: all 261 directly rendered text nodes across the eight routes increase by 2px with no omissions; the search input grows from 16px to 17px.
 - **Me length**: Me is longer than Figma to retain v1.0 functions and therefore scrolls.

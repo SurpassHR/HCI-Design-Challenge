@@ -629,12 +629,12 @@
 }
 
 .preferences-page {
-  max-width: 390px;
+  max-width: 1200px;
   background: var(--bg);
 }
 
 .preferences-inner {
-  width: min(390px, 100%);
+  width: 100%;
   margin: 0 auto;
   padding: 16px 20px 30px;
 }
@@ -671,12 +671,12 @@
 }
 
 .nudge-preview-page {
-  max-width: 390px;
+  max-width: 1200px;
   background: linear-gradient(180deg, #ffb36b 0%, #ff6f91 50%, #7b5cff 100%);
 }
 
 .nudge-preview-inner {
-  width: min(390px, 100%);
+  width: 100%;
   margin: 0 auto;
   padding: 24px 20px 34px;
 }

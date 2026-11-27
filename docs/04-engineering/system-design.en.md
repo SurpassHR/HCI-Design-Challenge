@@ -589,7 +589,7 @@ When no local Profile exists, Mock creates an anonymous profile: `displayName="A
 | Area | Target |
 | --- | --- |
 | First interactive state | Within 2 seconds under local Mock |
-| Orientation | 390px design baseline, compatible with 320–768px |
+| Orientation | 390px design baseline with a fluid content column, compatible with 320–1200px |
 | Error recovery | Every data module has loading, empty, error, and retry states |
 | Data consistency | Preferences, meal plan, and shopping list update through a single domain object, avoiding duplicate copies |
 | Traceability | Every user flow can be traced to a Figma frame, module interface, and test scenario |

@@ -112,7 +112,7 @@ p {
   flex: none;
   flex-direction: column;
   width: 100%;
-  max-width: 480px;
+  max-width: 1200px;
   height: 100vh;
   height: 100dvh;
   margin: 0 auto;

@@ -17,9 +17,9 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 ## Confirmed implementation interpretations
 
 - **Use Figma icons as supplied**: F01 cuisine tiles use Figma emoji; F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) for food, notification, setting and status icons. No substitute assets are invented.
-- **No device chrome**: no Figma 9:41 status bar, signal/battery chrome or 44px phone frame. The web prototype uses a content column of at most 390px.
+- **No device chrome**: no Figma 9:41 status bar, signal/battery chrome or 44px phone frame. The web prototype uses 390px as its design baseline, while the content column expands fluidly with the viewport up to 1200px.
 - **Fixed mobile zoom**: pinch zoom is disabled by requirement (viewport, touch-action and iOS gesture events); single-finger scrolling and input focus remain. Every input uses at least 16px type to prevent iOS focus zoom.
-- **Responsive layout**: mobile stays single-column; from 600px the app uses a fluid width, from 640px Me becomes two columns, from 900px Home becomes two columns, and the bottom navigation stays centered instead of stretching.
+- **Responsive layout**: the app shell remains fluid at every viewport (up to 1200px); mobile stays single-column, from 600px desktop padding and a bounded navigation apply, from 640px Me becomes two columns, from 900px Home becomes two columns, and the bottom navigation stays centered instead of stretching.
 - **Large text**: the Me toggle applies globally and persists; every explicit font size receives a 2px text boost, inherited text grows with it, and pages scroll instead of reproducing fixed-frame clipping.
 - **Me retains v1.0 information**: language, today’s targets, preference summary, nudge preview, Nudges entry and privacy note remain in addition to the Figma rows.
 - **Custom avoidances**: the F01 + Add action opens a local sheet for any ingredient or allergen; no backend field is added.
