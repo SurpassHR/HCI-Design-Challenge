@@ -26,6 +26,7 @@ npm run preview
 - F01 cuisine icons use the exact Figma emoji; F02–F06/F03b use Figma-exported SVGs from public/figma-icons
 - Archived 2026-11-25 Figma screens F01–F06, F03b and Me implemented as one interactive v1.1 prototype
 - Global, persisted large-text mode: every explicit and inherited text size receives a 2px boost
+- Responsive desktop layout: fluid app shell, two-column Home/Me views and centered navigation
 - Fixed mobile zoom: pinch zoom disabled; form controls use at least 16px type to prevent iOS focus zoom
 - Onboarding redirect for new users
 - F01 preference capture, custom avoidance sheet and Me edit mode with local Mock persistence

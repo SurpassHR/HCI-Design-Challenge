@@ -376,6 +376,7 @@ interface DisplayPreferenceRepository {
 - 底部导航和 F04/F05 的开关必须提供可访问名称和键盘操作。
 - `prefers-reduced-motion` 下取消非必要过渡。
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
+- 响应式：768px 起 shell 流体宽度；860px 起 Me 双列；900px 起 Home 双列；底部导航限宽居中。
 - F01 菜系使用 Figma emoji；F02–F06/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
 
 ### M10 Display and Accessibility Preferences

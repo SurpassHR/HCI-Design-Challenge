@@ -6,6 +6,7 @@ import "./styles.css";
 import "./styles/tokens.css";
 import "./styles/components.css";
 import "./styles/v11.css";
+import "./styles/responsive.css";
 
 const root = document.getElementById("root");
 

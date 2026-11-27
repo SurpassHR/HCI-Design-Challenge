@@ -78,7 +78,7 @@ export function MePage() {
         <span className="profile-badge">{t("Local", "本地")}</span>
       </section>
 
-      <section aria-labelledby="goal-heading">
+      <section aria-labelledby="goal-heading" className="me-targets">
         <h2 className="section-heading" id="goal-heading">
           {t("Today’s targets", "今日目标")}
         </h2>
@@ -179,37 +179,39 @@ export function MePage() {
         </div>
       </section>
 
-      <Link className="me-link-card" to="/nudges/preview">
-        <span aria-hidden="true" className="me-link-icon">
-          <Sparkles size={21} />
-        </span>
-        <span>
-          <strong>{t("Preview a nudge", "预览一条提醒")}</strong>
-          <small>
-            {t(
-              "See how a contextual suggestion appears",
-              "查看情境建议如何呈现",
-            )}
-          </small>
-        </span>
-        <b aria-hidden="true">›</b>
-      </Link>
+      <div className="me-links">
+        <Link className="me-link-card" to="/nudges/preview">
+          <span aria-hidden="true" className="me-link-icon">
+            <Sparkles size={21} />
+          </span>
+          <span>
+            <strong>{t("Preview a nudge", "预览一条提醒")}</strong>
+            <small>
+              {t(
+                "See how a contextual suggestion appears",
+                "查看情境建议如何呈现",
+              )}
+            </small>
+          </span>
+          <b aria-hidden="true">›</b>
+        </Link>
 
-      <Link className="me-link-card" to="/nudges/settings">
-        <span aria-hidden="true" className="me-link-icon">
-          <Bell size={21} />
-        </span>
-        <span>
-          <strong>{t("Nudges", "提醒")}</strong>
-          <small>
-            {t(
-              "Balanced · quiet hours 22:00–07:30",
-              "均衡 · 免打扰 22:00–07:30",
-            )}
-          </small>
-        </span>
-        <b aria-hidden="true">›</b>
-      </Link>
+        <Link className="me-link-card" to="/nudges/settings">
+          <span aria-hidden="true" className="me-link-icon">
+            <Bell size={21} />
+          </span>
+          <span>
+            <strong>{t("Nudges", "提醒")}</strong>
+            <small>
+              {t(
+                "Balanced · quiet hours 22:00–07:30",
+                "均衡 · 免打扰 22:00–07:30",
+              )}
+            </small>
+          </span>
+          <b aria-hidden="true">›</b>
+        </Link>
+      </div>
 
       <section className="privacy-note">
         <LockKeyhole aria-hidden="true" size={17} />
