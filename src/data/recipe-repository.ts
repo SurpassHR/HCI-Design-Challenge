@@ -271,6 +271,14 @@ export async function searchRecipes(
   };
 }
 
+export async function getRecipeById(id: string): Promise<Recipe | undefined> {
+  const result = await mockSupabase.from("recipes").select("*").limit(200);
+
+  if (result.error) throw new Error(result.error.message);
+
+  return (result.data ?? []).find((recipe) => recipe.id === id);
+}
+
 export const recipeDatabaseInfo = {
   count: recipeRowCount,
   sourceName: recipeCatalogMeta.sourceName,

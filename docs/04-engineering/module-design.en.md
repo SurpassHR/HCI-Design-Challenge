@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - Bottom navigation and F04/F05 toggles must have accessible names and keyboard operation.
 - Under `prefers-reduced-motion`, remove unnecessary transitions.
 - Colour contrast must meet WCAG AA; status also uses text or graphics, not colour alone.
-- Responsive: the shell expands fluidly at every viewport (up to 1200px); desktop padding and bounded navigation start at 600px, two-column Me at 640px and two-column Home at 900px, with a centred bottom navigation.
+- Responsive: the shell expands fluidly at every viewport (up to 1200px); desktop padding and bounded navigation start at 600px, two-column Me at 640px and two-column Home at 900px, with a centred bottom navigation. Bottom sheets are full-width on phones and capped at 680px on wider viewports.
 - F01 uses Figma emoji; F02–F06/F03b use SVG assets exported from Figma; no self-drawn substitutes.
 
 ### M10 Display and Accessibility Preferences
@@ -474,6 +474,7 @@ These decisions keep the first version bounded and avoid hiding missing interact
 12. Me large text persists, and all eight routes work in both sizes.
 13. F02 chi returns only titles containing Chicken/Chilli, not category-only matches such as Mapo Tofu.
 14. In the Chinese UI, entering “鸡肉/麻婆豆腐/鸡” searches and shows Chinese dish names; in the English UI, tou, toufu and pabellon return close matches.
+15. Clicking either the featured F02 card or a secondary recommendation opens its recipe sheet; the sheet is full-width at 530px and capped at 680px at 926px.
 
 ### 7.3 Module definition of done
 

@@ -252,7 +252,7 @@
 .ui-sheet {
   position: relative;
   display: flex;
-  width: min(390px, 100%);
+  width: min(680px, 100%);
   max-height: 82dvh;
   flex-direction: column;
   gap: 18px;

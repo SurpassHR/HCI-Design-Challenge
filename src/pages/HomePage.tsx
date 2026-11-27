@@ -14,6 +14,7 @@ import {
 import { glyphToFigmaIcon } from "../components/figma-food-icon";
 import { Sheet } from "../components/ui/Sheet";
 import {
+  getRecipeById,
   recipeDatabaseInfo,
   searchRecipes,
 } from "../data/recipe-repository";
@@ -27,6 +28,7 @@ interface LocalizedText {
 }
 
 interface Dish {
+  id: string;
   title: LocalizedText;
   glyph: FoodGlyphName;
   time: LocalizedText;
@@ -40,6 +42,7 @@ interface Dish {
 
 const dishes: Dish[] = [
   {
+    id: "local-mapo-tofu",
     title: { en: "Mapo Tofu & Brown Rice", zh: "麻婆豆腐配糙米饭" },
     glyph: "curry",
     time: { en: "25 min", zh: "25 分钟" },
@@ -57,6 +60,7 @@ const dishes: Dish[] = [
     keywords: ["tofu", "mapo", "sichuan", "rice", "spicy"],
   },
   {
+    id: "local-halloumi-quinoa",
     title: { en: "Halloumi Quinoa Bowl", zh: "哈鲁米藜麦碗" },
     glyph: "salad",
     time: { en: "15 min", zh: "15 分钟" },
@@ -74,6 +78,7 @@ const dishes: Dish[] = [
     keywords: ["halloumi", "quinoa", "bowl", "salad", "vegetarian"],
   },
   {
+    id: "local-miso-salmon",
     title: { en: "Miso Salmon Rice", zh: "味噌三文鱼饭" },
     glyph: "sushi",
     time: { en: "20 min", zh: "20 分钟" },
@@ -91,6 +96,7 @@ const dishes: Dish[] = [
     keywords: ["sushi", "salmon", "miso", "rice", "fish", "japanese"],
   },
   {
+    id: "local-lemon-chicken",
     title: { en: "Lemon Herb Chicken", zh: "柠檬香草鸡" },
     glyph: "citrus",
     time: { en: "30 min", zh: "30 分钟" },
@@ -108,6 +114,7 @@ const dishes: Dish[] = [
     keywords: ["lemon", "chicken", "herb", "high protein"],
   },
   {
+    id: "local-mushroom-risotto",
     title: { en: "Mushroom Miso Risotto", zh: "蘑菇味噌烩饭" },
     glyph: "beans",
     time: { en: "25 min", zh: "25 分钟" },
@@ -194,14 +201,11 @@ export function HomePage() {
   const { isChinese, t } = useI18n();
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
-  const [activeTitle, setActiveTitle] = useState(dishes[0].title.en);
   const [searchState, setSearchState] = useState<SearchState>({ status: "idle" });
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const isSearching = query.trim().length > 0;
   const visibleDishes = showAll ? dishes : dishes.slice(0, 3);
-  const featured =
-    visibleDishes.find((dish) => dish.title.en === activeTitle) ??
-    visibleDishes[0];
+  const featured = visibleDishes[0];
   const localize = (value: LocalizedText) =>
     isChinese ? value.zh : value.en;
 
@@ -210,6 +214,14 @@ export function HomePage() {
     setSearchState(
       next.trim() ? { status: "loading" } : { status: "idle" },
     );
+  }
+
+  function openDish(dish: Dish) {
+    void getRecipeById(dish.id)
+      .then((recipe) => {
+        if (recipe) setSelectedRecipe(recipe);
+      })
+      .catch(() => undefined);
   }
 
   useEffect(() => {
@@ -455,7 +467,15 @@ export function HomePage() {
         )
       ) : featured ? (
         <>
-          <article className="featured-card">
+          <button
+            aria-haspopup="dialog"
+            aria-label={
+              t("Open recipe", "打开菜谱") + ": " + localize(featured.title)
+            }
+            className="featured-card"
+            onClick={() => openDish(featured)}
+            type="button"
+          >
             <div className={"featured-hero featured-hero--" + featured.tone}>
               <div className="featured-tags">
                 {featured.tags.map((tag) => (
@@ -495,7 +515,7 @@ export function HomePage() {
                 </span>
               </p>
             </div>
-          </article>
+          </button>
 
           {visibleDishes.length > 1 ? (
             <div
@@ -506,9 +526,13 @@ export function HomePage() {
                 .filter((dish) => dish.title.en !== featured.title.en)
                 .map((dish) => (
                   <button
+                    aria-haspopup="dialog"
+                    aria-label={
+                      t("Open recipe", "打开菜谱") + ": " + localize(dish.title)
+                    }
                     className="mini-card"
                     key={dish.title.en}
-                    onClick={() => setActiveTitle(dish.title.en)}
+                    onClick={() => openDish(dish)}
                     type="button"
                   >
                     <span aria-hidden="true" className="mini-card__icon">

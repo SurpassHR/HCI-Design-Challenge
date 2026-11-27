@@ -376,7 +376,7 @@ interface DisplayPreferenceRepository {
 - 底部导航和 F04/F05 的开关必须提供可访问名称和键盘操作。
 - `prefers-reduced-motion` 下取消非必要过渡。
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
-- 响应式：shell 在所有视口下流体扩展（最大 1200px）；600px 起应用桌面内边距并限宽导航；640px 起 Me 双列；900px 起 Home 双列；底部导航限宽居中。
+- 响应式：shell 在所有视口下流体扩展（最大 1200px）；600px 起应用桌面内边距并限宽导航；640px 起 Me 双列；900px 起 Home 双列；底部导航限宽居中；底部 Sheet 手机全宽、宽屏最大 680px。
 - F01 菜系使用 Figma emoji；F02–F06/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
 
 ### M10 Display and Accessibility Preferences
@@ -474,6 +474,7 @@ interface DisplayPreferenceRepository {
 12. F02 输入 chi 时仅返回标题包含 Chicken/Chilli 的菜谱，不混入 Mapo Tofu 等分类命中项。
 13. Me 大字号开关持久化，8 个路由在两种字号下均可访问。
 14. 中文界面输入“鸡肉/麻婆豆腐/鸡”可搜索并显示中文菜名；英文界面输入 tou、toufu、pabellon 可得到相近菜谱。
+15. 点击 F02 精选大卡或次级推荐卡均打开对应菜谱 Sheet；Sheet 在 530px 视口全宽，在 926px 视口限宽 680px。
 
 ### 7.3 模块完成标准
 

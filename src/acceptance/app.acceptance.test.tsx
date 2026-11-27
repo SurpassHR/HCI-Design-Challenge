@@ -110,6 +110,41 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     expect(stored.preferences.dietStyles).toContain("Halal");
   });
 
+  it("opens recipe sheets from curated recommendations", async () => {
+    const user = userEvent.setup();
+    seedOnboardedProfile();
+    renderApp("/home");
+
+    await user.click(
+      await screen.findByRole("button", {
+        name: /open recipe: mapo tofu & brown rice/i,
+      }),
+    );
+
+    expect(
+      await screen.findByRole("dialog", {
+        name: /mapo tofu & brown rice/i,
+      }),
+    ).toBeInTheDocument();
+
+    await user.keyboard("{Escape}");
+    await waitFor(() =>
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument(),
+    );
+
+    await user.click(
+      screen.getByRole("button", {
+        name: /open recipe: halloumi quinoa bowl/i,
+      }),
+    );
+
+    expect(
+      await screen.findByRole("dialog", {
+        name: /halloumi quinoa bowl/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
   it("searches the mock Supabase recipe database with multiple queries", async () => {
     const user = userEvent.setup();
     seedOnboardedProfile();
