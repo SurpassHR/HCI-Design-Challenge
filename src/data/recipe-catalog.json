@@ -24,7 +24,10 @@
   "recipes": [
     {
       "id": "local-mapo-tofu",
-      "title": "Mapo Tofu & Brown Rice",
+      "title": {
+        "en": "Mapo Tofu & Brown Rice",
+        "zh": "麻婆豆腐配糙米饭"
+      },
       "category": "Chinese",
       "area": "Sichuan",
       "ingredients": [
@@ -45,9 +48,11 @@
         "豆腐",
         "麻婆豆腐",
         "川味",
-        "米饭"
+        "米饭",
+        "麻婆豆腐配糙米饭",
+        "Mapo Tofu & Brown Rice"
       ],
-      "searchText": "mapo tofu brown rice chinese sichuan tofu rice spring onion chilli bean paste 豆腐 麻婆豆腐 川味 米饭",
+      "searchText": "mapo tofu brown rice 麻婆豆腐配糙米饭 chinese sichuan tofu rice spring onion chilli bean paste tofu mapo sichuan rice spicy 豆腐 麻婆豆腐 川味 米饭 麻婆豆腐配糙米饭 mapo tofu brown rice",
       "minutes": 25,
       "calories": 520,
       "price": "£3.20",
@@ -55,7 +60,10 @@
     },
     {
       "id": "local-halloumi-quinoa",
-      "title": "Halloumi Quinoa Bowl",
+      "title": {
+        "en": "Halloumi Quinoa Bowl",
+        "zh": "哈鲁米藜麦碗"
+      },
       "category": "Vegetarian",
       "area": "Mediterranean",
       "ingredients": [
@@ -76,9 +84,11 @@
         "哈鲁米",
         "藜麦",
         "沙拉",
-        "素食"
+        "素食",
+        "哈鲁米藜麦碗",
+        "Halloumi Quinoa Bowl"
       ],
-      "searchText": "halloumi quinoa bowl vegetarian mediterranean halloumi quinoa tomato spinach 哈鲁米 藜麦 沙拉 素食",
+      "searchText": "halloumi quinoa bowl 哈鲁米藜麦碗 vegetarian mediterranean halloumi quinoa tomato spinach halloumi quinoa bowl salad vegetarian 哈鲁米 藜麦 沙拉 素食 哈鲁米藜麦碗 halloumi quinoa bowl",
       "minutes": 15,
       "calories": 450,
       "price": "£2.80",
@@ -86,7 +96,10 @@
     },
     {
       "id": "local-miso-salmon",
-      "title": "Miso Salmon Rice",
+      "title": {
+        "en": "Miso Salmon Rice",
+        "zh": "味噌三文鱼饭"
+      },
       "category": "Seafood",
       "area": "Japanese",
       "ingredients": [
@@ -108,9 +121,11 @@
         "寿司",
         "三文鱼",
         "米饭",
-        "日式"
+        "日式",
+        "味噌三文鱼饭",
+        "Miso Salmon Rice"
       ],
-      "searchText": "miso salmon rice japanese sushi salmon miso rice fish 寿司 三文鱼 米饭 日式",
+      "searchText": "miso salmon rice 味噌三文鱼饭 seafood japanese salmon rice miso spring onion sushi salmon miso rice fish japanese 寿司 三文鱼 米饭 日式 味噌三文鱼饭 miso salmon rice",
       "minutes": 20,
       "calories": 580,
       "price": "£4.60",
@@ -118,7 +133,10 @@
     },
     {
       "id": "local-lemon-chicken",
-      "title": "Lemon Herb Chicken",
+      "title": {
+        "en": "Lemon Herb Chicken",
+        "zh": "柠檬香草鸡"
+      },
       "category": "Chicken",
       "area": "Mediterranean",
       "ingredients": [
@@ -137,9 +155,11 @@
         "high protein",
         "柠檬",
         "鸡肉",
-        "香草"
+        "香草",
+        "柠檬香草鸡",
+        "Lemon Herb Chicken"
       ],
-      "searchText": "lemon herb chicken mediterranean chicken lemon herbs potato 柠檬 鸡肉 香草",
+      "searchText": "lemon herb chicken 柠檬香草鸡 chicken mediterranean chicken lemon herbs potato lemon chicken herb high protein 柠檬 鸡肉 香草 柠檬香草鸡 lemon herb chicken",
       "minutes": 30,
       "calories": 610,
       "price": "£4.20",
@@ -147,7 +167,10 @@
     },
     {
       "id": "local-mushroom-risotto",
-      "title": "Mushroom Miso Risotto",
+      "title": {
+        "en": "Mushroom Miso Risotto",
+        "zh": "蘑菇味噌烩饭"
+      },
       "category": "Vegetarian",
       "area": "Japanese",
       "ingredients": [
@@ -168,9 +191,11 @@
         "蘑菇",
         "味噌",
         "烩饭",
-        "素食"
+        "素食",
+        "蘑菇味噌烩饭",
+        "Mushroom Miso Risotto"
       ],
-      "searchText": "mushroom miso risotto japanese vegetarian mushroom rice miso butter 蘑菇 味噌 烩饭 素食",
+      "searchText": "mushroom miso risotto 蘑菇味噌烩饭 vegetarian japanese mushroom rice miso butter mushroom miso risotto rice vegetarian 蘑菇 味噌 烩饭 素食 蘑菇味噌烩饭 mushroom miso risotto",
       "minutes": 25,
       "calories": 520,
       "price": "£3.40",
@@ -178,7 +203,10 @@
     },
     {
       "id": "themealdb-53281",
-      "title": "Algerian Kefta (Meatballs)",
+      "title": {
+        "en": "Algerian Kefta (Meatballs)",
+        "zh": "阿尔及利亚烤肉丸"
+      },
       "category": "Beef",
       "area": "Algerian",
       "ingredients": [
@@ -205,13 +233,18 @@
         "蒜",
         "洋葱",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "阿尔及利亚烤肉丸",
+        "Algerian Kefta (Meatballs)"
       ],
-      "searchText": "algerian kefta meatballs beef algerian ground beef garlic onion salt pepper plum tomatoes parsley water beef 牛肉 beef algerian 大蒜 蒜 洋葱 番茄 西红柿"
+      "searchText": "algerian kefta meatballs 阿尔及利亚烤肉丸 beef algerian ground beef garlic onion salt pepper plum tomatoes parsley water beef 牛肉 beef algerian 大蒜 蒜 洋葱 番茄 西红柿 阿尔及利亚烤肉丸 algerian kefta meatballs"
     },
     {
       "id": "themealdb-53334",
-      "title": "Arepa Pabellón",
+      "title": {
+        "en": "Arepa Pabellón",
+        "zh": "委内瑞拉玉米饼拼盘"
+      },
       "category": "Beef",
       "area": "Venezuela",
       "ingredients": [
@@ -238,13 +271,18 @@
         "芝士",
         "香蕉",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "委内瑞拉玉米饼拼盘",
+        "Arepa Pabellón"
       ],
-      "searchText": "arepa pabellón beef venezuela corn arepa filled with mozarella cheese fried ripe bananas black beans pico de gallo sauce shredded meat tomato salt pepper beef 牛肉 beef venezuela 奶酪 芝士 香蕉 番茄 西红柿"
+      "searchText": "arepa pabellón 委内瑞拉玉米饼拼盘 beef venezuela corn arepa filled with mozarella cheese fried ripe bananas black beans pico de gallo sauce shredded meat tomato salt pepper beef 牛肉 beef venezuela 奶酪 芝士 香蕉 番茄 西红柿 委内瑞拉玉米饼拼盘 arepa pabellón"
     },
     {
       "id": "themealdb-53329",
-      "title": "Arepa pelua",
+      "title": {
+        "en": "Arepa pelua",
+        "zh": "委内瑞拉牛肉芝士玉米饼"
+      },
       "category": "Beef",
       "area": "Venezuela",
       "ingredients": [
@@ -275,13 +313,18 @@
         "大蒜",
         "蒜",
         "奶酪",
-        "芝士"
+        "芝士",
+        "委内瑞拉牛肉芝士玉米饼",
+        "Arepa pelua"
       ],
-      "searchText": "arepa pelua beef venezuela beef onion red pepper garlic cumin oregano paprika beef stock water salt cheese extra virgin olive oil beef 牛肉 beef venezuela 洋葱 大蒜 蒜 奶酪 芝士"
+      "searchText": "arepa pelua 委内瑞拉牛肉芝士玉米饼 beef venezuela beef onion red pepper garlic cumin oregano paprika beef stock water salt cheese extra virgin olive oil beef 牛肉 beef venezuela 洋葱 大蒜 蒜 奶酪 芝士 委内瑞拉牛肉芝士玉米饼 arepa pelua"
     },
     {
       "id": "themealdb-53133",
-      "title": "Asado",
+      "title": {
+        "en": "Asado",
+        "zh": "阿根廷烤肉"
+      },
       "category": "Beef",
       "area": "Argentina",
       "ingredients": [
@@ -299,13 +342,18 @@
         "Beef",
         "牛肉",
         "beef",
-        "Argentina"
+        "Argentina",
+        "阿根廷烤肉",
+        "Asado"
       ],
-      "searchText": "asado beef argentina mixed beef cuts chorizo morcilla salt beef 牛肉 beef argentina"
+      "searchText": "asado 阿根廷烤肉 beef argentina mixed beef cuts chorizo morcilla salt beef 牛肉 beef argentina 阿根廷烤肉 asado"
     },
     {
       "id": "themealdb-53099",
-      "title": "Aussie Burgers",
+      "title": {
+        "en": "Aussie Burgers",
+        "zh": "澳式汉堡"
+      },
       "category": "Beef",
       "area": "Australian",
       "ingredients": [
@@ -325,13 +373,18 @@
         "牛肉",
         "beef",
         "Australian",
-        "面包"
+        "面包",
+        "澳式汉堡",
+        "Aussie Burgers"
       ],
-      "searchText": "aussie burgers beef australian lean minced steak cooked beetroot naan bread rocket soured cream and chive dip beef 牛肉 beef australian 面包"
+      "searchText": "aussie burgers 澳式汉堡 beef australian lean minced steak cooked beetroot naan bread rocket soured cream and chive dip beef 牛肉 beef australian 面包 澳式汉堡 aussie burgers"
     },
     {
       "id": "themealdb-53430",
-      "title": "Antiguan Breakfast (Chop Up and ‘Saltfish’)",
+      "title": {
+        "en": "Antiguan Breakfast (Chop Up and ‘Saltfish’)",
+        "zh": "安提瓜早餐（咸鱼炒蔬菜）"
+      },
       "category": "Breakfast",
       "area": "",
       "ingredients": [
@@ -358,13 +411,18 @@
         "蛋",
         "大蒜",
         "蒜",
-        "洋葱"
+        "洋葱",
+        "安提瓜早餐（咸鱼炒蔬菜）",
+        "Antiguan Breakfast (Chop Up and ‘Saltfish’)"
       ],
-      "searchText": "antiguan breakfast chop up and saltfish breakfast egg plants callaloo pumpkin garlic onion butter salt black pepper breakfast 早餐 breakfast 鸡蛋 蛋 大蒜 蒜 洋葱"
+      "searchText": "antiguan breakfast chop up and saltfish 安提瓜早餐 咸鱼炒蔬菜 breakfast egg plants callaloo pumpkin garlic onion butter salt black pepper breakfast 早餐 breakfast 鸡蛋 蛋 大蒜 蒜 洋葱 安提瓜早餐 咸鱼炒蔬菜 antiguan breakfast chop up and saltfish"
     },
     {
       "id": "themealdb-53076",
-      "title": "Bread omelette",
+      "title": {
+        "en": "Bread omelette",
+        "zh": "印度面包煎蛋"
+      },
       "category": "Breakfast",
       "area": "India",
       "ingredients": [
@@ -384,13 +442,18 @@
         "India",
         "面包",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "印度面包煎蛋",
+        "Bread omelette"
       ],
-      "searchText": "bread omelette breakfast india bread egg salt breakfast 早餐 breakfast india 面包 鸡蛋 蛋"
+      "searchText": "bread omelette 印度面包煎蛋 breakfast india bread egg salt breakfast 早餐 breakfast india 面包 鸡蛋 蛋 印度面包煎蛋 bread omelette"
     },
     {
       "id": "themealdb-52965",
-      "title": "Breakfast Potatoes",
+      "title": {
+        "en": "Breakfast Potatoes",
+        "zh": "加拿大早餐土豆"
+      },
       "category": "Breakfast",
       "area": "Canadian",
       "ingredients": [
@@ -419,13 +482,18 @@
         "土豆",
         "马铃薯",
         "大蒜",
-        "蒜"
+        "蒜",
+        "加拿大早餐土豆",
+        "Breakfast Potatoes"
       ],
-      "searchText": "breakfast potatoes breakfast canadian breakfast brunch potatoes olive oil bacon garlic clove maple syrup parsley salt pepper allspice breakfast 早餐 breakfast canadian 加拿大 brunch 土豆 马铃薯 大蒜 蒜"
+      "searchText": "breakfast potatoes 加拿大早餐土豆 breakfast canadian potatoes olive oil bacon garlic clove maple syrup parsley salt pepper allspice breakfast 早餐 breakfast canadian 加拿大 brunch 土豆 马铃薯 大蒜 蒜 加拿大早餐土豆 breakfast potatoes"
     },
     {
       "id": "themealdb-53379",
-      "title": "Dutch poffertjes (mini pancakes)",
+      "title": {
+        "en": "Dutch poffertjes (mini pancakes)",
+        "zh": "荷兰迷你松饼"
+      },
       "category": "Breakfast",
       "area": "Netherlands",
       "ingredients": [
@@ -449,13 +517,18 @@
         "breakfast",
         "Netherlands",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "荷兰迷你松饼",
+        "Dutch poffertjes (mini pancakes)"
       ],
-      "searchText": "dutch poffertjes mini pancakes breakfast netherlands flour buckwheat flour eggs butter milk yeast vanilla sugar icing sugar breakfast 早餐 breakfast netherlands 鸡蛋 蛋"
+      "searchText": "dutch poffertjes mini pancakes 荷兰迷你松饼 breakfast netherlands flour buckwheat flour eggs butter milk yeast vanilla sugar icing sugar breakfast 早餐 breakfast netherlands 鸡蛋 蛋 荷兰迷你松饼 dutch poffertjes mini pancakes"
     },
     {
       "id": "themealdb-52895",
-      "title": "English Breakfast",
+      "title": {
+        "en": "English Breakfast",
+        "zh": "英式早餐"
+      },
       "category": "Breakfast",
       "area": "British",
       "ingredients": [
@@ -484,13 +557,18 @@
         "西红柿",
         "鸡蛋",
         "蛋",
-        "面包"
+        "面包",
+        "英式早餐",
+        "English Breakfast"
       ],
-      "searchText": "english breakfast breakfast british breakfast sausages bacon mushrooms tomatoes black pudding eggs bread breakfast 早餐 breakfast british 英国 英式 蘑菇 番茄 西红柿 鸡蛋 蛋 面包"
+      "searchText": "english breakfast 英式早餐 breakfast british sausages bacon mushrooms tomatoes black pudding eggs bread breakfast 早餐 breakfast british 英国 英式 蘑菇 番茄 西红柿 鸡蛋 蛋 面包 英式早餐 english breakfast"
     },
     {
       "id": "themealdb-53085",
-      "title": "15-minute chicken & halloumi burgers",
+      "title": {
+        "en": "15-minute chicken & halloumi burgers",
+        "zh": "15分钟鸡肉哈鲁米汉堡"
+      },
       "category": "Chicken",
       "area": "United States",
       "ingredients": [
@@ -519,13 +597,18 @@
         "United States",
         "柠檬",
         "奶酪",
-        "芝士"
+        "芝士",
+        "15分钟鸡肉哈鲁米汉堡",
+        "15-minute chicken & halloumi burgers"
       ],
-      "searchText": "15 minute chicken halloumi burgers chicken united states chicken breasts oil hotsauce lemon juice buns cheese cabbage mayonnaise sour cream lettuce red pepper chicken 鸡肉 鸡 chicken united states 柠檬 奶酪 芝士"
+      "searchText": "15 minute chicken halloumi burgers 15分钟鸡肉哈鲁米汉堡 chicken united states chicken breasts oil hotsauce lemon juice buns cheese cabbage mayonnaise sour cream lettuce red pepper chicken 鸡肉 鸡 chicken united states 柠檬 奶酪 芝士 15分钟鸡肉哈鲁米汉堡 15 minute chicken halloumi burgers"
     },
     {
       "id": "themealdb-53050",
-      "title": "Ayam Percik",
+      "title": {
+        "en": "Ayam Percik",
+        "zh": "马来西亚椰香烤鸡"
+      },
       "category": "Chicken",
       "area": "Malaysian",
       "ingredients": [
@@ -559,13 +642,18 @@
         "大蒜",
         "蒜",
         "椰子",
-        "椰奶"
+        "椰奶",
+        "马来西亚椰香烤鸡",
+        "Ayam Percik"
       ],
-      "searchText": "ayam percik chicken malaysian chicken thighs challots ginger garlic clove cayenne pepper turmeric cumin coriander fennel tamarind paste coconut milk sugar water chicken 鸡肉 鸡 chicken malaysian 马来西亚 姜 大蒜 蒜 椰子 椰奶"
+      "searchText": "ayam percik 马来西亚椰香烤鸡 chicken malaysian chicken thighs challots ginger garlic clove cayenne pepper turmeric cumin coriander fennel tamarind paste coconut milk sugar water chicken 鸡肉 鸡 chicken malaysian 马来西亚 姜 大蒜 蒜 椰子 椰奶 马来西亚椰香烤鸡 ayam percik"
     },
     {
       "id": "themealdb-53466",
-      "title": "Belgian Waterzooi Chicken",
+      "title": {
+        "en": "Belgian Waterzooi Chicken",
+        "zh": "比利时奶油炖鸡"
+      },
       "category": "Chicken",
       "area": "",
       "ingredients": [
@@ -602,13 +690,18 @@
         "大蒜",
         "蒜",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "比利时奶油炖鸡",
+        "Belgian Waterzooi Chicken"
       ],
-      "searchText": "belgian waterzooi chicken chicken chicken legs chicken breast water carrots leek celery potatoes garlic rosemary cream bay leaf unsalted butter egg yolks pepper salt chicken 鸡肉 鸡 chicken 胡萝卜 土豆 马铃薯 大蒜 蒜 鸡蛋 蛋"
+      "searchText": "belgian waterzooi chicken 比利时奶油炖鸡 chicken chicken legs chicken breast water carrots leek celery potatoes garlic rosemary cream bay leaf unsalted butter egg yolks pepper salt chicken 鸡肉 鸡 chicken 胡萝卜 土豆 马铃薯 大蒜 蒜 鸡蛋 蛋 比利时奶油炖鸡 belgian waterzooi chicken"
     },
     {
       "id": "themealdb-53453",
-      "title": "Bengali Chicken Curry with Potatoes",
+      "title": {
+        "en": "Bengali Chicken Curry with Potatoes",
+        "zh": "孟加拉土豆咖喱鸡"
+      },
       "category": "Chicken",
       "area": "",
       "ingredients": [
@@ -644,13 +737,18 @@
         "西红柿",
         "咖喱",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "孟加拉土豆咖喱鸡",
+        "Bengali Chicken Curry with Potatoes"
       ],
-      "searchText": "bengali chicken curry with potatoes chicken olive oil onion ginger garlic paste tomato cayenne pepper curry powder garam masala ground turmeric ground cumin chicken breast red potatoes cilantro chicken 鸡肉 鸡 chicken 洋葱 大蒜 蒜 姜 番茄 西红柿 咖喱 土豆 马铃薯"
+      "searchText": "bengali chicken curry with potatoes 孟加拉土豆咖喱鸡 chicken olive oil onion ginger garlic paste tomato cayenne pepper curry powder garam masala ground turmeric ground cumin chicken breast red potatoes cilantro chicken 鸡肉 鸡 chicken 洋葱 大蒜 蒜 姜 番茄 西红柿 咖喱 土豆 马铃薯 孟加拉土豆咖喱鸡 bengali chicken curry with potatoes"
     },
     {
       "id": "themealdb-52940",
-      "title": "Brown Stew Chicken",
+      "title": {
+        "en": "Brown Stew Chicken",
+        "zh": "牙买加棕炖鸡"
+      },
       "category": "Chicken",
       "area": "Jamaican",
       "ingredients": [
@@ -689,13 +787,18 @@
         "胡萝卜",
         "青柠",
         "椰子",
-        "椰奶"
+        "椰奶",
+        "牙买加棕炖鸡",
+        "Brown Stew Chicken"
       ],
-      "searchText": "brown stew chicken chicken jamaican stew chicken tomato onions garlic clove red pepper carrots lime thyme allspice soy sauce cornstarch coconut milk vegetable oil chicken 鸡肉 鸡 chicken jamaican 牙买加 stew 番茄 西红柿 洋葱 大蒜 蒜 胡萝卜 青柠 椰子 椰奶"
+      "searchText": "brown stew chicken 牙买加棕炖鸡 chicken jamaican chicken tomato onions garlic clove red pepper carrots lime thyme allspice soy sauce cornstarch coconut milk vegetable oil chicken 鸡肉 鸡 chicken jamaican 牙买加 stew 番茄 西红柿 洋葱 大蒜 蒜 胡萝卜 青柠 椰子 椰奶 牙买加棕炖鸡 brown stew chicken"
     },
     {
       "id": "themealdb-53120",
-      "title": "Æbleskiver",
+      "title": {
+        "en": "Æbleskiver",
+        "zh": "挪威球形松饼"
+      },
       "category": "Dessert",
       "area": "Norway",
       "ingredients": [
@@ -722,13 +825,18 @@
         "dessert",
         "Norway",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "挪威球形松饼",
+        "Æbleskiver"
       ],
-      "searchText": "æbleskiver dessert norway flour salt granulated sugar baking powder cardamom egg buttermilk butter powdered sugar raspberry jam dessert 甜点 蛋糕 dessert norway 鸡蛋 蛋"
+      "searchText": "æbleskiver 挪威球形松饼 dessert norway flour salt granulated sugar baking powder cardamom egg buttermilk butter powdered sugar raspberry jam dessert 甜点 蛋糕 dessert norway 鸡蛋 蛋 挪威球形松饼 æbleskiver"
     },
     {
       "id": "themealdb-53138",
-      "title": "Alfajores",
+      "title": {
+        "en": "Alfajores",
+        "zh": "阿根廷焦糖夹心饼干"
+      },
       "category": "Dessert",
       "area": "Argentina",
       "ingredients": [
@@ -756,13 +864,18 @@
         "蛋",
         "柠檬",
         "椰子",
-        "椰奶"
+        "椰奶",
+        "阿根廷焦糖夹心饼干",
+        "Alfajores"
       ],
-      "searchText": "alfajores dessert argentina all purpose flour cornstarch butter sugar egg yolks lemon zest dulce de leche desiccated coconut dessert 甜点 蛋糕 dessert argentina 鸡蛋 蛋 柠檬 椰子 椰奶"
+      "searchText": "alfajores 阿根廷焦糖夹心饼干 dessert argentina all purpose flour cornstarch butter sugar egg yolks lemon zest dulce de leche desiccated coconut dessert 甜点 蛋糕 dessert argentina 鸡蛋 蛋 柠檬 椰子 椰奶 阿根廷焦糖夹心饼干 alfajores"
     },
     {
       "id": "themealdb-53111",
-      "title": "Anzac biscuits",
+      "title": {
+        "en": "Anzac biscuits",
+        "zh": "澳新椰香燕麦饼干"
+      },
       "category": "Dessert",
       "area": "Australian",
       "ingredients": [
@@ -786,13 +899,18 @@
         "dessert",
         "Australian",
         "椰子",
-        "椰奶"
+        "椰奶",
+        "澳新椰香燕麦饼干",
+        "Anzac biscuits"
       ],
-      "searchText": "anzac biscuits dessert australian porridge oats desiccated coconut plain flour caster sugar butter golden syrup bicarbonate of soda dessert 甜点 蛋糕 dessert australian 椰子 椰奶"
+      "searchText": "anzac biscuits 澳新椰香燕麦饼干 dessert australian porridge oats desiccated coconut plain flour caster sugar butter golden syrup bicarbonate of soda dessert 甜点 蛋糕 dessert australian 椰子 椰奶 澳新椰香燕麦饼干 anzac biscuits"
     },
     {
       "id": "themealdb-53049",
-      "title": "Apam balik",
+      "title": {
+        "en": "Apam balik",
+        "zh": "马来西亚花生煎饼"
+      },
       "category": "Dessert",
       "area": "Malaysian",
       "ingredients": [
@@ -819,13 +937,18 @@
         "Malaysian",
         "马来西亚",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "马来西亚花生煎饼",
+        "Apam balik"
       ],
-      "searchText": "apam balik dessert malaysian milk oil eggs flour baking powder salt unsalted butter sugar peanut butter dessert 甜点 蛋糕 dessert malaysian 马来西亚 鸡蛋 蛋"
+      "searchText": "apam balik 马来西亚花生煎饼 dessert malaysian milk oil eggs flour baking powder salt unsalted butter sugar peanut butter dessert 甜点 蛋糕 dessert malaysian 马来西亚 鸡蛋 蛋 马来西亚花生煎饼 apam balik"
     },
     {
       "id": "themealdb-52893",
-      "title": "Apple & Blackberry Crumble",
+      "title": {
+        "en": "Apple & Blackberry Crumble",
+        "zh": "英式苹果黑莓酥"
+      },
       "category": "Dessert",
       "area": "British",
       "ingredients": [
@@ -852,13 +975,18 @@
         "英国",
         "英式",
         "Pudding",
-        "苹果"
+        "苹果",
+        "英式苹果黑莓酥",
+        "Apple & Blackberry Crumble"
       ],
-      "searchText": "apple blackberry crumble dessert british pudding plain flour caster sugar butter braeburn apples demerara sugar blackberries cinnamon ice cream dessert 甜点 蛋糕 dessert british 英国 英式 pudding 苹果"
+      "searchText": "apple blackberry crumble 英式苹果黑莓酥 dessert british plain flour caster sugar butter braeburn apples demerara sugar blackberries cinnamon ice cream dessert 甜点 蛋糕 dessert british 英国 英式 pudding 苹果 英式苹果黑莓酥 apple blackberry crumble"
     },
     {
       "id": "themealdb-53354",
-      "title": "Jamaican Curry Goat",
+      "title": {
+        "en": "Jamaican Curry Goat",
+        "zh": "牙买加咖喱山羊"
+      },
       "category": "Goat",
       "area": "Jamaican",
       "ingredients": [
@@ -894,13 +1022,18 @@
         "大蒜",
         "蒜",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "牙买加咖喱山羊",
+        "Jamaican Curry Goat"
       ],
-      "searchText": "jamaican curry goat goat jamaican goat meat jamaican curry powder ground ginger all purpose seasoning allspice onion garlic thyme oil water scotch bonnet russet potato salt pepper goat 山羊肉 goat jamaican 牙买加 咖喱 姜 洋葱 大蒜 蒜 土豆 马铃薯"
+      "searchText": "jamaican curry goat 牙买加咖喱山羊 goat jamaican goat meat jamaican curry powder ground ginger all purpose seasoning allspice onion garlic thyme oil water scotch bonnet russet potato salt pepper goat 山羊肉 goat jamaican 牙买加 咖喱 姜 洋葱 大蒜 蒜 土豆 马铃薯 牙买加咖喱山羊 jamaican curry goat"
     },
     {
       "id": "themealdb-52968",
-      "title": "Mbuzi Choma (Roasted Goat)",
+      "title": {
+        "en": "Mbuzi Choma (Roasted Goat)",
+        "zh": "肯尼亚炭烤山羊"
+      },
       "category": "Goat",
       "area": "Kenyan",
       "ingredients": [
@@ -927,13 +1060,18 @@
         "Meat",
         "番茄",
         "西红柿",
-        "洋葱"
+        "洋葱",
+        "肯尼亚炭烤山羊",
+        "Mbuzi Choma (Roasted Goat)"
       ],
-      "searchText": "mbuzi choma roasted goat goat kenyan bbq meat goat meat corn flour tomatoes salt onion green chilli coriander leaves goat 山羊肉 goat kenyan 肯尼亚 bbq meat 番茄 西红柿 洋葱"
+      "searchText": "mbuzi choma roasted goat 肯尼亚炭烤山羊 goat kenyan goat meat corn flour tomatoes salt onion green chilli coriander leaves goat 山羊肉 goat kenyan 肯尼亚 bbq meat 番茄 西红柿 洋葱 肯尼亚炭烤山羊 mbuzi choma roasted goat"
     },
     {
       "id": "themealdb-53262",
-      "title": "Adana kebab",
+      "title": {
+        "en": "Adana kebab",
+        "zh": "土耳其阿达纳烤肉串"
+      },
       "category": "Lamb",
       "area": "Turkish",
       "ingredients": [
@@ -953,13 +1091,18 @@
         "羊肉",
         "lamb",
         "Turkish",
-        "土耳其"
+        "土耳其",
+        "土耳其阿达纳烤肉串",
+        "Adana kebab"
       ],
-      "searchText": "adana kebab lamb turkish romano pepper lamb mince red pepper paste pul biber sunflower oil lamb 羊肉 lamb turkish 土耳其"
+      "searchText": "adana kebab 土耳其阿达纳烤肉串 lamb turkish romano pepper lamb mince red pepper paste pul biber sunflower oil lamb 羊肉 lamb turkish 土耳其 土耳其阿达纳烤肉串 adana kebab"
     },
     {
       "id": "themealdb-53265",
-      "title": "Chilli ginger lamb chops",
+      "title": {
+        "en": "Chilli ginger lamb chops",
+        "zh": "土耳其辣椒姜汁羊排"
+      },
       "category": "Lamb",
       "area": "Turkish",
       "ingredients": [
@@ -985,13 +1128,18 @@
         "大蒜",
         "蒜",
         "姜",
-        "柠檬"
+        "柠檬",
+        "土耳其辣椒姜汁羊排",
+        "Chilli ginger lamb chops"
       ],
-      "searchText": "chilli ginger lamb chops lamb turkish garlic ginger lemon juice olive oil chili powder cumin lamb loin chops lamb 羊肉 lamb turkish 土耳其 大蒜 蒜 姜 柠檬"
+      "searchText": "chilli ginger lamb chops 土耳其辣椒姜汁羊排 lamb turkish garlic ginger lemon juice olive oil chili powder cumin lamb loin chops lamb 羊肉 lamb turkish 土耳其 大蒜 蒜 姜 柠檬 土耳其辣椒姜汁羊排 chilli ginger lamb chops"
     },
     {
       "id": "themealdb-53289",
-      "title": "Chorba Hamra bel Frik (Algerian Lamb, Tomato, and Freekeh Soup)",
+      "title": {
+        "en": "Chorba Hamra bel Frik (Algerian Lamb, Tomato, and Freekeh Soup)",
+        "zh": "阿尔及利亚羊肉番茄碎麦汤"
+      },
       "category": "Lamb",
       "area": "Algerian",
       "ingredients": [
@@ -1029,13 +1177,18 @@
         "番茄",
         "西红柿",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "阿尔及利亚羊肉番茄碎麦汤",
+        "Chorba Hamra bel Frik (Algerian Lamb, Tomato, and Freekeh Soup)"
       ],
-      "searchText": "chorba hamra bel frik algerian lamb tomato and freekeh soup lamb algerian freekeh lamb onion black pepper paprika ground cinnamon salt vegetable oil cilantro mint celery chickpeas water zucchini carrots tomato puree tomato potatoes lamb 羊肉 lamb algerian 洋葱 胡萝卜 番茄 西红柿 土豆 马铃薯"
+      "searchText": "chorba hamra bel frik algerian lamb tomato and freekeh soup 阿尔及利亚羊肉番茄碎麦汤 lamb algerian freekeh lamb onion black pepper paprika ground cinnamon salt vegetable oil cilantro mint celery chickpeas water zucchini carrots tomato puree tomato potatoes lamb 羊肉 lamb algerian 洋葱 胡萝卜 番茄 西红柿 土豆 马铃薯 阿尔及利亚羊肉番茄碎麦汤 chorba hamra bel frik algerian lamb tomato and freekeh soup"
     },
     {
       "id": "themealdb-53123",
-      "title": "Fårikål (Norwegian National Dish)",
+      "title": {
+        "en": "Fårikål (Norwegian National Dish)",
+        "zh": "挪威羊肉卷心菜锅"
+      },
       "category": "Lamb",
       "area": "Norway",
       "ingredients": [
@@ -1055,13 +1208,18 @@
         "Lamb",
         "羊肉",
         "lamb",
-        "Norway"
+        "Norway",
+        "挪威羊肉卷心菜锅",
+        "Fårikål (Norwegian National Dish)"
       ],
-      "searchText": "fårikål norwegian national dish lamb norway lamb white cabbage whole black peppercorns salt water flour lamb 羊肉 lamb norway"
+      "searchText": "fårikål norwegian national dish 挪威羊肉卷心菜锅 lamb norway lamb white cabbage whole black peppercorns salt water flour lamb 羊肉 lamb norway 挪威羊肉卷心菜锅 fårikål norwegian national dish"
     },
     {
       "id": "themealdb-53258",
-      "title": "Hot cumin lamb wrap with crunchy slaw & spicy mayo",
+      "title": {
+        "en": "Hot cumin lamb wrap with crunchy slaw & spicy mayo",
+        "zh": "土耳其孜然羊肉卷"
+      },
       "category": "Lamb",
       "area": "Turkish",
       "ingredients": [
@@ -1090,13 +1248,18 @@
         "土耳其",
         "胡萝卜",
         "洋葱",
-        "面包"
+        "面包",
+        "土耳其孜然羊肉卷",
+        "Hot cumin lamb wrap with crunchy slaw & spicy mayo"
       ],
-      "searchText": "hot cumin lamb wrap with crunchy slaw spicy mayo lamb turkish lamb leg olive oil ground cumin sugar white wine vinegar carrots spring onions white cabbage sweet peppadew peppers mayonnaise pita bread lamb 羊肉 lamb turkish 土耳其 胡萝卜 洋葱 面包"
+      "searchText": "hot cumin lamb wrap with crunchy slaw spicy mayo 土耳其孜然羊肉卷 lamb turkish lamb leg olive oil ground cumin sugar white wine vinegar carrots spring onions white cabbage sweet peppadew peppers mayonnaise pita bread lamb 羊肉 lamb turkish 土耳其 胡萝卜 洋葱 面包 土耳其孜然羊肉卷 hot cumin lamb wrap with crunchy slaw spicy mayo"
     },
     {
       "id": "themealdb-53527",
-      "title": "Achiote Oil (Aceite Achiotado) Recipe",
+      "title": {
+        "en": "Achiote Oil (Aceite Achiotado) Recipe",
+        "zh": "红木素油"
+      },
       "category": "Miscellaneous",
       "area": "",
       "ingredients": [
@@ -1112,13 +1275,18 @@
         "Miscellaneous",
         "综合",
         "misc",
-        ""
+        "",
+        "红木素油",
+        "Achiote Oil (Aceite Achiotado) Recipe"
       ],
-      "searchText": "achiote oil aceite achiotado recipe miscellaneous vegetable oil achiote seeds miscellaneous 综合 misc"
+      "searchText": "achiote oil aceite achiotado recipe 红木素油 miscellaneous vegetable oil achiote seeds miscellaneous 综合 misc 红木素油 achiote oil aceite achiotado recipe"
     },
     {
       "id": "themealdb-53525",
-      "title": "Ají de Aguacate Recipe (Colombian Spicy Avocado Sauce)",
+      "title": {
+        "en": "Ají de Aguacate Recipe (Colombian Spicy Avocado Sauce)",
+        "zh": "哥伦比亚牛油果辣酱"
+      },
       "category": "Miscellaneous",
       "area": "",
       "ingredients": [
@@ -1145,13 +1313,18 @@
         "鸡蛋",
         "蛋",
         "青柠",
-        "洋葱"
+        "洋葱",
+        "哥伦比亚牛油果辣酱",
+        "Ají de Aguacate Recipe (Colombian Spicy Avocado Sauce)"
       ],
-      "searchText": "ají de aguacate recipe colombian spicy avocado sauce miscellaneous avocado habanero pepper egg lime salt vinegar onion scallions cilantro miscellaneous 综合 misc 鸡蛋 蛋 青柠 洋葱"
+      "searchText": "ají de aguacate recipe colombian spicy avocado sauce 哥伦比亚牛油果辣酱 miscellaneous avocado habanero pepper egg lime salt vinegar onion scallions cilantro miscellaneous 综合 misc 鸡蛋 蛋 青柠 洋葱 哥伦比亚牛油果辣酱 ají de aguacate recipe colombian spicy avocado sauce"
     },
     {
       "id": "themealdb-52848",
-      "title": "Bean & Sausage Hotpot",
+      "title": {
+        "en": "Bean & Sausage Hotpot",
+        "zh": "英式豆子香肠锅"
+      },
       "category": "Miscellaneous",
       "area": "British",
       "ingredients": [
@@ -1174,13 +1347,18 @@
         "英国",
         "英式",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "英式豆子香肠锅",
+        "Bean & Sausage Hotpot"
       ],
-      "searchText": "bean sausage hotpot miscellaneous british sausages tomato sauce butter beans black treacle english mustard miscellaneous 综合 misc british 英国 英式 番茄 西红柿"
+      "searchText": "bean sausage hotpot 英式豆子香肠锅 miscellaneous british sausages tomato sauce butter beans black treacle english mustard miscellaneous 综合 misc british 英国 英式 番茄 西红柿 英式豆子香肠锅 bean sausage hotpot"
     },
     {
       "id": "themealdb-53438",
-      "title": "Bolita di Keshi",
+      "title": {
+        "en": "Bolita di Keshi",
+        "zh": "库拉索奶酪球"
+      },
       "category": "Miscellaneous",
       "area": "",
       "ingredients": [
@@ -1202,13 +1380,18 @@
         "奶酪",
         "芝士",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "库拉索奶酪球",
+        "Bolita di Keshi"
       ],
-      "searchText": "bolita di keshi miscellaneous cheddar cheese feta eggs cornstarch miscellaneous 综合 misc 奶酪 芝士 鸡蛋 蛋"
+      "searchText": "bolita di keshi 库拉索奶酪球 miscellaneous cheddar cheese feta eggs cornstarch miscellaneous 综合 misc 奶酪 芝士 鸡蛋 蛋 库拉索奶酪球 bolita di keshi"
     },
     {
       "id": "themealdb-52939",
-      "title": "Callaloo Jamaican Style",
+      "title": {
+        "en": "Callaloo Jamaican Style",
+        "zh": "牙买加式卡拉洛菜汤"
+      },
       "category": "Miscellaneous",
       "area": "Jamaican",
       "ingredients": [
@@ -1240,13 +1423,18 @@
         "洋葱",
         "番茄",
         "西红柿",
-        "香蕉"
+        "香蕉",
+        "牙买加式卡拉洛菜汤",
+        "Callaloo Jamaican Style"
       ],
-      "searchText": "callaloo jamaican style miscellaneous jamaican savory kale bacon garlic onion paprika thyme tomato red pepper banana vegetable oil miscellaneous 综合 misc jamaican 牙买加 savory 大蒜 蒜 洋葱 番茄 西红柿 香蕉"
+      "searchText": "callaloo jamaican style 牙买加式卡拉洛菜汤 miscellaneous jamaican kale bacon garlic onion paprika thyme tomato red pepper banana vegetable oil miscellaneous 综合 misc jamaican 牙买加 savory 大蒜 蒜 洋葱 番茄 西红柿 香蕉 牙买加式卡拉洛菜汤 callaloo jamaican style"
     },
     {
       "id": "themealdb-52839",
-      "title": "Chilli prawn linguine",
+      "title": {
+        "en": "Chilli prawn linguine",
+        "zh": "辣椒虾意面"
+      },
       "category": "Pasta",
       "area": "Italian",
       "ingredients": [
@@ -1284,13 +1472,18 @@
         "番茄",
         "西红柿",
         "面包",
-        "青柠"
+        "青柠",
+        "辣椒虾意面",
+        "Chilli prawn linguine"
       ],
-      "searchText": "chilli prawn linguine pasta italian linguine pasta sugar snap peas olive oil garlic clove red chilli king prawns cherry tomatoes basil leaves lettuce bread fromage frais lime caster sugar pasta 意面 意大利面 pasta italian 意大利 意式 面食 大蒜 蒜 虾 番茄 西红柿 面包 青柠"
+      "searchText": "chilli prawn linguine 辣椒虾意面 pasta italian linguine pasta sugar snap peas olive oil garlic clove red chilli king prawns cherry tomatoes basil leaves lettuce bread fromage frais lime caster sugar pasta 意面 意大利面 pasta italian 意大利 意式 面食 大蒜 蒜 虾 番茄 西红柿 面包 青柠 辣椒虾意面 chilli prawn linguine"
     },
     {
       "id": "themealdb-53064",
-      "title": "Fettuccine Alfredo",
+      "title": {
+        "en": "Fettuccine Alfredo",
+        "zh": "奶油宽面阿尔弗雷多"
+      },
       "category": "Pasta",
       "area": "Italian",
       "ingredients": [
@@ -1313,13 +1506,18 @@
         "pasta",
         "Italian",
         "意大利",
-        "意式"
+        "意式",
+        "奶油宽面阿尔弗雷多",
+        "Fettuccine Alfredo"
       ],
-      "searchText": "fettuccine alfredo pasta italian fettuccine heavy cream butter parmesan parsley black pepper pasta 意面 意大利面 pasta italian 意大利 意式"
+      "searchText": "fettuccine alfredo 奶油宽面阿尔弗雷多 pasta italian fettuccine heavy cream butter parmesan parsley black pepper pasta 意面 意大利面 pasta italian 意大利 意式 奶油宽面阿尔弗雷多 fettuccine alfredo"
     },
     {
       "id": "themealdb-52835",
-      "title": "Fettucine alfredo",
+      "title": {
+        "en": "Fettucine alfredo",
+        "zh": "奶油宽面（变体）"
+      },
       "category": "Pasta",
       "area": "Italian",
       "ingredients": [
@@ -1345,13 +1543,18 @@
         "意大利",
         "意式",
         "奶酪",
-        "芝士"
+        "芝士",
+        "奶油宽面（变体）",
+        "Fettucine alfredo"
       ],
-      "searchText": "fettucine alfredo pasta italian clotted cream butter corn flour parmesan cheese nutmeg fettuccine parsley pasta 意面 意大利面 pasta italian 意大利 意式 奶酪 芝士"
+      "searchText": "fettucine alfredo 奶油宽面 变体 pasta italian clotted cream butter corn flour parmesan cheese nutmeg fettuccine parsley pasta 意面 意大利面 pasta italian 意大利 意式 奶酪 芝士 奶油宽面 变体 fettucine alfredo"
     },
     {
       "id": "themealdb-52829",
-      "title": "Grilled Mac and Cheese Sandwich",
+      "title": {
+        "en": "Grilled Mac and Cheese Sandwich",
+        "zh": "烤芝士通心粉三明治"
+      },
       "category": "Pasta",
       "area": "United States",
       "ingredients": [
@@ -1387,13 +1590,18 @@
         "蒜",
         "奶酪",
         "芝士",
-        "面包"
+        "面包",
+        "烤芝士通心粉三明治",
+        "Grilled Mac and Cheese Sandwich"
       ],
-      "searchText": "grilled mac and cheese sandwich pasta united states cheesy macaroni plain flour mustard powder garlic powder kosher salt black pepper cayenne pepper butter whole milk heavy cream monterey jack cheese garlic powder bread cheddar cheese colby jack cheese pasta 意面 意大利面 pasta united states cheesy 大蒜 蒜 奶酪 芝士 面包"
+      "searchText": "grilled mac and cheese sandwich 烤芝士通心粉三明治 pasta united states macaroni plain flour mustard powder garlic powder kosher salt black pepper cayenne pepper butter whole milk heavy cream monterey jack cheese garlic powder bread cheddar cheese colby jack cheese pasta 意面 意大利面 pasta united states cheesy 大蒜 蒜 奶酪 芝士 面包 烤芝士通心粉三明治 grilled mac and cheese sandwich"
     },
     {
       "id": "themealdb-52987",
-      "title": "Lasagna Sandwiches",
+      "title": {
+        "en": "Lasagna Sandwiches",
+        "zh": "千层面三明治"
+      },
       "category": "Pasta",
       "area": "United States",
       "ingredients": [
@@ -1422,13 +1630,18 @@
         "洋葱",
         "面包",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "千层面三明治",
+        "Lasagna Sandwiches"
       ],
-      "searchText": "lasagna sandwiches pasta united states sandwich sour cream chopped onion dried oregano salt bread bacon tomato mozzarella butter pasta 意面 意大利面 pasta united states sandwich 洋葱 面包 番茄 西红柿"
+      "searchText": "lasagna sandwiches 千层面三明治 pasta united states sour cream chopped onion dried oregano salt bread bacon tomato mozzarella butter pasta 意面 意大利面 pasta united states sandwich 洋葱 面包 番茄 西红柿 千层面三明治 lasagna sandwiches"
     },
     {
       "id": "themealdb-52885",
-      "title": " Bubble & Squeak",
+      "title": {
+        "en": "Bubble & Squeak",
+        "zh": "英式煎土豆卷心菜"
+      },
       "category": "Pork",
       "area": "British",
       "ingredients": [
@@ -1457,13 +1670,18 @@
         "大蒜",
         "蒜",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "英式煎土豆卷心菜",
+        "Bubble & Squeak"
       ],
-      "searchText": "bubble squeak pork british sidedish speciality butter bacon onion garlic clove brussels sprouts potatoes pork 猪肉 pork british 英国 英式 sidedish speciality 洋葱 大蒜 蒜 土豆 马铃薯"
+      "searchText": "bubble squeak 英式煎土豆卷心菜 pork british butter bacon onion garlic clove brussels sprouts potatoes pork 猪肉 pork british 英国 英式 sidedish speciality 洋葱 大蒜 蒜 土豆 马铃薯 英式煎土豆卷心菜 bubble squeak"
     },
     {
       "id": "themealdb-53156",
-      "title": "Arroz al horno (baked rice)",
+      "title": {
+        "en": "Arroz al horno (baked rice)",
+        "zh": "西班牙烤饭"
+      },
       "category": "Pork",
       "area": "Spanish",
       "ingredients": [
@@ -1503,13 +1721,18 @@
         "鸡",
         "米饭",
         "米",
-        "柠檬"
+        "柠檬",
+        "西班牙烤饭",
+        "Arroz al horno (baked rice)"
       ],
-      "searchText": "arroz al horno baked rice pork spanish extra virgin olive oil pork belly slices black pudding bacon lardon onion red pepper plum tomatoes garlic clove paprika chilli flakes dried white beans chicken stock thyme paella rice lemon juice pork 猪肉 pork spanish 西班牙 洋葱 番茄 西红柿 大蒜 蒜 鸡肉 鸡 米饭 米 柠檬"
+      "searchText": "arroz al horno baked rice 西班牙烤饭 pork spanish extra virgin olive oil pork belly slices black pudding bacon lardon onion red pepper plum tomatoes garlic clove paprika chilli flakes dried white beans chicken stock thyme paella rice lemon juice pork 猪肉 pork spanish 西班牙 洋葱 番茄 西红柿 大蒜 蒜 鸡肉 鸡 米饭 米 柠檬 西班牙烤饭 arroz al horno baked rice"
     },
     {
       "id": "themealdb-53496",
-      "title": "Bai Sach Chrouk – Grilled Pork with Rice",
+      "title": {
+        "en": "Bai Sach Chrouk – Grilled Pork with Rice",
+        "zh": "越南烤猪排饭"
+      },
       "category": "Pork",
       "area": "",
       "ingredients": [
@@ -1541,13 +1764,18 @@
         "大蒜",
         "蒜",
         "米饭",
-        "米"
+        "米",
+        "越南烤猪排饭",
+        "Bai Sach Chrouk – Grilled Pork with Rice"
       ],
-      "searchText": "bai sach chrouk grilled pork with rice pork pork shoulder coconut milk soy sauce oyster sauce honey garlic black pepper jasmine rice water vegetable oil cucumber cilantro leaves pork 猪肉 pork 椰子 椰奶 大蒜 蒜 米饭 米"
+      "searchText": "bai sach chrouk grilled pork with rice 越南烤猪排饭 pork pork shoulder coconut milk soy sauce oyster sauce honey garlic black pepper jasmine rice water vegetable oil cucumber cilantro leaves pork 猪肉 pork 椰子 椰奶 大蒜 蒜 米饭 米 越南烤猪排饭 bai sach chrouk grilled pork with rice"
     },
     {
       "id": "themealdb-53242",
-      "title": "Barbecue pork buns",
+      "title": {
+        "en": "Barbecue pork buns",
+        "zh": "越南烧烤猪肉包"
+      },
       "category": "Pork",
       "area": "Vietnamese",
       "ingredients": [
@@ -1580,13 +1808,18 @@
         "番茄",
         "西红柿",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "越南烧烤猪肉包",
+        "Barbecue pork buns"
       ],
-      "searchText": "barbecue pork buns pork vietnamese sugar white bread mix sunflower oil bacon ginger garlic soy sauce clear honey tomato puree egg pork 猪肉 pork vietnamese 越南 面包 姜 大蒜 蒜 番茄 西红柿 鸡蛋 蛋"
+      "searchText": "barbecue pork buns 越南烧烤猪肉包 pork vietnamese sugar white bread mix sunflower oil bacon ginger garlic soy sauce clear honey tomato puree egg pork 猪肉 pork vietnamese 越南 面包 姜 大蒜 蒜 番茄 西红柿 鸡蛋 蛋 越南烧烤猪肉包 barbecue pork buns"
     },
     {
       "id": "themealdb-52995",
-      "title": "BBQ Pork Sloppy Joes",
+      "title": {
+        "en": "BBQ Pork Sloppy Joes",
+        "zh": "美式烧烤猪肉三明治"
+      },
       "category": "Pork",
       "area": "United States",
       "ingredients": [
@@ -1622,13 +1855,18 @@
         "青柠",
         "面包",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "美式烧烤猪肉三明治",
+        "BBQ Pork Sloppy Joes"
       ],
-      "searchText": "bbq pork sloppy joes pork united states potatoes red onions garlic lime bread pork barbeque sauce hotsauce tomato ketchup sugar vegetable oil salt pepper pork 猪肉 pork united states 土豆 马铃薯 洋葱 大蒜 蒜 青柠 面包 番茄 西红柿"
+      "searchText": "bbq pork sloppy joes 美式烧烤猪肉三明治 pork united states potatoes red onions garlic lime bread pork barbeque sauce hotsauce tomato ketchup sugar vegetable oil salt pepper pork 猪肉 pork united states 土豆 马铃薯 洋葱 大蒜 蒜 青柠 面包 番茄 西红柿 美式烧烤猪肉三明治 bbq pork sloppy joes"
     },
     {
       "id": "themealdb-53483",
-      "title": "Acaraje black-eyed pea fritters with shrimp filling",
+      "title": {
+        "en": "Acaraje black-eyed pea fritters with shrimp filling",
+        "zh": "巴西黑眼豆虾馅炸饼"
+      },
       "category": "Seafood",
       "area": "",
       "ingredients": [
@@ -1666,13 +1904,18 @@
         "虾",
         "番茄",
         "西红柿",
-        "青柠"
+        "青柠",
+        "巴西黑眼豆虾馅炸饼",
+        "Acaraje black-eyed pea fritters with shrimp filling"
       ],
-      "searchText": "acaraje black eyed pea fritters with shrimp filling seafood black eyed peas garlic green chilli red onions plain flour salt chilli powder baking powder vegetable oil ginger red chilli raw tiger prawns plum tomatoes coriander lime seafood 海鲜 鱼 seafood 大蒜 蒜 洋葱 姜 虾 番茄 西红柿 青柠"
+      "searchText": "acaraje black eyed pea fritters with shrimp filling 巴西黑眼豆虾馅炸饼 seafood black eyed peas garlic green chilli red onions plain flour salt chilli powder baking powder vegetable oil ginger red chilli raw tiger prawns plum tomatoes coriander lime seafood 海鲜 鱼 seafood 大蒜 蒜 洋葱 姜 虾 番茄 西红柿 青柠 巴西黑眼豆虾馅炸饼 acaraje black eyed pea fritters with shrimp filling"
     },
     {
       "id": "themealdb-53495",
-      "title": "Amok Trey – Cambodian Fish Curry",
+      "title": {
+        "en": "Amok Trey – Cambodian Fish Curry",
+        "zh": "柬埔寨酸汤鱼咖喱"
+      },
       "category": "Seafood",
       "area": "",
       "ingredients": [
@@ -1709,13 +1952,18 @@
         "鸡蛋",
         "蛋",
         "青柠",
-        "香蕉"
+        "香蕉",
+        "柬埔寨酸汤鱼咖喱",
+        "Amok Trey – Cambodian Fish Curry"
       ],
-      "searchText": "amok trey cambodian fish curry seafood fish fillet coconut milk red curry paste fish sauce brown sugar chicken stock egg kaffir lime leaves vegetable oil banana leaves cilantro lime seafood 海鲜 鱼 seafood 鱼肉 椰子 椰奶 咖喱 鸡肉 鸡 鸡蛋 蛋 青柠 香蕉"
+      "searchText": "amok trey cambodian fish curry 柬埔寨酸汤鱼咖喱 seafood fish fillet coconut milk red curry paste fish sauce brown sugar chicken stock egg kaffir lime leaves vegetable oil banana leaves cilantro lime seafood 海鲜 鱼 seafood 鱼肉 椰子 椰奶 咖喱 鸡肉 鸡 鸡蛋 蛋 青柠 香蕉 柬埔寨酸汤鱼咖喱 amok trey cambodian fish curry"
     },
     {
       "id": "themealdb-53147",
-      "title": "Arroz con gambas y calamar",
+      "title": {
+        "en": "Arroz con gambas y calamar",
+        "zh": "西班牙虾鱿鱼饭"
+      },
       "category": "Seafood",
       "area": "Spanish",
       "ingredients": [
@@ -1747,13 +1995,18 @@
         "米饭",
         "米",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "西班牙虾鱿鱼饭",
+        "Arroz con gambas y calamar"
       ],
-      "searchText": "arroz con gambas y calamar seafood spanish raw king prawns olive oil onion bay leaf saffron paella rice tomato puree white wine seafood stock squid seafood 海鲜 鱼 seafood spanish 西班牙 虾 洋葱 米饭 米 番茄 西红柿"
+      "searchText": "arroz con gambas y calamar 西班牙虾鱿鱼饭 seafood spanish raw king prawns olive oil onion bay leaf saffron paella rice tomato puree white wine seafood stock squid seafood 海鲜 鱼 seafood spanish 西班牙 虾 洋葱 米饭 米 番茄 西红柿 西班牙虾鱿鱼饭 arroz con gambas y calamar"
     },
     {
       "id": "themealdb-53481",
-      "title": "Bahia-style Moqueca prawn stew",
+      "title": {
+        "en": "Bahia-style Moqueca prawn stew",
+        "zh": "巴西海鲜炖锅"
+      },
       "category": "Seafood",
       "area": "",
       "ingredients": [
@@ -1792,13 +2045,18 @@
         "番茄",
         "西红柿",
         "米饭",
-        "米"
+        "米",
+        "巴西海鲜炖锅",
+        "Bahia-style Moqueca prawn stew"
       ],
-      "searchText": "bahia style moqueca prawn stew seafood raw king prawns lime juice garlic coconut oil spring onions onion red pepper chilli flakes paprika plum tomatoes coconut milk coriander rice seafood 海鲜 鱼 seafood 虾 青柠 大蒜 蒜 椰子 椰奶 洋葱 番茄 西红柿 米饭 米"
+      "searchText": "bahia style moqueca prawn stew 巴西海鲜炖锅 seafood raw king prawns lime juice garlic coconut oil spring onions onion red pepper chilli flakes paprika plum tomatoes coconut milk coriander rice seafood 海鲜 鱼 seafood 虾 青柠 大蒜 蒜 椰子 椰奶 洋葱 番茄 西红柿 米饭 米 巴西海鲜炖锅 bahia style moqueca prawn stew"
     },
     {
       "id": "themealdb-52959",
-      "title": "Baked salmon with fennel & tomatoes",
+      "title": {
+        "en": "Baked salmon with fennel & tomatoes",
+        "zh": "英式茴香番茄烤三文鱼"
+      },
       "category": "Seafood",
       "area": "British",
       "ingredients": [
@@ -1832,13 +2090,18 @@
         "番茄",
         "西红柿",
         "三文鱼",
-        "鲑鱼"
+        "鲑鱼",
+        "英式茴香番茄烤三文鱼",
+        "Baked salmon with fennel & tomatoes"
       ],
-      "searchText": "baked salmon with fennel tomatoes seafood british paleo keto highfat baking lowcarbs fennel parsley lemon cherry tomatoes olive oil salmon black olives seafood 海鲜 鱼 seafood british 英国 英式 paleo keto highfat baking lowcarbs 柠檬 番茄 西红柿 三文鱼 鲑鱼"
+      "searchText": "baked salmon with fennel tomatoes 英式茴香番茄烤三文鱼 seafood british fennel parsley lemon cherry tomatoes olive oil salmon black olives seafood 海鲜 鱼 seafood british 英国 英式 paleo keto highfat baking lowcarbs 柠檬 番茄 西红柿 三文鱼 鲑鱼 英式茴香番茄烤三文鱼 baked salmon with fennel tomatoes"
     },
     {
       "id": "themealdb-53373",
-      "title": "Air Fryer Egg Rolls",
+      "title": {
+        "en": "Air Fryer Egg Rolls",
+        "zh": "空气炸锅中式蛋卷"
+      },
       "category": "Side",
       "area": "Chinese",
       "ingredients": [
@@ -1876,13 +2139,18 @@
         "米饭",
         "米",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "空气炸锅中式蛋卷",
+        "Air Fryer Egg Rolls"
       ],
-      "searchText": "air fryer egg rolls side chinese olive oil ground pork garlic ginger carrots scallions cabbage soy sauce rice vinegar egg roll wrappers oil duck sauce plum sauce side 配菜 side chinese 中国 中式 猪肉 大蒜 蒜 姜 胡萝卜 米饭 米 鸡蛋 蛋"
+      "searchText": "air fryer egg rolls 空气炸锅中式蛋卷 side chinese olive oil ground pork garlic ginger carrots scallions cabbage soy sauce rice vinegar egg roll wrappers oil duck sauce plum sauce side 配菜 side chinese 中国 中式 猪肉 大蒜 蒜 姜 胡萝卜 米饭 米 鸡蛋 蛋 空气炸锅中式蛋卷 air fryer egg rolls"
     },
     {
       "id": "themealdb-53284",
-      "title": "Algerian Bouzgene Berber Bread with Roasted Pepper Sauce",
+      "title": {
+        "en": "Algerian Bouzgene Berber Bread with Roasted Pepper Sauce",
+        "zh": "阿尔及利亚柏柏尔面包配烤椒酱"
+      },
       "category": "Side",
       "area": "Algerian",
       "ingredients": [
@@ -1908,13 +2176,18 @@
         "番茄",
         "西红柿",
         "大蒜",
-        "蒜"
+        "蒜",
+        "阿尔及利亚柏柏尔面包配烤椒酱",
+        "Algerian Bouzgene Berber Bread with Roasted Pepper Sauce"
       ],
-      "searchText": "algerian bouzgene berber bread with roasted pepper sauce side algerian red pepper tomato olive oil garlic jalapeno salt semolina water side 配菜 side algerian 番茄 西红柿 大蒜 蒜"
+      "searchText": "algerian bouzgene berber bread with roasted pepper sauce 阿尔及利亚柏柏尔面包配烤椒酱 side algerian red pepper tomato olive oil garlic jalapeno salt semolina water side 配菜 side algerian 番茄 西红柿 大蒜 蒜 阿尔及利亚柏柏尔面包配烤椒酱 algerian bouzgene berber bread with roasted pepper sauce"
     },
     {
       "id": "themealdb-53282",
-      "title": "Algerian Carrots",
+      "title": {
+        "en": "Algerian Carrots",
+        "zh": "阿尔及利亚胡萝卜"
+      },
       "category": "Side",
       "area": "Algerian",
       "ingredients": [
@@ -1943,13 +2216,18 @@
         "胡萝卜",
         "大蒜",
         "蒜",
-        "柠檬"
+        "柠檬",
+        "阿尔及利亚胡萝卜",
+        "Algerian Carrots"
       ],
-      "searchText": "algerian carrots side algerian water carrots olive oil salt black pepper ground cinnamon ground cumin garlic thyme bay leaf lemon juice side 配菜 side algerian 胡萝卜 大蒜 蒜 柠檬"
+      "searchText": "algerian carrots 阿尔及利亚胡萝卜 side algerian water carrots olive oil salt black pepper ground cinnamon ground cumin garlic thyme bay leaf lemon juice side 配菜 side algerian 胡萝卜 大蒜 蒜 柠檬 阿尔及利亚胡萝卜 algerian carrots"
     },
     {
       "id": "themealdb-53529",
-      "title": "Almojábanas (Colombian Cheese Bread)",
+      "title": {
+        "en": "Almojábanas (Colombian Cheese Bread)",
+        "zh": "哥伦比亚芝士面包"
+      },
       "category": "Side",
       "area": "",
       "ingredients": [
@@ -1973,13 +2251,18 @@
         "side",
         "",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "哥伦比亚芝士面包",
+        "Almojábanas (Colombian Cheese Bread)"
       ],
-      "searchText": "almojábanas colombian cheese bread side cornmeal queso fresco mozzarella butter baking powder salt eggs milk side 配菜 side 鸡蛋 蛋"
+      "searchText": "almojábanas colombian cheese bread 哥伦比亚芝士面包 side cornmeal queso fresco mozzarella butter baking powder salt eggs milk side 配菜 side 鸡蛋 蛋 哥伦比亚芝士面包 almojábanas colombian cheese bread"
     },
     {
       "id": "themealdb-53389",
-      "title": "Apple Potato Mash (Hete bliksem) ",
+      "title": {
+        "en": "Apple Potato Mash (Hete bliksem)",
+        "zh": "荷兰苹果土豆泥"
+      },
       "category": "Side",
       "area": "Netherlands",
       "ingredients": [
@@ -2010,13 +2293,18 @@
         "奶酪",
         "芝士",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "荷兰苹果土豆泥",
+        "Apple Potato Mash (Hete bliksem)"
       ],
-      "searchText": "apple potato mash hete bliksem side netherlands apples potatoes cinnamon stick maple syrup ground cinnamon bacon cheese salt egg sesame seed side 配菜 side netherlands 苹果 土豆 马铃薯 奶酪 芝士 鸡蛋 蛋"
+      "searchText": "apple potato mash hete bliksem 荷兰苹果土豆泥 side netherlands apples potatoes cinnamon stick maple syrup ground cinnamon bacon cheese salt egg sesame seed side 配菜 side netherlands 苹果 土豆 马铃薯 奶酪 芝士 鸡蛋 蛋 荷兰苹果土豆泥 apple potato mash hete bliksem"
     },
     {
       "id": "themealdb-53169",
-      "title": "Ajo blanco",
+      "title": {
+        "en": "Ajo blanco",
+        "zh": "西班牙蒜香杏仁冷汤"
+      },
       "category": "Starter",
       "area": "Spanish",
       "ingredients": [
@@ -2039,13 +2327,18 @@
         "西班牙",
         "面包",
         "大蒜",
-        "蒜"
+        "蒜",
+        "西班牙蒜香杏仁冷汤",
+        "Ajo blanco"
       ],
-      "searchText": "ajo blanco starter spanish white bread almonds extra virgin olive oil garlic clove red wine vinegar starter 前菜 starter spanish 西班牙 面包 大蒜 蒜"
+      "searchText": "ajo blanco 西班牙蒜香杏仁冷汤 starter spanish white bread almonds extra virgin olive oil garlic clove red wine vinegar starter 前菜 starter spanish 西班牙 面包 大蒜 蒜 西班牙蒜香杏仁冷汤 ajo blanco"
     },
     {
       "id": "themealdb-53559",
-      "title": "Baked brie with sorrel jam",
+      "title": {
+        "en": "Baked brie with sorrel jam",
+        "zh": "烤布里奶酪配酸模果酱"
+      },
       "category": "Starter",
       "area": "",
       "ingredients": [
@@ -2073,13 +2366,18 @@
         "",
         "姜",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "烤布里奶酪配酸模果酱",
+        "Baked brie with sorrel jam"
       ],
-      "searchText": "baked brie with sorrel jam starter dried sorrel brown sugar ground ginger cinnamon vanilla pod orange water egg puff pastry brie sorrel jam starter 前菜 starter 姜 鸡蛋 蛋"
+      "searchText": "baked brie with sorrel jam 烤布里奶酪配酸模果酱 starter dried sorrel brown sugar ground ginger cinnamon vanilla pod orange water egg puff pastry brie sorrel jam starter 前菜 starter 姜 鸡蛋 蛋 烤布里奶酪配酸模果酱 baked brie with sorrel jam"
     },
     {
       "id": "themealdb-53546",
-      "title": "Black Bean soup",
+      "title": {
+        "en": "Black Bean soup",
+        "zh": "黑豆汤"
+      },
       "category": "Starter",
       "area": "",
       "ingredients": [
@@ -2117,13 +2415,18 @@
         "西红柿",
         "鸡肉",
         "鸡",
-        "青柠"
+        "青柠",
+        "黑豆汤",
+        "Black Bean soup"
       ],
-      "searchText": "black bean soup starter extra virgin olive oil red onions jalapeno garlic tomato puree kosher salt black pepper ground cumin chilli powder black beans chicken stock bay leaf sour cream avocado cilantro lime starter 前菜 starter 洋葱 大蒜 蒜 番茄 西红柿 鸡肉 鸡 青柠"
+      "searchText": "black bean soup 黑豆汤 starter extra virgin olive oil red onions jalapeno garlic tomato puree kosher salt black pepper ground cumin chilli powder black beans chicken stock bay leaf sour cream avocado cilantro lime starter 前菜 starter 洋葱 大蒜 蒜 番茄 西红柿 鸡肉 鸡 青柠 黑豆汤 black bean soup"
     },
     {
       "id": "themealdb-52842",
-      "title": "Broccoli & Stilton soup",
+      "title": {
+        "en": "Broccoli & Stilton soup",
+        "zh": "西兰花斯蒂尔顿奶酪汤"
+      },
       "category": "Starter",
       "area": "British",
       "ingredients": [
@@ -2155,13 +2458,18 @@
         "土豆",
         "马铃薯",
         "奶酪",
-        "芝士"
+        "芝士",
+        "西兰花斯蒂尔顿奶酪汤",
+        "Broccoli & Stilton soup"
       ],
-      "searchText": "broccoli stilton soup starter british soup cheesy rapeseed oil onion celery leek potatoes butter vegetable stock broccoli stilton cheese starter 前菜 starter british 英国 英式 soup cheesy 洋葱 土豆 马铃薯 奶酪 芝士"
+      "searchText": "broccoli stilton soup 西兰花斯蒂尔顿奶酪汤 starter british rapeseed oil onion celery leek potatoes butter vegetable stock broccoli stilton cheese starter 前菜 starter british 英国 英式 soup cheesy 洋葱 土豆 马铃薯 奶酪 芝士 西兰花斯蒂尔顿奶酪汤 broccoli stilton soup"
     },
     {
       "id": "themealdb-52840",
-      "title": "Clam chowder",
+      "title": {
+        "en": "Clam chowder",
+        "zh": "美式蛤蜊浓汤"
+      },
       "category": "Starter",
       "area": "United States",
       "ingredients": [
@@ -2189,13 +2497,18 @@
         "United States",
         "洋葱",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "美式蛤蜊浓汤",
+        "Clam chowder"
       ],
-      "searchText": "clam chowder starter united states clams butter bacon onion thyme bay leaf plain flour milk double cream potatoes parsley starter 前菜 starter united states 洋葱 土豆 马铃薯"
+      "searchText": "clam chowder 美式蛤蜊浓汤 starter united states clams butter bacon onion thyme bay leaf plain flour milk double cream potatoes parsley starter 前菜 starter united states 洋葱 土豆 马铃薯 美式蛤蜊浓汤 clam chowder"
     },
     {
       "id": "themealdb-53092",
-      "title": "Fasoliyyeh Bi Z-Zayt (Syrian Green Beans with Olive Oil)",
+      "title": {
+        "en": "Fasoliyyeh Bi Z-Zayt (Syrian Green Beans with Olive Oil)",
+        "zh": "叙利亚橄榄油青豆"
+      },
       "category": "Vegan",
       "area": "Syrian",
       "ingredients": [
@@ -2216,13 +2529,18 @@
         "vegan",
         "Syrian",
         "大蒜",
-        "蒜"
+        "蒜",
+        "叙利亚橄榄油青豆",
+        "Fasoliyyeh Bi Z-Zayt (Syrian Green Beans with Olive Oil)"
       ],
-      "searchText": "fasoliyyeh bi z zayt syrian green beans with olive oil vegan syrian green beans olive oil salt garlic cilantro vegan 纯素 vegan syrian 大蒜 蒜"
+      "searchText": "fasoliyyeh bi z zayt syrian green beans with olive oil 叙利亚橄榄油青豆 vegan syrian green beans olive oil salt garlic cilantro vegan 纯素 vegan syrian 大蒜 蒜 叙利亚橄榄油青豆 fasoliyyeh bi z zayt syrian green beans with olive oil"
     },
     {
       "id": "themealdb-53150",
-      "title": "Padron peppers",
+      "title": {
+        "en": "Padron peppers",
+        "zh": "西班牙帕德龙辣椒"
+      },
       "category": "Vegan",
       "area": "Spanish",
       "ingredients": [
@@ -2239,13 +2557,18 @@
         "纯素",
         "vegan",
         "Spanish",
-        "西班牙"
+        "西班牙",
+        "西班牙帕德龙辣椒",
+        "Padron peppers"
       ],
-      "searchText": "padron peppers vegan spanish olive oil padron peppers vegan 纯素 vegan spanish 西班牙"
+      "searchText": "padron peppers 西班牙帕德龙辣椒 vegan spanish olive oil padron peppers vegan 纯素 vegan spanish 西班牙 西班牙帕德龙辣椒 padron peppers"
     },
     {
       "id": "themealdb-53115",
-      "title": "Red onion pickle",
+      "title": {
+        "en": "Red onion pickle",
+        "zh": "挪威红洋葱腌菜"
+      },
       "category": "Vegan",
       "area": "Norway",
       "ingredients": [
@@ -2266,13 +2589,18 @@
         "纯素",
         "vegan",
         "Norway",
-        "洋葱"
+        "洋葱",
+        "挪威红洋葱腌菜",
+        "Red onion pickle"
       ],
-      "searchText": "red onion pickle vegan norway red onions sea salt cider vinegar granulated sugar black pepper bay leaves vegan 纯素 vegan norway 洋葱"
+      "searchText": "red onion pickle 挪威红洋葱腌菜 vegan norway red onions sea salt cider vinegar granulated sugar black pepper bay leaves vegan 纯素 vegan norway 洋葱 挪威红洋葱腌菜 red onion pickle"
     },
     {
       "id": "themealdb-52942",
-      "title": "Roast fennel and aubergine paella",
+      "title": {
+        "en": "Roast fennel and aubergine paella",
+        "zh": "西班牙烤茴香茄子海鲜饭"
+      },
       "category": "Vegan",
       "area": "Spanish",
       "ingredients": [
@@ -2307,13 +2635,18 @@
         "洋葱",
         "米饭",
         "米",
-        "柠檬"
+        "柠檬",
+        "西班牙烤茴香茄子海鲜饭",
+        "Roast fennel and aubergine paella"
       ],
-      "searchText": "roast fennel and aubergine paella vegan spanish vegan paella baby aubergine fennel red pepper courgettes onion paella rice paprika saffron white wine vegetable stock frozen peas lemon parsley salt black pepper vegan 纯素 vegan spanish 西班牙 paella 洋葱 米饭 米 柠檬"
+      "searchText": "roast fennel and aubergine paella 西班牙烤茴香茄子海鲜饭 vegan spanish baby aubergine fennel red pepper courgettes onion paella rice paprika saffron white wine vegetable stock frozen peas lemon parsley salt black pepper vegan 纯素 vegan spanish 西班牙 paella 洋葱 米饭 米 柠檬 西班牙烤茴香茄子海鲜饭 roast fennel and aubergine paella"
     },
     {
       "id": "themealdb-53250",
-      "title": "Vegan banh mi",
+      "title": {
+        "en": "Vegan banh mi",
+        "zh": "越南纯素法棍三明治"
+      },
       "category": "Vegan",
       "area": "Vietnamese",
       "ingredients": [
@@ -2337,13 +2670,18 @@
         "纯素",
         "vegan",
         "Vietnamese",
-        "越南"
+        "越南",
+        "越南纯素法棍三明治",
+        "Vegan banh mi"
       ],
-      "searchText": "vegan banh mi vegan vietnamese raw vegetables vegan white wine vinegar golden caster sugar baguette hummus tempeh coriander mint hotsauce vegan 纯素 vegan vietnamese 越南"
+      "searchText": "vegan banh mi 越南纯素法棍三明治 vegan vietnamese raw vegetables vegan white wine vinegar golden caster sugar baguette hummus tempeh coriander mint hotsauce vegan 纯素 vegan vietnamese 越南 越南纯素法棍三明治 vegan banh mi"
     },
     {
       "id": "themealdb-53158",
-      "title": "Air fryer patatas bravas",
+      "title": {
+        "en": "Air fryer patatas bravas",
+        "zh": "空气炸锅西班牙辣酱土豆"
+      },
       "category": "Vegetarian",
       "area": "Spanish",
       "ingredients": [
@@ -2373,13 +2711,18 @@
         "大蒜",
         "蒜",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "空气炸锅西班牙辣酱土豆",
+        "Air fryer patatas bravas"
       ],
-      "searchText": "air fryer patatas bravas vegetarian spanish potatoes olive oil onion garlic paprika tomato puree tinned tomatos basil leaves vegetarian 素食 vegetarian spanish 西班牙 土豆 马铃薯 洋葱 大蒜 蒜 番茄 西红柿"
+      "searchText": "air fryer patatas bravas 空气炸锅西班牙辣酱土豆 vegetarian spanish potatoes olive oil onion garlic paprika tomato puree tinned tomatos basil leaves vegetarian 素食 vegetarian spanish 西班牙 土豆 马铃薯 洋葱 大蒜 蒜 番茄 西红柿 空气炸锅西班牙辣酱土豆 air fryer patatas bravas"
     },
     {
       "id": "themealdb-53288",
-      "title": "Algerian Flafla (Bell Pepper Salad)",
+      "title": {
+        "en": "Algerian Flafla (Bell Pepper Salad)",
+        "zh": "阿尔及利亚彩椒沙拉"
+      },
       "category": "Vegetarian",
       "area": "Algerian",
       "ingredients": [
@@ -2405,13 +2748,18 @@
         "大蒜",
         "蒜",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "阿尔及利亚彩椒沙拉",
+        "Algerian Flafla (Bell Pepper Salad)"
       ],
-      "searchText": "algerian flafla bell pepper salad vegetarian algerian green pepper olive oil red onions garlic salt pepper plum tomatoes vegetarian 素食 vegetarian algerian 洋葱 大蒜 蒜 番茄 西红柿"
+      "searchText": "algerian flafla bell pepper salad 阿尔及利亚彩椒沙拉 vegetarian algerian green pepper olive oil red onions garlic salt pepper plum tomatoes vegetarian 素食 vegetarian algerian 洋葱 大蒜 蒜 番茄 西红柿 阿尔及利亚彩椒沙拉 algerian flafla bell pepper salad"
     },
     {
       "id": "themealdb-53278",
-      "title": "Aubergine & hummus grills",
+      "title": {
+        "en": "Aubergine & hummus grills",
+        "zh": "土耳其茄子鹰嘴豆泥烤盘"
+      },
       "category": "Vegetarian",
       "area": "Turkish",
       "ingredients": [
@@ -2439,13 +2787,18 @@
         "面包",
         "番茄",
         "西红柿",
-        "柠檬"
+        "柠檬",
+        "土耳其茄子鹰嘴豆泥烤盘",
+        "Aubergine & hummus grills"
       ],
-      "searchText": "aubergine hummus grills vegetarian turkish aubergine vegetable oil bread hummus walnuts parsley cherry tomatoes lemon extra virgin olive oil vegetarian 素食 vegetarian turkish 土耳其 面包 番茄 西红柿 柠檬"
+      "searchText": "aubergine hummus grills 土耳其茄子鹰嘴豆泥烤盘 vegetarian turkish aubergine vegetable oil bread hummus walnuts parsley cherry tomatoes lemon extra virgin olive oil vegetarian 素食 vegetarian turkish 土耳其 面包 番茄 西红柿 柠檬 土耳其茄子鹰嘴豆泥烤盘 aubergine hummus grills"
     },
     {
       "id": "themealdb-53267",
-      "title": "Aubergine couscous salad",
+      "title": {
+        "en": "Aubergine couscous salad",
+        "zh": "土耳其茄子库斯库斯沙拉"
+      },
       "category": "Vegetarian",
       "area": "Turkish",
       "ingredients": [
@@ -2473,13 +2826,18 @@
         "西红柿",
         "奶酪",
         "芝士",
-        "柠檬"
+        "柠檬",
+        "土耳其茄子库斯库斯沙拉",
+        "Aubergine couscous salad"
       ],
-      "searchText": "aubergine couscous salad vegetarian turkish aubergine olive oil couscous vegetable stock cherry tomatoes mint goats cheese lemon vegetarian 素食 vegetarian turkish 土耳其 番茄 西红柿 奶酪 芝士 柠檬"
+      "searchText": "aubergine couscous salad 土耳其茄子库斯库斯沙拉 vegetarian turkish aubergine olive oil couscous vegetable stock cherry tomatoes mint goats cheese lemon vegetarian 素食 vegetarian turkish 土耳其 番茄 西红柿 奶酪 芝士 柠檬 土耳其茄子库斯库斯沙拉 aubergine couscous salad"
     },
     {
       "id": "themealdb-53107",
-      "title": "Avocado dip with new potatoes",
+      "title": {
+        "en": "Avocado dip with new potatoes",
+        "zh": "澳式牛油果蘸酱配新土豆"
+      },
       "category": "Vegetarian",
       "area": "Australian",
       "ingredients": [
@@ -2506,13 +2864,18 @@
         "青柠",
         "柠檬",
         "土豆",
-        "马铃薯"
+        "马铃薯",
+        "澳式牛油果蘸酱配新土豆",
+        "Avocado dip with new potatoes"
       ],
-      "searchText": "avocado dip with new potatoes vegetarian australian avocado natural yoghurt lime lemon baby new potatoes olive oil hot chilli powder cumin seeds tortillas vegetarian 素食 vegetarian australian 青柠 柠檬 土豆 马铃薯"
+      "searchText": "avocado dip with new potatoes 澳式牛油果蘸酱配新土豆 vegetarian australian avocado natural yoghurt lime lemon baby new potatoes olive oil hot chilli powder cumin seeds tortillas vegetarian 素食 vegetarian australian 青柠 柠檬 土豆 马铃薯 澳式牛油果蘸酱配新土豆 avocado dip with new potatoes"
     },
     {
       "id": "themealdb-53065",
-      "title": "Sushi",
+      "title": {
+        "en": "Sushi",
+        "zh": "寿司"
+      },
       "category": "Seafood",
       "area": "Japanese",
       "ingredients": [
@@ -2538,13 +2901,17 @@
         "日式",
         "米饭",
         "米",
-        "寿司"
+        "寿司",
+        "Sushi"
       ],
-      "searchText": "sushi seafood japanese sushi rice rice wine caster sugar mayonnaise soy sauce cucumber seafood 海鲜 鱼 seafood japanese 日本 日式 米饭 米 寿司"
+      "searchText": "sushi 寿司 seafood japanese sushi rice rice wine caster sugar mayonnaise soy sauce cucumber seafood 海鲜 鱼 seafood japanese 日本 日式 米饭 米 寿司 sushi"
     },
     {
       "id": "themealdb-52947",
-      "title": "Ma Po Tofu",
+      "title": {
+        "en": "Ma Po Tofu",
+        "zh": "麻婆豆腐"
+      },
       "category": "Beef",
       "area": "Chinese",
       "ingredients": [
@@ -2581,13 +2948,18 @@
         "洋葱",
         "大蒜",
         "蒜",
-        "姜"
+        "姜",
+        "麻婆豆腐",
+        "Ma Po Tofu"
       ],
-      "searchText": "ma po tofu beef chinese tofu minced beef sesame seed oil doubanjiang fermented black beans pepper salt sichuan pepper soy sauce water olive oil scallions spring onions garlic ginger cornstarch beef 牛肉 beef chinese 中国 中式 豆腐 洋葱 大蒜 蒜 姜"
+      "searchText": "ma po tofu 麻婆豆腐 beef chinese tofu minced beef sesame seed oil doubanjiang fermented black beans pepper salt sichuan pepper soy sauce water olive oil scallions spring onions garlic ginger cornstarch beef 牛肉 beef chinese 中国 中式 豆腐 洋葱 大蒜 蒜 姜 麻婆豆腐 ma po tofu"
     },
     {
       "id": "themealdb-53240",
-      "title": "Tofu, greens & cashew stir-fry",
+      "title": {
+        "en": "Tofu, greens & cashew stir-fry",
+        "zh": "豆腐时蔬腰果炒"
+      },
       "category": "Vegetarian",
       "area": "Vietnamese",
       "ingredients": [
@@ -2617,13 +2989,18 @@
         "大蒜",
         "蒜",
         "洋葱",
-        "豆腐"
+        "豆腐",
+        "豆腐时蔬腰果炒",
+        "Tofu, greens & cashew stir-fry"
       ],
-      "searchText": "tofu greens cashew stir fry vegetarian vietnamese vegetable oil broccoli garlic clove red chilli spring onions soya bean pak choi marinated tofu hoisin sauce soy sauce cashew nuts vegetarian 素食 vegetarian vietnamese 越南 大蒜 蒜 洋葱 豆腐"
+      "searchText": "tofu greens cashew stir fry 豆腐时蔬腰果炒 vegetarian vietnamese vegetable oil broccoli garlic clove red chilli spring onions soya bean pak choi marinated tofu hoisin sauce soy sauce cashew nuts vegetarian 素食 vegetarian vietnamese 越南 大蒜 蒜 洋葱 豆腐 豆腐时蔬腰果炒 tofu greens cashew stir fry"
     },
     {
       "id": "themealdb-53369",
-      "title": "Silken Tofu with Sesame Soy Sauce",
+      "title": {
+        "en": "Silken Tofu with Sesame Soy Sauce",
+        "zh": "芝麻酱油嫩豆腐"
+      },
       "category": "Vegetarian",
       "area": "Chinese",
       "ingredients": [
@@ -2645,13 +3022,18 @@
         "Chinese",
         "中国",
         "中式",
-        "豆腐"
+        "豆腐",
+        "芝麻酱油嫩豆腐",
+        "Silken Tofu with Sesame Soy Sauce"
       ],
-      "searchText": "silken tofu with sesame soy sauce vegetarian chinese silken tofu soy sauce chinese sesame sauce scallions sesame seed vegetarian 素食 vegetarian chinese 中国 中式 豆腐"
+      "searchText": "silken tofu with sesame soy sauce 芝麻酱油嫩豆腐 vegetarian chinese silken tofu soy sauce chinese sesame sauce scallions sesame seed vegetarian 素食 vegetarian chinese 中国 中式 豆腐 芝麻酱油嫩豆腐 silken tofu with sesame soy sauce"
     },
     {
       "id": "themealdb-53383",
-      "title": "Ramen Noodles with Boiled Egg",
+      "title": {
+        "en": "Ramen Noodles with Boiled Egg",
+        "zh": "拉面配溏心蛋"
+      },
       "category": "Miscellaneous",
       "area": "Chinese",
       "ingredients": [
@@ -2680,13 +3062,18 @@
         "面",
         "鸡蛋",
         "蛋",
-        "洋葱"
+        "洋葱",
+        "拉面配溏心蛋",
+        "Ramen Noodles with Boiled Egg"
       ],
-      "searchText": "ramen noodles with boiled egg miscellaneous chinese noodles water egg soy sauce chilli sauce spring onions salt pepper miscellaneous 综合 misc chinese 中国 中式 面条 面 鸡蛋 蛋 洋葱"
+      "searchText": "ramen noodles with boiled egg 拉面配溏心蛋 miscellaneous chinese noodles water egg soy sauce chilli sauce spring onions salt pepper miscellaneous 综合 misc chinese 中国 中式 面条 面 鸡蛋 蛋 洋葱 拉面配溏心蛋 ramen noodles with boiled egg"
     },
     {
       "id": "themealdb-53257",
-      "title": "kofta burgers",
+      "title": {
+        "en": "kofta burgers",
+        "zh": "土耳其烤肉汉堡"
+      },
       "category": "Lamb",
       "area": "Turkish",
       "ingredients": [
@@ -2718,13 +3105,18 @@
         "蒜",
         "面包",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "土耳其烤肉汉堡",
+        "kofta burgers"
       ],
-      "searchText": "kofta burgers lamb turkish lamb onion garlic bulb garam masala coriander chilli sauce pita bread tomato red cabbage red onions yogurt lamb 羊肉 lamb turkish 土耳其 洋葱 大蒜 蒜 面包 番茄 西红柿"
+      "searchText": "kofta burgers 土耳其烤肉汉堡 lamb turkish lamb onion garlic bulb garam masala coriander chilli sauce pita bread tomato red cabbage red onions yogurt lamb 羊肉 lamb turkish 土耳其 洋葱 大蒜 蒜 面包 番茄 西红柿 土耳其烤肉汉堡 kofta burgers"
     },
     {
       "id": "themealdb-53010",
-      "title": "Lamb Tzatziki Burgers",
+      "title": {
+        "en": "Lamb Tzatziki Burgers",
+        "zh": "希腊酸奶黄瓜酱羊肉汉堡"
+      },
       "category": "Lamb",
       "area": "Greek",
       "ingredients": [
@@ -2752,13 +3144,18 @@
         "Greek",
         "希腊",
         "大蒜",
-        "蒜"
+        "蒜",
+        "希腊酸奶黄瓜酱羊肉汉堡",
+        "Lamb Tzatziki Burgers"
       ],
-      "searchText": "lamb tzatziki burgers lamb greek bulgur wheat lamb mince cumin coriander paprika garlic olive oil bun cucumber greek yogurt mint lamb 羊肉 lamb greek 希腊 大蒜 蒜"
+      "searchText": "lamb tzatziki burgers 希腊酸奶黄瓜酱羊肉汉堡 lamb greek bulgur wheat lamb mince cumin coriander paprika garlic olive oil bun cucumber greek yogurt mint lamb 羊肉 lamb greek 希腊 大蒜 蒜 希腊酸奶黄瓜酱羊肉汉堡 lamb tzatziki burgers"
     },
     {
       "id": "themealdb-53562",
-      "title": "Breadfruit Tacos",
+      "title": {
+        "en": "Breadfruit Tacos",
+        "zh": "面包果塔可"
+      },
       "category": "Side",
       "area": "",
       "ingredients": [
@@ -2780,13 +3177,18 @@
         "",
         "面包",
         "鱼",
-        "鱼肉"
+        "鱼肉",
+        "面包果塔可",
+        "Breadfruit Tacos"
       ],
-      "searchText": "breadfruit tacos side breadfruit water codfish bulljaw lettuce oil side 配菜 side 面包 鱼 鱼肉"
+      "searchText": "breadfruit tacos 面包果塔可 side breadfruit water codfish bulljaw lettuce oil side 配菜 side 面包 鱼 鱼肉 面包果塔可 breadfruit tacos"
     },
     {
       "id": "themealdb-52819",
-      "title": "Cajun spiced fish tacos",
+      "title": {
+        "en": "Cajun spiced fish tacos",
+        "zh": "卡真香料鱼塔可"
+      },
       "category": "Seafood",
       "area": "Mexican",
       "ingredients": [
@@ -2821,13 +3223,18 @@
         "洋葱",
         "柠檬",
         "大蒜",
-        "蒜"
+        "蒜",
+        "卡真香料鱼塔可",
+        "Cajun spiced fish tacos"
       ],
-      "searchText": "cajun spiced fish tacos seafood mexican spicy fish cajun cayenne pepper white fish vegetable oil flour tortilla avocado little gem lettuce spring onions salsa sour cream lemon garlic seafood 海鲜 鱼 seafood mexican 墨西哥 spicy fish 鱼肉 洋葱 柠檬 大蒜 蒜"
+      "searchText": "cajun spiced fish tacos 卡真香料鱼塔可 seafood mexican cajun cayenne pepper white fish vegetable oil flour tortilla avocado little gem lettuce spring onions salsa sour cream lemon garlic seafood 海鲜 鱼 seafood mexican 墨西哥 spicy fish 鱼肉 洋葱 柠檬 大蒜 蒜 卡真香料鱼塔可 cajun spiced fish tacos"
     },
     {
       "id": "themealdb-52830",
-      "title": "Crock Pot Chicken Baked Tacos",
+      "title": {
+        "en": "Crock Pot Chicken Baked Tacos",
+        "zh": "慢炖锅鸡肉烤塔可"
+      },
       "category": "Chicken",
       "area": "Mexican",
       "ingredients": [
@@ -2865,13 +3272,18 @@
         "奶酪",
         "芝士",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "慢炖锅鸡肉烤塔可",
+        "Crock Pot Chicken Baked Tacos"
       ],
-      "searchText": "crock pot chicken baked tacos chicken mexican chicken breasts vinaigrette dressing cumin smoked paprika garlic refried beans hard taco shells shredded mexican cheese grape tomatoes jalapeno avocado green salsa sour cream milk chicken 鸡肉 鸡 chicken mexican 墨西哥 大蒜 蒜 塔可 墨西哥卷 奶酪 芝士 番茄 西红柿"
+      "searchText": "crock pot chicken baked tacos 慢炖锅鸡肉烤塔可 chicken mexican chicken breasts vinaigrette dressing cumin smoked paprika garlic refried beans hard taco shells shredded mexican cheese grape tomatoes jalapeno avocado green salsa sour cream milk chicken 鸡肉 鸡 chicken mexican 墨西哥 大蒜 蒜 塔可 墨西哥卷 奶酪 芝士 番茄 西红柿 慢炖锅鸡肉烤塔可 crock pot chicken baked tacos"
     },
     {
       "id": "themealdb-53330",
-      "title": "Cassava pizza",
+      "title": {
+        "en": "Cassava pizza",
+        "zh": "委内瑞拉木薯披萨"
+      },
       "category": "Pork",
       "area": "Venezuela",
       "ingredients": [
@@ -2895,13 +3307,18 @@
         "pork",
         "Venezuela",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "委内瑞拉木薯披萨",
+        "Cassava pizza"
       ],
-      "searchText": "cassava pizza pork venezuela casabe tomato sauce chorizo turkey ham sweetcorn green olives paprika mozzarella pork 猪肉 pork venezuela 番茄 西红柿"
+      "searchText": "cassava pizza 委内瑞拉木薯披萨 pork venezuela casabe tomato sauce chorizo turkey ham sweetcorn green olives paprika mozzarella pork 猪肉 pork venezuela 番茄 西红柿 委内瑞拉木薯披萨 cassava pizza"
     },
     {
       "id": "themealdb-53140",
-      "title": "Matambre a la Pizza",
+      "title": {
+        "en": "Matambre a la Pizza",
+        "zh": "阿根廷披萨风味牛腹肉"
+      },
       "category": "Beef",
       "area": "Argentina",
       "ingredients": [
@@ -2924,13 +3341,18 @@
         "beef",
         "Argentina",
         "番茄",
-        "西红柿"
+        "西红柿",
+        "阿根廷披萨风味牛腹肉",
+        "Matambre a la Pizza"
       ],
-      "searchText": "matambre a la pizza beef argentina beef flank steak tomato sauce mozzarella oregano green olives salt pepper beef 牛肉 beef argentina 番茄 西红柿"
+      "searchText": "matambre a la pizza 阿根廷披萨风味牛腹肉 beef argentina beef flank steak tomato sauce mozzarella oregano green olives salt pepper beef 牛肉 beef argentina 番茄 西红柿 阿根廷披萨风味牛腹肉 matambre a la pizza"
     },
     {
       "id": "themealdb-53014",
-      "title": "Pizza Express Margherita",
+      "title": {
+        "en": "Pizza Express Margherita",
+        "zh": "意式玛格丽特披萨"
+      },
       "category": "Miscellaneous",
       "area": "Italian",
       "ingredients": [
@@ -2957,13 +3379,18 @@
         "misc",
         "Italian",
         "意大利",
-        "意式"
+        "意式",
+        "意式玛格丽特披萨",
+        "Pizza Express Margherita"
       ],
-      "searchText": "pizza express margherita miscellaneous italian water sugar yeast plain flour salt olive oil passata mozzarella oregano basil black pepper miscellaneous 综合 misc italian 意大利 意式"
+      "searchText": "pizza express margherita 意式玛格丽特披萨 miscellaneous italian water sugar yeast plain flour salt olive oil passata mozzarella oregano basil black pepper miscellaneous 综合 misc italian 意大利 意式 意式玛格丽特披萨 pizza express margherita"
     },
     {
       "id": "themealdb-52814",
-      "title": "Thai Green Curry",
+      "title": {
+        "en": "Thai Green Curry",
+        "zh": "泰式绿咖喱"
+      },
       "category": "Chicken",
       "area": "Thai",
       "ingredients": [
@@ -3006,13 +3433,18 @@
         "鱼肉",
         "青柠",
         "米饭",
-        "米"
+        "米",
+        "泰式绿咖喱",
+        "Thai Green Curry"
       ],
-      "searchText": "thai green curry chicken thai curry mild potatoes green beans sunflower oil garlic thai green curry paste coconut milk thai fish sauce sugar chicken lime basil rice chicken 鸡肉 鸡 chicken thai 泰国 泰式 curry mild 土豆 马铃薯 大蒜 蒜 咖喱 椰子 椰奶 鱼 鱼肉 青柠 米饭 米"
+      "searchText": "thai green curry 泰式绿咖喱 chicken thai potatoes green beans sunflower oil garlic thai green curry paste coconut milk thai fish sauce sugar chicken lime basil rice chicken 鸡肉 鸡 chicken thai 泰国 泰式 curry mild 土豆 马铃薯 大蒜 蒜 咖喱 椰子 椰奶 鱼 鱼肉 青柠 米饭 米 泰式绿咖喱 thai green curry"
     },
     {
       "id": "themealdb-53205",
-      "title": "Thai prawn curry",
+      "title": {
+        "en": "Thai prawn curry",
+        "zh": "泰式虾咖喱"
+      },
       "category": "Seafood",
       "area": "Thai",
       "ingredients": [
@@ -3045,13 +3477,18 @@
         "西红柿",
         "椰子",
         "椰奶",
-        "虾"
+        "虾",
+        "泰式虾咖喱",
+        "Thai prawn curry"
       ],
-      "searchText": "thai prawn curry seafood thai vegetable oil onion ginger thai red curry paste tinned tomatos coconut cream raw frozen prawns coriander seafood 海鲜 鱼 seafood thai 泰国 泰式 洋葱 姜 咖喱 番茄 西红柿 椰子 椰奶 虾"
+      "searchText": "thai prawn curry 泰式虾咖喱 seafood thai vegetable oil onion ginger thai red curry paste tinned tomatos coconut cream raw frozen prawns coriander seafood 海鲜 鱼 seafood thai 泰国 泰式 洋葱 姜 咖喱 番茄 西红柿 椰子 椰奶 虾 泰式虾咖喱 thai prawn curry"
     },
     {
       "id": "themealdb-52868",
-      "title": "Kidney Bean Curry",
+      "title": {
+        "en": "Kidney Bean Curry",
+        "zh": "印度腰豆咖喱"
+      },
       "category": "Vegetarian",
       "area": "India",
       "ingredients": [
@@ -3085,13 +3522,18 @@
         "番茄",
         "西红柿",
         "米饭",
-        "米"
+        "米",
+        "印度腰豆咖喱",
+        "Kidney Bean Curry"
       ],
-      "searchText": "kidney bean curry vegetarian india curry vegetable oil onion garlic ginger coriander cumin paprika garam masala chopped tomatoes kidney beans basmati rice vegetarian 素食 vegetarian india curry 洋葱 大蒜 蒜 姜 番茄 西红柿 米饭 米"
+      "searchText": "kidney bean curry 印度腰豆咖喱 vegetarian india vegetable oil onion garlic ginger coriander cumin paprika garam masala chopped tomatoes kidney beans basmati rice vegetarian 素食 vegetarian india curry 洋葱 大蒜 蒜 姜 番茄 西红柿 米饭 米 印度腰豆咖喱 kidney bean curry"
     },
     {
       "id": "themealdb-52873",
-      "title": "Beef Dumpling Stew",
+      "title": {
+        "en": "Beef Dumpling Stew",
+        "zh": "英式牛肉饺子炖锅"
+      },
       "category": "Beef",
       "area": "British",
       "ingredients": [
@@ -3131,13 +3573,18 @@
         "大蒜",
         "蒜",
         "洋葱",
-        "胡萝卜"
+        "胡萝卜",
+        "英式牛肉饺子炖锅",
+        "Beef Dumpling Stew"
       ],
-      "searchText": "beef dumpling stew beef british stew baking olive oil butter beef plain flour garlic onions celery carrots leek swede red wine beef stock bay leaf thyme parsley baking powder suet water beef 牛肉 beef british 英国 英式 stew baking 大蒜 蒜 洋葱 胡萝卜"
+      "searchText": "beef dumpling stew 英式牛肉饺子炖锅 beef british olive oil butter beef plain flour garlic onions celery carrots leek swede red wine beef stock bay leaf thyme parsley baking powder suet water beef 牛肉 beef british 英国 英式 stew baking 大蒜 蒜 洋葱 胡萝卜 英式牛肉饺子炖锅 beef dumpling stew"
     },
     {
       "id": "themealdb-53444",
-      "title": "Tirolean Dumplings",
+      "title": {
+        "en": "Tirolean Dumplings",
+        "zh": "蒂罗尔饺子"
+      },
       "category": "Pork",
       "area": "",
       "ingredients": [
@@ -3165,13 +3612,18 @@
         "",
         "面包",
         "鸡蛋",
-        "蛋"
+        "蛋",
+        "蒂罗尔饺子",
+        "Tirolean Dumplings"
       ],
-      "searchText": "tirolean dumplings pork bread milk smoked ham eggs shallots butter parsley flour salt pepper nutmeg pork 猪肉 pork 面包 鸡蛋 蛋"
+      "searchText": "tirolean dumplings 蒂罗尔饺子 pork bread milk smoked ham eggs shallots butter parsley flour salt pepper nutmeg pork 猪肉 pork 面包 鸡蛋 蛋 蒂罗尔饺子 tirolean dumplings"
     },
     {
       "id": "themealdb-53227",
-      "title": "Rice paper dumplings",
+      "title": {
+        "en": "Rice paper dumplings",
+        "zh": "越南米纸饺"
+      },
       "category": "Pork",
       "area": "Vietnamese",
       "ingredients": [
@@ -3207,9 +3659,11 @@
         "姜",
         "洋葱",
         "米饭",
-        "米"
+        "米",
+        "越南米纸饺",
+        "Rice paper dumplings"
       ],
-      "searchText": "rice paper dumplings pork vietnamese white cabbage carrots shiitake mushrooms ground pork garlic ginger soy sauce sesame seed oil spring onions rice paper sheets vegetable oil rice vinegar sesame seed pork 猪肉 pork vietnamese 越南 胡萝卜 蘑菇 大蒜 蒜 姜 洋葱 米饭 米"
+      "searchText": "rice paper dumplings 越南米纸饺 pork vietnamese white cabbage carrots shiitake mushrooms ground pork garlic ginger soy sauce sesame seed oil spring onions rice paper sheets vegetable oil rice vinegar sesame seed pork 猪肉 pork vietnamese 越南 胡萝卜 蘑菇 大蒜 蒜 姜 洋葱 米饭 米 越南米纸饺 rice paper dumplings"
     }
   ]
 }

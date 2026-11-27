@@ -18,7 +18,9 @@ function columnValue(row: Recipe, column: string): string {
   };
   const key = (snakeToCamel[column] ?? column) as keyof Recipe;
   const value = row[key];
-  return Array.isArray(value) ? value.join(" ") : String(value ?? "");
+  if (Array.isArray(value)) return value.join(" ");
+  if (value && typeof value === "object") return Object.values(value).join(" ");
+  return String(value ?? "");
 }
 
 function ilikePattern(pattern: string): RegExp {

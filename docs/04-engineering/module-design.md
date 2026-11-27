@@ -140,7 +140,7 @@ flowchart TB
 
 - 展示当天热量与蛋白质/碳水/脂肪摘要。
 - 展示 1–3 个个性化推荐及“为什么推荐”的解释。
-- 提供基于 Supabase 兼容 Mock 的菜品搜索（91 道菜谱）；按标题、关键词/食材、分类/地区分层排序，短前缀如 chi 优先返回 Chicken/Chilli 菜名，避免分类泛匹配淹没结果。
+- 提供基于 Supabase 兼容 Mock 的菜品搜索（91 道双语菜谱）；title 为 en/zh 对象，按标题、关键词/食材、分类/地区分层排序，结果按当前语言显示。
 - 在页面内展开更多推荐；不新增食谱详情路由。
 
 **交互规则**
@@ -155,7 +155,7 @@ flowchart TB
 
 - `GET /recommendations` 返回 `RecommendationBundle`；不直接读取 RecipeProvider。
 - 偏好保存后重新请求；不自行合并本地偏好。
-- 搜索通过 RecipeRepository 查询本地 recipes 表；返回菜名、分类、地区、食材与来源，不伪造营养数据。
+- 搜索通过 RecipeRepository 查询本地 recipes 表；返回双语菜名、分类、地区、食材与来源，不伪造营养数据。
 
 **验收**
 
@@ -471,7 +471,8 @@ interface DisplayPreferenceRepository {
 10. Mock 超时、空数据、Provider 不可用时，页面均可恢复且不展示虚假数据。
 11. F02 搜索 Tofu/Sushi、无结果和清除搜索均可用。
 12. F02 输入 chi 时仅返回标题包含 Chicken/Chilli 的菜谱，不混入 Mapo Tofu 等分类命中项。
-12. Me 大字号开关持久化，8 个路由在两种字号下均可访问。
+13. Me 大字号开关持久化，8 个路由在两种字号下均可访问。
+14. 中文界面输入“鸡肉/麻婆豆腐”可搜索并显示中文菜名。
 
 ### 7.3 模块完成标准
 

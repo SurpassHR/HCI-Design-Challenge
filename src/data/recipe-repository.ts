@@ -57,6 +57,7 @@ function queryTokens(normalized: string) {
 }
 
 function scoreRecipe(recipe: Recipe, tokens: string[]) {
+  const titleText = recipe.title.en + " " + recipe.title.zh;
   const keywordText = recipe.keywords.join(" ");
   const ingredientText = recipe.ingredients.join(" ");
   const metaText = recipe.category + " " + recipe.area;
@@ -67,7 +68,7 @@ function scoreRecipe(recipe: Recipe, tokens: string[]) {
   let metaHits = 0;
 
   for (const token of tokens) {
-    if (tokenHit(recipe.title, token)) {
+    if (tokenHit(titleText, token)) {
       titleHits += 1;
     } else if (tokenHit(keywordText, token)) {
       keywordHits += 1;
@@ -113,6 +114,7 @@ export async function searchRecipes(
   if (result.error) throw new Error(result.error.message);
 
   const tokens = queryTokens(normalized);
+  const hasCjk = tokens.some((token) => /[\u3400-\u9fff]/u.test(token));
   const scored = (result.data ?? []).map((recipe) =>
     scoreRecipe(recipe, tokens),
   );
@@ -122,16 +124,18 @@ export async function searchRecipes(
   ) => right.score - left.score;
 
   if (tokens.length > 0) {
-    const titleMatches = scored
-      .filter((item) => item.allInTitle)
-      .sort(byScore);
+    if (!hasCjk) {
+      const titleMatches = scored
+        .filter((item) => item.allInTitle)
+        .sort(byScore);
 
-    if (titleMatches.length > 0) {
-      return {
-        mode: "exact",
-        recipes: titleMatches.slice(0, limit).map((item) => item.recipe),
-        suggestions: [],
-      };
+      if (titleMatches.length > 0) {
+        return {
+          mode: "exact",
+          recipes: titleMatches.slice(0, limit).map((item) => item.recipe),
+          suggestions: [],
+        };
+      }
     }
 
     const allMatches = scored

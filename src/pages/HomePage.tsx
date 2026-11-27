@@ -553,6 +553,8 @@ function RecipeResults({
   areaLabel: (value: string) => string;
   label: string;
 }) {
+  const { isChinese } = useI18n();
+
   return (
     <section aria-label={label} className="recipe-results">
       {recipes.map((recipe) => (
@@ -569,7 +571,7 @@ function RecipeResults({
             />
           </span>
           <span className="recipe-result__copy">
-            <strong>{recipe.title}</strong>
+            <strong>{recipe.title[isChinese ? "zh" : "en"]}</strong>
             <small>
               {categoryLabel(recipe.category)} · {areaLabel(recipe.area)}
             </small>
@@ -601,7 +603,7 @@ function RecipeSheet({
   categoryLabel: (value: string) => string;
   areaLabel: (value: string) => string;
 }) {
-  const { t } = useI18n();
+  const { isChinese, t } = useI18n();
   const hasMetrics =
     recipe.minutes !== undefined ||
     recipe.calories !== undefined ||
@@ -631,7 +633,7 @@ function RecipeSheet({
         </>
       }
       onClose={onClose}
-      title={recipe.title}
+      title={recipe.title[isChinese ? "zh" : "en"]}
     >
       <div className="recipe-detail">
         <div className="recipe-detail__hero">

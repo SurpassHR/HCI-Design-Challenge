@@ -2,9 +2,14 @@ import type { FoodGlyphName } from "./food-glyph";
 
 export type RecipeOrigin = "nutripal" | "themealdb";
 
+export interface LocalizedRecipeTitle {
+  en: string;
+  zh: string;
+}
+
 export interface Recipe {
   id: string;
-  title: string;
+  title: LocalizedRecipeTitle;
   category: string;
   area: string;
   ingredients: string[];

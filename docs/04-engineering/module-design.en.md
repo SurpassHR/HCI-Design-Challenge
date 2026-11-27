@@ -140,7 +140,7 @@ flowchart TB
 
 - Show today’s calorie and protein/carbohydrate/fat summary.
 - Show 1–3 personalised recommendations with a “why recommended” explanation.
-- Provide search through a Supabase-compatible mock with 91 recipes, ranked by title, then keyword/ingredient, then category/area. Short prefixes such as chi prioritise Chicken/Chilli titles instead of category-only noise.
+- Provide search through a Supabase-compatible mock with 91 bilingual recipes. Titles are en/zh objects, ranked by title, then keyword/ingredient, then category/area, and displayed in the current UI language.
 - Expand more recommendations on the same page; no new recipe-detail route.
 
 **Interaction rules**
@@ -155,7 +155,7 @@ flowchart TB
 
 - `GET /recommendations` returns `RecommendationBundle`; the module does not read RecipeProvider directly.
 - Refetch after preferences are saved; do not merge local preferences manually.
-- Search goes through RecipeRepository against the local recipes table and returns title, category, area, ingredients and source; it does not fabricate nutrition data.
+- Search goes through RecipeRepository against the local recipes table and returns bilingual titles, category, area, ingredients and source; it does not fabricate nutrition data.
 
 **Acceptance**
 

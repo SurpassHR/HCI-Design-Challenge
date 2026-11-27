@@ -14,7 +14,7 @@ See the [Figma prototype fidelity audit](../03-design/figma-implementation-audit
 | --- | --- | --- |
 | AC-01 | New user visits /home | Redirect to F01; no status bar; + Add opens and adds a custom avoidance |
 | AC-02 | User selects preferences and Continue | Preferences persist locally, F02 opens and navigation appears |
-| AC-03 | User searches in F02 | 91 mock recipes; chi returns only Chicken/Chilli title matches; tofu/pasta work; detail sheet and no-match suggestions available |
+| AC-03 | User searches in F02 | 91 bilingual recipes; chi and Chinese titles are searchable; chi returns only Chicken/Chilli title matches; results follow the UI language |
 | AC-04 | User enters F03/F03b | New week strip, constraints, pantry and meals; F03b has four items and budget |
 | AC-05 | User checks an F03b item | Feta starts checked; clicking Chicken thighs marks it checked |
 | AC-06 | User enters F04 | Gradient lock screen, notification and suggestion; no tab bar; all four actions available |
