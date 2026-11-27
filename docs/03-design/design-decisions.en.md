@@ -13,7 +13,7 @@
 | D-05 | Figma screens and click-through flow | Updated (2026-11-25) | Eight screens × default/large text, 16 frames, are archived; v1.1 implements them |
 | D-06 | Trigger timing for proactive suggestions | To be researched | Usefulness, acceptability, and privacy boundaries need validation |
 | D-07 | User-control mechanisms | To be researched | At minimum, study accept, postpone, dismiss, and quiet-hours behaviour |
-| D-08 | Visual components and design specification | Completed (v1.1) | Uses the 2026-11-25 colour tokens and shared UI primitives; F01 uses Figma emoji and F02–F06/F03b use Figma-exported SVGs |
+| D-08 | Visual components and design specification | Completed (v1.1) | Uses the 2026-11-25 colour tokens and shared UI primitives; F01 uses Figma emoji and F02–F07/F03b use Figma-exported SVGs |
 | D-09 | System architecture and API boundary | Drafted (pending review) | [System design](../04-engineering/system-design.en.md) |
 | D-10 | Module responsibilities and routing contract | Drafted (pending review) | [Module design](../04-engineering/module-design.en.md) |
 | D-11 | First-version mock/real capability boundary | Drafted (pending review) | Recipe, scan, notification, and location capabilities are reserved through adapter interfaces |

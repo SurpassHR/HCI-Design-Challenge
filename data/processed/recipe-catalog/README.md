@@ -1,6 +1,6 @@
 # 公共菜谱 Mock 数据集
 
-> 用途：为 NutriPal 原型提供本地“Supabase 兼容”菜谱表，支持 F02 搜索与详情 Sheet。
+> 用途：为 NutriPal 原型提供本地“Supabase 兼容”菜谱表，支持 F02 搜索与 F07 菜谱详情。
 > 数据不是用户数据；所有在线菜谱保留来源链接。
 
 ## 1. 来源与抓取
@@ -46,7 +46,7 @@
 | keywords / searchText | 英文、中文别名与检索文本 |
 | minutes / calories / price / reason | 仅原型内置推荐包含 |
 
-不复制 TheMealDB 的完整烹饪步骤和图片；详情 Sheet 提供原始页面链接。
+不复制 TheMealDB 的完整烹饪步骤和图片；F07 使用简化做法并由原型补充替换演示数据。
 
 ## 3. Mock Supabase 结构
 
@@ -55,7 +55,8 @@
 - 支持链式 select / ilike / or / limit 和 thenable 结果，模拟 PostgREST 查询形态。
 - 表名固定为 recipes；字段同时接受 SQL 风格 search_text 与前端 camelCase。
 - 替换真实 Supabase 时，只需把 mock client 替换为 createClient(...)，并保持 recipes 表结构与查询字段。
-- 菜谱 Sheet 的 4 步“简单做法”由 [recipe-steps.ts](../../../src/data/recipe-steps.ts) 提供：5 道 NutriPal 内置菜谱使用定制步骤，其余按菜品类别生成；不复制 TheMealDB 完整做法。
+- F07 普通菜谱的“简单做法”由 [recipe-steps.ts](../../../src/data/recipe-steps.ts) 按类别生成；Mapo Tofu 使用 [recipe-details.ts](../../../src/data/recipe-details.ts) 中 Figma 对应的 3 步定制流程。
+- Mapo Tofu 的详细用量、低/高热量替换和热量差同样由 `recipe-details.ts` 提供；其他菜谱显示只读详情，不复制 TheMealDB 完整做法。
 
 ## 4. 搜索行为
 

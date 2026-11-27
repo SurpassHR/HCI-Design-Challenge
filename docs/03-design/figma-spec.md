@@ -9,14 +9,14 @@
 ## 当前基线（2026-11-25）
 
 - 当前视觉事实源：Figma NutriPal – Healthy Eating App (Copy)，文件 key QHOOV8NcB4Ev499ycoRtZq。
-- 8 个页面：F01–F06、F03b、Me；每屏包含默认字号与大字号，共 16 个 390 × 844 Frame。
+- 8 个核心页面：F01–F06、F03b、Me；另有 F07a–F07l 共 12 个菜谱详情与食材替换状态，均为 390 × 844 Frame。
 - 设计归档：[2026-11-25 归档](../../design/exports/2026-11-25-nutripal-v2/README.md)。
 - 实现版本：NutriPal v1.1；视觉层重设计，数据和 /api/v1 契约保持兼容。
 - Figma 是视觉事实源；工程实现不等于逐像素复制设计稿。
 
 ## 已确认的实现解释
 
-- **Figma 图标原样**：F01 菜系使用 Figma emoji；F02–F06/F03b 的食物、通知、设置和状态图标使用从 Figma 导出的 SVG（public/figma-icons），不自行绘制替代资产。
+- **Figma 图标原样**：F01 菜系使用 Figma emoji；F02–F07/F03b 的食物、通知、设置和状态图标使用从 Figma 导出的 SVG（public/figma-icons），不自行绘制替代资产。
 - **不显示设备外观**：不实现 Figma 的 9:41 状态栏、信号/电池和 44px 圆角手机框；Web 原型以 390px 为设计基准，内容列随视口流式扩展，最大 1200px。
 - **移动端固定缩放**：按要求禁止双指放大（viewport、touch-action 与 iOS gesture 事件）；保留单指滚动和输入框聚焦。所有输入框字号至少 16px，防止 iOS 聚焦自动放大。
 - **UI 文字不可选中**：正文、按钮和标签禁止拖选或双击选中，保持原生 App 手感；`input`、`textarea` 与可编辑区域保留文本选择能力。
@@ -31,7 +31,7 @@
 
 - 统一视觉 token、组件和底部导航。
 - 核心任务的可点击页面流，按钮连接真实目标页面或已记录的 Sheet/演示态。
-- F02 菜品搜索接入 Supabase 兼容 Mock（91 道在线/内置菜谱），支持中英文、多词、变音符号折叠、拉丁拼写容错、中文单字、相似结果与为空时的推荐菜谱；详情 Sheet 展示食材和 4 步简化做法。
+- F02 菜品搜索接入 Supabase 兼容 Mock（91 道在线/内置菜谱），支持中英文、多词、变音符号折叠、拉丁拼写容错、中文单字、相似结果与为空时的推荐菜谱；菜谱卡进入独立的 F07 详情页，展示食材与简化做法。
 - F01 自定义忌口、保存和编辑模式返回 Me。
 - Me 的大字号开关、语言切换、偏好与通知入口。
 - 主动建议的接受、推迟、关闭和解释入口。
@@ -54,15 +54,16 @@
 | F04 | Context-Aware Proactive Assistance | 锁屏式主动建议与情境解释 | 已实现，渐变背景与全部动作 |
 | F05 | Notification Control & Explanation | 总开关、Snooze、频率、类别、解释与反馈 | 已实现 |
 | F06 | AI Food Recognition & Calorie Estimation | 模拟识别、份量、营养与日志 | 已实现，Mock 识别 |
+| F07a–l | Recipe Detail & Ingredient Swaps | 菜品详情、低/高热量替换、应用/撤销、过滤与无推荐状态 | 已实现，Mapo Tofu 完整状态流 |
 | Me | Profile & Settings | 个人资料、偏好、通知、语言、大字号等设置 | 已实现，保留 v1.0 内容 |
 
 ## 交付前检查
 
-- [x] 8 个页面均有路由和可访问入口。
+- [x] 8 个核心页面与 F07 详情流均有路由和可访问入口。
 - [x] 默认/大字号两种字号状态均可用。
 - [x] 关键按钮连接到真实页面、Sheet 或已记录的演示态。
 - [x] 原型明确区分 Mock 数据与真实能力。
-- [x] F01 emoji 与 F02–F06/F03b SVG 图标均与 Figma 一致；不使用模拟设备 chrome。
+- [x] F01 emoji 与 F02–F07/F03b SVG 图标均与 Figma 一致；不使用模拟设备 chrome。
 - [ ] 完成一次团队点击走查。
 - [ ] 完成至少一名目标用户的原型测试并记录问题。
 

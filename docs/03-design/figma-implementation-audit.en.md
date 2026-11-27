@@ -5,7 +5,7 @@
 > - Audited release: NutriPal v1.1
 > - Audit date: 2026-11-26
 > - Visual baseline: [2026-11-25 Figma archive](../../design/exports/2026-11-25-nutripal-v2/README.en.md), file key QHOOV8NcB4Ev499ycoRtZq
-> - Automated acceptance: 13 Vitest/Testing Library tests
+> - Automated acceptance: 25 Vitest/Testing Library tests
 
 ## 1. Method
 
@@ -18,11 +18,11 @@
 
 | Item | Result |
 | --- | --- |
-| Routes and entry points | Passed: all eight screens are reachable |
+| Routes and entry points | Passed: all eight core screens and the F07 detail flow are reachable |
 | Default-size visuals | Passed for structure, hierarchy, tokens and main controls |
 | Large-text visuals | Passed; global tokens apply and content scrolls |
 | Interaction completeness | Passed: search, custom avoidance, plan, nudges, scan and Me settings have acceptance coverage |
-| Icon system | F01 uses Figma emoji; F02–F06/F03b use SVG assets exported from Figma with no hand-drawn substitutes |
+| Icon system | F01 uses Figma emoji; F02–F07/F03b use SVG assets exported from Figma with no hand-drawn substitutes |
 | Device chrome | Not implemented by decision |
 | Real external capabilities | Not implemented; Mock/provisional Providers remain |
 
@@ -31,20 +31,21 @@
 | Frame | Status | Main result / intentional deviation |
 | --- | --- | --- |
 | F01 | Passed | Eight cuisines use the exact Figma emoji and selected/default tile treatments; six diet styles, fixed avoidances + Add |
-| F02 | Passed | New hierarchy, gradient summary, 91-recipe mock search, detail sheet, no-match suggestions, recommendation cards and See all |
+| F02 | Passed | New hierarchy, gradient summary, 91-recipe mock search, no-match suggestions, recommendation cards and See all; cards open the full F07 detail screen |
 | F03 | Passed | New week strip, constraint cards, five pantry chips, three meals and shopping entry; swap/edit/regenerate retained |
 | F03b | Passed | New four items and budget, six pantry items, check-off, primary Share and secondary delivery demo |
 | F04 | Passed | Orange→pink→purple gradient, large clock, notification and suggestion cards, all four actions |
 | F05 | Passed | Uses Figma-exported bell/sparkle/moon/plate/droplet/apple SVGs; settings and explanation retained |
 | F06 | Passed | Camera/recognition visuals, orange-pink calorie card, portion stepper, macro bars and Log to Dinner |
+| F07a–l | Passed | Mapo Tofu fully covers detail, Lower/Higher swaps, browse/preview, Apply/Undo, Dismiss, no-goal and Egg-allergy filtering; other recipes use read-only fallback details |
 | Me | Passed | New setting rows + Accessibility, while restoring v1.0 language, goals, preference summary, nudge preview and privacy |
 
 ## 4. Global interpretations
 
-- **Icon handling**: the old emoji ban is withdrawn; F01 uses Figma emoji, while F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) with no hand-drawn approximations.
+- **Icon handling**: the old emoji ban is withdrawn; F01 uses Figma emoji, while F02–F07/F03b use SVG assets exported from Figma (public/figma-icons) with no hand-drawn approximations.
 - **Device chrome**: no status bar, signal/battery or phone frame; the web content column uses 390px as its design baseline and expands fluidly up to 1200px.
 - **Large text**: both sizes use the same component tree through semantic type tokens; clipping in fixed captures is not a requirement.
-- **Large-text completeness**: all 261 directly rendered text nodes across the eight routes increase by 2px with no omissions; the search input grows from 16px to 17px.
+- **Large-text completeness**: all 261 directly rendered text nodes in the v1.1 eight routes increase by 2px; new F07 nodes also use the semantic type tokens without omissions.
 - **Me length**: Me is longer than Figma to retain v1.0 functions and therefore scrolls.
 - **F03b initial state**: Feta starts checked to match the archived demo state; the total remains four items.
 

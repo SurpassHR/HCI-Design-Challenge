@@ -23,15 +23,16 @@ npm run preview
 
 - 390px design baseline with a fluid content column up to 1200px, without simulated phone chrome or status bar
 - English and Chinese interface with a persisted language switch in Me
-- F01 cuisine icons use the exact Figma emoji; F02–F06/F03b use Figma-exported SVGs from public/figma-icons
-- Archived 2026-11-25 Figma screens F01–F06, F03b and Me implemented as one interactive v1.1 prototype
+- F01 cuisine icons use the exact Figma emoji; F02–F07/F03b use Figma-exported SVGs from public/figma-icons
+- Archived 2026-11-25 Figma screens F01–F07, F03b and Me implemented as one interactive prototype
 - Global, persisted large-text mode: every explicit and inherited text size receives a 2px boost
 - Responsive layout: fluid app shell, two-column Home/Me views, centered navigation and 680px-capped bottom sheets
 - Fixed mobile zoom: pinch zoom disabled; form controls use at least 16px type to prevent iOS focus zoom
 - Native-app text behaviour: UI copy is non-selectable, while inputs, textareas and editable regions remain selectable
 - Onboarding redirect for new users
 - F01 preference capture, custom avoidance sheet and Me edit mode with local Mock persistence
-- F02 recommendations with curated-card recipe sheets, bilingual simple cooking steps, and 91-recipe mock Supabase search with diacritic folding, tolerant Latin spelling and single-character Chinese queries
+- F02 recommendations with 91-recipe mock Supabase search, diacritic folding, tolerant Latin spelling and single-character Chinese queries
+- F07a–F07l full recipe details with bilingual ingredients and steps, lower/higher calorie swaps, apply/undo, dismissed hints, no-goal and Egg-allergy states
 - F03 meal plan with day selection, pantry editing, swaps and regeneration
 - F03b shopping checklist, budget summary, sharing hand-off and order demo
 - F04 contextual nudge preview with alternate ideas and dismissal

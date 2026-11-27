@@ -31,6 +31,7 @@ Included:
 - F04 Context-Aware Proactive Assistance
 - F05 Notification Control & Explanation
 - F06 AI Food Recognition & Calorie Estimation
+- F07 Recipe Detail & Ingredient Swaps
 - Mock data, repository interfaces, API contracts, and routes required by those screens
 
 Excluded:
@@ -258,6 +259,7 @@ classDiagram
 | F04 | Show contextual proactive suggestions and their reasons | Nudges | Mock nudge fixture + NotificationScheduler | Mock |
 | F05 | Enable/disable suggestions, snooze, frequency, quiet hours, and explain the latest nudge | Nudges | MockNudgeRepository | Baseline |
 | F06 | Recognise or simulate food, adjust portion, and add to the daily log | Food Scan | MockFoodScanProvider | Mock |
+| F07a–l | Show recipe details and demo lower/higher swaps, apply/undo and allergen filtering for Mapo Tofu | Recipe Detail | RecipeRepository + getRecipeDetail | Baseline, complete Mapo state flow |
 | Me | Profile, preference/nudge entries, language, large text, nudge preview and privacy | Display / Profile | MockProfileRepository + DisplayPreferenceRepository | Independent v1.1 screen |
 
 The following capabilities remain design gaps and do not create new pages:
@@ -265,6 +267,7 @@ The following capabilities remain design gaps and do not create new pages:
 - F02 `See all` expands more recommendations inline; it does not create an undesigned route.
 - F06 `Edit dish`, the F05 feedback entry, `Order for delivery`, and real system notifications are outside v1. The UI must show an explicit demo-state explanation rather than silently failing.
 - Real GPS/background triggering in F04 and real image recognition in F06 are preserved only as Provider interfaces.
+- F07 swaps remain local to the recipe page and do not update the meal plan, shopping list or Home summary; other recipes do not receive fabricated swaps.
 
 ## 6. API Contract
 
@@ -565,6 +568,8 @@ When no local Profile exists, Mock creates an anonymous profile: `displayName="A
 | Save preferences (first time) | Set `onboardingCompleted=true`, open `/home`, and refresh recommendations |
 | Edit preferences from Me | Reuse `/preferences?mode=edit`; save returns to the source screen, cancel preserves the previous values |
 | F02 See all | Expand more recommendations inline; do not create a route |
+| F02 recipe card / search result | Open `/recipe/:recipeId`; invalid IDs return to `/home` |
+| F07 apply/undo swap | Update only the current recipe page state; reset after leaving |
 | F03 generate/replace meal plan | Write MealPlan; on success refresh ShoppingList; on failure preserve the previous plan |
 | F03b check an item | Write only `purchased`; do not change budget calculation |
 | F04 accept/postpone/dismiss | Update Nudge status; `Start cooking` navigates to `/plan` and focuses the corresponding meal |

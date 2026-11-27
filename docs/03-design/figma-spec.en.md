@@ -9,14 +9,14 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 ## Current baseline (2026-11-25)
 
 - Visual source of truth: Figma NutriPal – Healthy Eating App (Copy), file key QHOOV8NcB4Ev499ycoRtZq.
-- Eight screens: F01–F06, F03b and Me; every screen has a default and large-text variant, giving 16 frames at 390 × 844.
+- Eight core screens: F01–F06, F03b and Me, plus 12 F07a–F07l recipe-detail and ingredient-swap states at 390 × 844.
 - Design archive: [2026-11-25 archive](../../design/exports/2026-11-25-nutripal-v2/README.en.md).
 - Implementation: NutriPal v1.1; the presentation layer is redesigned while data and /api/v1 contracts remain compatible.
 - Figma is the visual source of truth; implementation is not a pixel copy.
 
 ## Confirmed implementation interpretations
 
-- **Use Figma icons as supplied**: F01 cuisine tiles use Figma emoji; F02–F06/F03b use SVG assets exported from Figma (public/figma-icons) for food, notification, setting and status icons. No substitute assets are invented.
+- **Use Figma icons as supplied**: F01 cuisine tiles use Figma emoji; F02–F07/F03b use SVG assets exported from Figma (public/figma-icons) for food, notification, setting and status icons. No substitute assets are invented.
 - **No device chrome**: no Figma 9:41 status bar, signal/battery chrome or 44px phone frame. The web prototype uses 390px as its design baseline, while the content column expands fluidly with the viewport up to 1200px.
 - **Fixed mobile zoom**: pinch zoom is disabled by requirement (viewport, touch-action and iOS gesture events); single-finger scrolling and input focus remain. Every input uses at least 16px type to prevent iOS focus zoom.
 - **Non-selectable UI text**: body copy, buttons and labels cannot be drag- or double-click-selected, preserving native-app behaviour; `input`, `textarea` and editable regions retain text selection.
@@ -31,7 +31,7 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 
 - Unified visual tokens, components and bottom navigation.
 - Clickable flows for core tasks, with buttons connected to real screens or documented sheets/demo states.
-- F02 search backed by a Supabase-compatible mock with 91 web/prototype recipes, including English, Chinese, multi-word, diacritic-free, tolerant Latin spelling, single-character Chinese, closest-match and suggestion states; the detail sheet shows ingredients and four simple cooking steps.
+- F02 search backed by a Supabase-compatible mock with 91 web/prototype recipes, including English, Chinese, multi-word, diacritic-free, tolerant Latin spelling, single-character Chinese, closest-match and suggestion states; recipe cards open the standalone F07 detail screen with ingredients and simple steps.
 - F01 custom avoidance, saving and edit-mode return to Me.
 - Me large-text toggle, language switch, preference and notification entries.
 - Accept, postpone, dismiss and explanation controls for proactive suggestions.
@@ -54,15 +54,16 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 | F04 | Context-Aware Proactive Assistance | Lock-screen suggestion and context explanation | Implemented with gradient and all actions |
 | F05 | Notification Control & Explanation | Master toggle, snooze, frequency, categories, explanation and feedback | Implemented |
 | F06 | AI Food Recognition & Calorie Estimation | Simulated recognition, portion, nutrition and log | Implemented with Mock recognition |
+| F07a–l | Recipe Detail & Ingredient Swaps | Recipe detail, lower/higher swaps, apply/undo, filtered and no-recommendation states | Implemented with the complete Mapo Tofu state flow |
 | Me | Profile & Settings | Profile, preferences, notifications, language and large text | Implemented while retaining v1.0 content |
 
 ## Pre-delivery checklist
 
-- [x] All eight screens have routes and reachable entry points.
+- [x] All eight core screens and the F07 detail flow have routes and reachable entry points.
 - [x] Both default and large-text states work.
 - [x] Key buttons lead to real screens, sheets or documented demo states.
 - [x] Mock data and real capabilities are clearly distinguished.
-- [x] F01 emoji and F02–F06/F03b SVG icons match Figma; no simulated device chrome.
+- [x] F01 emoji and F02–F07/F03b SVG icons match Figma; no simulated device chrome.
 - [ ] Complete a team click-through review.
 - [ ] Test with at least one target user and record issues.
 

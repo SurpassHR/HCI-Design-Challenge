@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-已完成**系统设计 → 模块设计**的技术设计基线，并发布 NutriPal v1.1 React/Vite/TypeScript 原型。当前包含 8 屏交互、Mock Repository、显示偏好、91 道菜谱 Mock 搜索和 13 条测试；真实后端、数据库和第三方服务仍待决定。
+已完成**系统设计 → 模块设计**的技术设计基线，并发布 NutriPal React/Vite/TypeScript 原型。当前包含 8 个核心页面、F07a–l 菜谱详情与替换流、Mock Repository、显示偏好、91 道菜谱 Mock 搜索和 25 条测试；真实后端、数据库和第三方服务仍待决定。
 
 ## 设计顺序
 

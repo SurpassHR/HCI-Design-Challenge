@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  ExternalLink,
   LoaderCircle,
   Search,
   X,
@@ -12,13 +11,10 @@ import {
   type FigmaIconName,
 } from "../components/FigmaIcon";
 import { glyphToFigmaIcon } from "../components/figma-food-icon";
-import { Sheet } from "../components/ui/Sheet";
 import {
-  getRecipeById,
   recipeDatabaseInfo,
   searchRecipes,
 } from "../data/recipe-repository";
-import { getRecipeSteps } from "../data/recipe-steps";
 import type { FoodGlyphName } from "../domain/food-glyph";
 import type { Recipe, RecipeSearchResponse } from "../domain/recipe";
 import { useI18n } from "../i18n/useI18n";
@@ -203,7 +199,6 @@ export function HomePage() {
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [searchState, setSearchState] = useState<SearchState>({ status: "idle" });
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const isSearching = query.trim().length > 0;
   const visibleDishes = showAll ? dishes : dishes.slice(0, 3);
   const featured = visibleDishes[0];
@@ -217,12 +212,8 @@ export function HomePage() {
     );
   }
 
-  function openDish(dish: Dish) {
-    void getRecipeById(dish.id)
-      .then((recipe) => {
-        if (recipe) setSelectedRecipe(recipe);
-      })
-      .catch(() => undefined);
+  function openRecipe(recipeId: string) {
+    navigate(`/recipe/${encodeURIComponent(recipeId)}`);
   }
 
   useEffect(() => {
@@ -434,7 +425,7 @@ export function HomePage() {
             areaLabel={areaLabel}
             categoryLabel={categoryLabel}
             label={t("Matching recipes", "匹配菜谱")}
-            onOpen={setSelectedRecipe}
+            onOpen={(recipe) => openRecipe(recipe.id)}
             recipes={resultRecipes}
           />
         ) : (
@@ -458,7 +449,7 @@ export function HomePage() {
               areaLabel={areaLabel}
               categoryLabel={categoryLabel}
               label={t("Suggested recipes", "推荐菜谱")}
-              onOpen={setSelectedRecipe}
+              onOpen={(recipe) => openRecipe(recipe.id)}
               recipes={suggestionRecipes}
             />
             <button className="text-link" onClick={() => updateQuery("")} type="button">
@@ -474,7 +465,7 @@ export function HomePage() {
               t("Open recipe", "打开菜谱") + ": " + localize(featured.title)
             }
             className="featured-card"
-            onClick={() => openDish(featured)}
+            onClick={() => openRecipe(featured.id)}
             type="button"
           >
             <div className={"featured-hero featured-hero--" + featured.tone}>
@@ -533,7 +524,7 @@ export function HomePage() {
                     }
                     className="mini-card"
                     key={dish.title.en}
-                    onClick={() => openDish(dish)}
+                    onClick={() => openRecipe(dish.id)}
                     type="button"
                   >
                     <span aria-hidden="true" className="mini-card__icon">
@@ -553,14 +544,6 @@ export function HomePage() {
         </>
       ) : null}
 
-      {selectedRecipe ? (
-        <RecipeSheet
-          areaLabel={areaLabel}
-          categoryLabel={categoryLabel}
-          onClose={() => setSelectedRecipe(null)}
-          recipe={selectedRecipe}
-        />
-      ) : null}
     </main>
   );
 }
@@ -614,130 +597,5 @@ function RecipeResults({
         </button>
       ))}
     </section>
-  );
-}
-
-function RecipeSheet({
-  recipe,
-  onClose,
-  categoryLabel,
-  areaLabel,
-}: {
-  recipe: Recipe;
-  onClose: () => void;
-  categoryLabel: (value: string) => string;
-  areaLabel: (value: string) => string;
-}) {
-  const { isChinese, t } = useI18n();
-  const hasMetrics =
-    recipe.minutes !== undefined ||
-    recipe.calories !== undefined ||
-    recipe.price !== undefined;
-  const steps = getRecipeSteps(recipe);
-
-  return (
-    <Sheet
-      description={categoryLabel(recipe.category) + " · " + areaLabel(recipe.area)}
-      footer={
-        <>
-          {recipe.sourceUrl ? (
-            <a
-              className="ui-sheet__primary ui-sheet__link"
-              href={recipe.sourceUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              {t("View source", "查看来源")}
-              <ExternalLink aria-hidden="true" size={15} />
-            </a>
-          ) : (
-            <span />
-          )}
-          <button className="ui-sheet__secondary" onClick={onClose} type="button">
-            {t("Close", "关闭")}
-          </button>
-        </>
-      }
-      onClose={onClose}
-      title={recipe.title[isChinese ? "zh" : "en"]}
-    >
-      <div className="recipe-detail">
-        <div className="recipe-detail__hero">
-          <span aria-hidden="true" className="recipe-detail__glyph">
-            <FigmaIcon
-              name={glyphToFigmaIcon[recipe.glyph]}
-              size={38}
-            />
-          </span>
-          <div>
-            <strong>{recipe.sourceName}</strong>
-            <small>
-              {recipe.ingredients.length} {t("ingredients", "种食材")}
-            </small>
-          </div>
-        </div>
-
-        {hasMetrics ? (
-          <p className="recipe-detail__metrics">
-            {recipe.minutes !== undefined ? (
-              <span>
-                <FigmaIcon name="timer" size={13} />
-                {recipe.minutes} {t("min", "分钟")}
-              </span>
-            ) : null}
-            {recipe.calories !== undefined ? (
-              <span>
-                <FigmaIcon name="flame" size={13} />
-                {recipe.calories} {t("kcal", "千卡")}
-              </span>
-            ) : null}
-            {recipe.price ? (
-              <span>
-                <FigmaIcon name="money" size={13} />
-                {recipe.price}
-              </span>
-            ) : null}
-          </p>
-        ) : null}
-
-        <h3>{t("Ingredients", "食材")}</h3>
-        <div className="ingredient-chips">
-          {recipe.ingredients.map((ingredient) => (
-            <span className="ingredient-chip" key={ingredient}>
-              {ingredient}
-            </span>
-          ))}
-        </div>
-
-        <h3>{t("Simple steps", "简单做法")}</h3>
-        <ol className="recipe-steps">
-          {steps.map((step, index) => (
-            <li key={step.en}>
-              <span aria-hidden="true">{index + 1}</span>
-              <p>{isChinese ? step.zh : step.en}</p>
-            </li>
-          ))}
-        </ol>
-
-        {recipe.reason ? (
-          <p className="why-card">
-            <FigmaIcon name="bulb" size={14} />
-            <span>{recipe.reason}</span>
-          </p>
-        ) : null}
-
-        <p className="recipe-attribution">
-          {recipe.origin === "themealdb"
-            ? t(
-                "Simple prototype steps are suggested from the listed ingredients; the publisher’s full method is not copied.",
-                "原型根据所列食材给出简化做法，未复制原站完整步骤。",
-              )
-            : t(
-                "Simple prototype cooking steps prepared for NutriPal.",
-                "NutriPal 原型提供的简化做法。",
-              )}
-        </p>
-      </div>
-    </Sheet>
   );
 }

@@ -35,6 +35,7 @@ const dietStyles = [
 const allergens = [
   { value: "Nuts", en: "Nuts", zh: "坚果" },
   { value: "Dairy", en: "Dairy", zh: "乳制品" },
+  { value: "Egg", en: "Egg", zh: "鸡蛋" },
   { value: "Gluten", en: "Gluten", zh: "麸质" },
   { value: "Shellfish", en: "Shellfish", zh: "贝类" },
 ];
@@ -42,6 +43,7 @@ const allergens = [
 const allergenLabels: Record<string, string> = {
   Nuts: "坚果",
   Dairy: "乳制品",
+  Egg: "鸡蛋",
   Gluten: "麸质",
   Shellfish: "贝类",
   Pork: "猪肉",

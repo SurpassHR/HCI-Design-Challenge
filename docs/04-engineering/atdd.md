@@ -2,8 +2,8 @@
 
 **语言：[中文](atdd.md) | [English](atdd.en.md)**
 
-> - 状态：v1.1 自动化验收通过；视觉按 2026-11-25 Figma 结构实现
-> - 日期：2026-11-26
+> - 状态：自动化验收通过；F07a–F07l 菜谱详情与替换流已实现
+> - 日期：2026-11-27
 > - 技术栈：React 19 + Vite 8 + TypeScript 5.9 + Vitest + Testing Library
 
 当前视觉审计见 [Figma 原型实现一致性审计](../03-design/figma-implementation-audit.md)。
@@ -21,12 +21,13 @@
 | AC-07 | 用户进入 F05 | 总开关、Snooze、频率、类别、解释和反馈可用 |
 | AC-08 | 用户进入 F06 | 识别结果、份量调整、营养条、Log to Dinner 与返回 Home |
 | AC-09 | 用户进入 Me | 新设置行、语言、今日目标、偏好摘要、预览提醒、隐私说明和大字号开关均存在 |
-| AC-10 | 用户开启 Large text | 根元素 data-text-size=large，设置持久化，8 个路由均可访问 |
+| AC-10 | 用户开启 Large text | 根元素 data-text-size=large，设置持久化，9 个路由均可访问 |
 | AC-11 | 用户切换语言 | 中英文界面切换并在刷新后保留 |
-| AC-12 | Figma 图标 | F01 使用原样 emoji；F02–F06/F03b 使用 Figma 导出 SVG |
-| AC-13 | 用户点击 F02 精选卡片 | 打开对应菜谱 Sheet，显示食材与 4 步简单做法；530px 视口全宽，926px 视口限宽 680px；次级推荐卡同样可打开 |
+| AC-12 | Figma 图标 | F01 使用原样 emoji；F02–F07/F03b 使用 Figma 导出 SVG |
+| AC-13 | 用户点击 F02 精选卡片 | 进入对应 F07 全屏菜谱详情，显示食材与简单做法；530px 视口流体，926px 视口内容限宽 760px；次级推荐卡和搜索结果同样可打开 |
 | AC-14 | 用户拖选或双击界面文字 | 正文、按钮和标签不产生选区；搜索框、文本域和可编辑区域仍可选择文本 |
-| AC-13 | Mock 菜谱与 CSS 回归 | 中英文/多词搜索通过；所有显式字号跟随大字号 boost |
+| AC-15 | Mock 菜谱与 CSS 回归 | 中英文/多词搜索通过；所有显式字号跟随大字号 boost |
+| AC-16 | 用户调整 Mapo Tofu | 覆盖 F07a–F07l：Lower/Higher 浏览与预览、Apply/Undo、Dismiss、无热量目标和 Egg 过敏过滤；替换只在页面内生效 |
 
 自动验收文件：[app.acceptance.test.tsx](../../src/acceptance/app.acceptance.test.tsx)。
 
@@ -37,7 +38,7 @@
 3. F01 自定义忌口验收先因 + Add 无目标而失败；加入 Sheet 与保存逻辑后通过。
 4. F03/F03b 新 fixture 与 Share 主操作验收在更新页面数据和 CTA 后通过。
 5. Me 保留内容验收在恢复语言、目标、偏好摘要、预览提醒和隐私说明后通过。
-6. F01 emoji 与 F02–F06/F03b SVG 均按 Figma 原样落地；旧“禁 emoji”规则已撤销。
+6. F01 emoji 与 F02–F07/F03b SVG 均按 Figma 原样落地；旧“禁 emoji”规则已撤销。
 
 ## 3. 已实现内容
 
@@ -45,7 +46,8 @@
 - 路由、onboarding guard、共享 App Shell 和底部导航。
 - v1.1 token 层、共享 UI 组件和页面样式。
 - F01 偏好持久化、自定义忌口、编辑返回。
-- F02 营养摘要、91 道菜谱 Mock 搜索、详情 Sheet、Try 芯片、推荐与 See all。
+- F02 营养摘要、91 道菜谱 Mock 搜索、Try 芯片、推荐与 See all。
+- F07a–F07l 全屏菜谱详情、详细食材、简单做法、热量方向、替换预览/应用/撤销、提示关闭和过敏过滤。
 - F03 日期、预算、食材、换餐、重生成与购物入口。
 - F03b 采购项、预算、 pantry、勾选、分享和配送演示。
 - F04/F05/F06 主动建议、控制、解释和扫描计算。
@@ -69,7 +71,7 @@ npm run build
 ## 6. 执行基线
 
 - 视觉与文案：以 [2026-11-25 Figma 归档](../../design/exports/2026-11-25-nutripal-v2/README.md) 为基线。
-- 图标：F01 使用 Figma emoji；F02–F06/F03b 使用 Figma 导出 SVG（public/figma-icons），不自行绘制替代。
+- 图标：F01 使用 Figma emoji；F02–F07/F03b 使用 Figma 导出 SVG（public/figma-icons），不自行绘制替代。
 - 设备外观：不显示状态栏、信号/电池或手机框。
 - 后端：只使用本地 Mock 和预留 Repository/API 契约。
 - 权限与隐私：不请求真实相机、定位或通知权限。

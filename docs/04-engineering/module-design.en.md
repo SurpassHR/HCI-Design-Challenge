@@ -141,14 +141,14 @@ flowchart TB
 - Show today’s calorie and protein/carbohydrate/fat summary.
 - Show 1–3 personalised recommendations with a “why recommended” explanation.
 - Provide search through a Supabase-compatible mock with 91 bilingual recipes. Titles are en/zh objects, ranked by title, then keyword/ingredient, then category/area, and displayed in the current UI language. Queries fold diacritics and tolerate Latin spelling variants from three characters as well as single Chinese characters, for example tou/toufu → tofu, pabellon → Pabellón, and 鸡 → chicken recipes.
-- The detail sheet shows ingredients and four bilingual simple steps; the five built-in recipes use tailored steps, while other recipes use category templates rather than copying TheMealDB’s full method.
-- Expand more recommendations on the same page; no new recipe-detail route.
+- Featured cards and search results open a standalone `/recipe/:recipeId`; the F07 page shows nutrition, detailed ingredients and bilingual simple steps, with the complete ingredient-swap flow for Mapo Tofu.
+- Expand more recommendations on the same page; the detail screen returns to `/home` through its back control.
 
 **Interaction rules**
 
 - Show a skeleton/loading state first, then calories and recommendations.
 - `See all` requests `limit=10` and expands the result inline; pressing again collapses it.
-- Recommendation cards are informational. Without a designed detail screen, do not add “add to plan” or a recipe-detail route.
+- Recommendation cards and search results open the F07 recipe screen; no “add to plan” action is created.
 - Nutrition summary is derived from FoodLogEntry values; with no entries, show `0 / target` and an empty-state prompt.
 - If the provider fails, show cached content or an explicit “recommendations unavailable” state; never fabricate new recommendations.
 
@@ -156,7 +156,7 @@ flowchart TB
 
 - `GET /recommendations` returns `RecommendationBundle`; the module does not read RecipeProvider directly.
 - Refetch after preferences are saved; do not merge local preferences manually.
-- Search goes through RecipeRepository against the local recipes table and returns bilingual titles, category, area, ingredients and source; it does not fabricate nutrition data.
+- Search goes through RecipeRepository against the local recipes table. Details use `getRecipeDetail` for Mapo Tofu quantities, swaps and steps; other recipes receive read-only fallback data and no fabricated swaps.
 
 **Acceptance**
 
@@ -379,7 +379,7 @@ interface DisplayPreferenceRepository {
 - Colour contrast must meet WCAG AA; status also uses text or graphics, not colour alone.
 - UI text defaults to `user-select: none`; inputs, textareas and editable regions explicitly restore `text` so entering and copying data still work.
 - Responsive: the shell expands fluidly at every viewport (up to 1200px); desktop padding and bounded navigation start at 600px, two-column Me at 640px and two-column Home at 900px, with a centred bottom navigation. Bottom sheets are full-width on phones and capped at 680px on wider viewports.
-- F01 uses Figma emoji; F02–F06/F03b use SVG assets exported from Figma; no self-drawn substitutes.
+- F01 uses Figma emoji; F02–F07/F03b use SVG assets exported from Figma; no self-drawn substitutes.
 
 ### M10 Display and Accessibility Preferences
 
@@ -400,8 +400,35 @@ interface DisplayPreferenceRepository {
 **Acceptance**
 
 - Large text survives refresh.
-- All eight routes work in both sizes.
+- All nine routes work in both sizes.
 - Turning large text off restores default tokens.
+
+### M11 Recipe Detail and Ingredient Swaps
+
+**Screens:** F07a–F07l, `/recipe/:recipeId`.
+
+**Responsibilities**
+
+- Load a recipe by ID and show its title, nutrition summary, detailed ingredients and steps; invalid IDs return Home.
+- Mapo Tofu provides Lower/Higher directions, swap browse/preview, Apply/Undo, dismissed hints and allergen filtering.
+- Other recipes use read-only generic details; no swaps are fabricated.
+
+**Interaction rules**
+
+- With a calorie goal and no relevant allergy, Lower is selected by default; without a goal or under an allergen filter, no direction is selected and View swaps is disabled.
+- A replacement must be selected before Apply. Changing direction clears the preview; Cancel leaves the recipe unchanged.
+- Apply updates the title, calories, ingredients and steps; Undo restores the 520 kcal base recipe.
+- Dismiss hides the suggestion only for the current page visit. An Egg allergy hides egg fried rice and shows the no-suitable-swap state for Higher.
+
+**Reads**
+
+- Base recipe metadata comes from RecipeRepository; Mapo quantities, swap options and calorie deltas come from `getRecipeDetail`.
+- Swaps remain page-local and do not write to the meal plan, shopping list or Home nutrition summary.
+
+**Acceptance**
+
+- Every F07a–F07l state is reachable; state resets after returning Home.
+- The page has no horizontal overflow at 390/530/926px in either text size.
 
 ## 4. Cross-module State and Invalidation Rules
 
@@ -445,7 +472,7 @@ All modules use `loading / success / empty / error`; pages may add derived state
 | F06 `Edit dish` has no destination | Local candidate-dish Bottom Sheet |
 | F03b `Order for delivery` has no flow | Secondary demo action after Share; no ordering or payment |
 | F04 has no real background trigger | Preview/simulation only; Provider interface reserved |
-| No recipe-detail screen | V1 creates no detail page; recommendation cards show only summary and reason |
+| Only Mapo has complete F07 swap data | Other recipes show read-only details; no swaps are fabricated |
 | Real notification/camera permissions are not designed | V1 requests no permissions; real capability needs a separate privacy and failure flow |
 
 These decisions keep the first version bounded and avoid hiding missing interaction design behind temporary pages.
@@ -454,7 +481,7 @@ These decisions keep the first version bounded and avoid hiding missing interact
 
 ### 7.1 Current documentation acceptance
 
-- All eight screens (16 default/large-text frames) have a route, module, data source and acceptance entry.
+- All eight core screens plus the F07a–F07l flow have a route, module, data source and acceptance entry.
 - Routes and navigation state are consistent between system and module designs.
 - All DTOs use the same names in the API contract, Repository, and module state.
 - Mermaid diagrams render; Markdown links are valid; Mock capabilities are not described as live.
@@ -473,11 +500,11 @@ These decisions keep the first version bounded and avoid hiding missing interact
 9. F06 portion 1→3 scales calories/macros proportionally; adding the log updates F02.
 10. Mock timeout, empty data, and provider-unavailable states are recoverable and never show fabricated data.
 11. F02 Tofu/Sushi search, empty results and clear search all work.
-12. Me large text persists, and all eight routes work in both sizes.
+12. Me large text persists, and all nine routes work in both sizes.
 13. F02 chi returns only titles containing Chicken/Chilli, not category-only matches such as Mapo Tofu.
 14. In the Chinese UI, entering “鸡肉/麻婆豆腐/鸡” searches and shows Chinese dish names; in the English UI, tou, toufu and pabellon return close matches.
-15. Clicking either the featured F02 card or a secondary recommendation opens its recipe sheet with ingredients and four simple steps; the sheet is full-width at 530px and capped at 680px at 926px.
-
+15. Featured F02 cards, secondary recommendations and search results open the full F07 detail screen and return to Home.
+16. Mapo Tofu covers all F07a–F07l: Lower/Higher, browse/preview, Apply/Undo, Dismiss, no-goal and Egg-allergy filtering.
 ### 7.3 Module definition of done
 
 - Pages access data only through Repositories.

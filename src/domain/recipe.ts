@@ -7,6 +7,45 @@ export interface LocalizedRecipeTitle {
   zh: string;
 }
 
+export type SwapDirection = "lower" | "higher";
+
+export interface RecipeDetailIngredient {
+  id: string;
+  name: LocalizedRecipeTitle;
+  amount?: LocalizedRecipeTitle;
+  emphasized?: boolean;
+}
+
+export interface RecipeSwapOption {
+  id: string;
+  direction: SwapDirection;
+  replacesIngredientId: string;
+  replacement: RecipeDetailIngredient;
+  optionAmount: LocalizedRecipeTitle;
+  caloriesDelta: number;
+  resultingCalories: number;
+  appliedTitle: LocalizedRecipeTitle;
+  steps: LocalizedRecipeStep[];
+  allergens: string[];
+  cardSummary: LocalizedRecipeTitle;
+  confirmation: LocalizedRecipeTitle;
+}
+
+export interface LocalizedRecipeStep {
+  en: string;
+  zh: string;
+}
+
+export interface RecipeDetail {
+  recipeId: string;
+  servings: number;
+  caloriesPerServing?: number;
+  ingredients: RecipeDetailIngredient[];
+  steps: LocalizedRecipeStep[];
+  allergens: LocalizedRecipeTitle[];
+  swaps: RecipeSwapOption[];
+}
+
 export interface Recipe {
   id: string;
   title: LocalizedRecipeTitle;

@@ -4,7 +4,7 @@
 
 ## Current status
 
-The **system design → module design** engineering baseline is complete, and the NutriPal v1.1 React/Vite/TypeScript prototype is released. It includes eight interactive screens, Mock Repositories, display preferences, a 91-recipe mock search and 13 tests; the real backend, database and third-party services remain undecided.
+The **system design → module design** engineering baseline is complete, and the NutriPal React/Vite/TypeScript prototype is released. It includes eight core screens, the F07a–l recipe-detail and swap flow, Mock Repositories, display preferences, a 91-recipe mock search and 25 tests; the real backend, database and third-party services remain undecided.
 
 ## Design order
 

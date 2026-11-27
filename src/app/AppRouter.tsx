@@ -5,6 +5,7 @@ import { NudgesSettingsPage } from "../pages/NudgesSettingsPage";
 import { NudgePreviewPage } from "../pages/NudgePreviewPage";
 import { PlanPage } from "../pages/PlanPage";
 import { PreferencesPage } from "../pages/PreferencesPage";
+import { RecipeDetailPage } from "../pages/RecipeDetailPage";
 import { ScanPage } from "../pages/ScanPage";
 import { ShoppingListPage } from "../pages/ShoppingListPage";
 import { AppShell } from "./AppShell";
@@ -31,6 +32,7 @@ function AppRoutes() {
       <Route path="/preferences" element={<PreferencesPage />} />
       <Route element={<RequireOnboarding />}>
         <Route path="/nudges/preview" element={<NudgePreviewPage />} />
+        <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
         <Route element={<AppShell />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/plan" element={<PlanPage />} />

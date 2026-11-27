@@ -4,7 +4,7 @@
 
 ## Current stage
 
-The 2026-11-25 eight-screen Figma design is archived (16 frames including default and large text), and the v1.1 React prototype is complete. The new visual system uses vector icons, semantic type tokens and global large text; Me retains v1.0 language, goals, preference summary and nudge entry. Team walkthrough and user testing remain.
+The 2026-11-25 eight-screen Figma design is archived (16 frames including default and large text), and the React prototype including the F07a–l recipe-detail and ingredient-swap flow is complete. The new visual system uses vector icons, semantic type tokens and global large text; Me retains v1.0 language, goals, preference summary and nudge entry. Team walkthrough and user testing remain.
 
 ## Recorded constraints
 

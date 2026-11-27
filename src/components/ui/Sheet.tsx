@@ -6,11 +6,15 @@ export function Sheet({
   onClose,
   children,
   footer,
+  className,
+  closeLabel = "Close",
 }: PropsWithChildren<{
   title: string;
   description?: string;
   onClose: () => void;
   footer?: ReactNode;
+  className?: string;
+  closeLabel?: string;
 }>) {
   const panelRef = useRef<HTMLDivElement>(null);
   const onCloseRef = useRef(onClose);
@@ -33,7 +37,7 @@ export function Sheet({
   return (
     <div className="ui-sheet-layer" role="presentation">
       <button
-        aria-label="Close"
+        aria-label={closeLabel}
         className="ui-sheet-backdrop"
         onClick={onClose}
         tabIndex={-1}
@@ -43,7 +47,7 @@ export function Sheet({
         aria-describedby={description ? "ui-sheet-description" : undefined}
         aria-labelledby="ui-sheet-title"
         aria-modal="true"
-        className="ui-sheet"
+        className={className ? "ui-sheet " + className : "ui-sheet"}
         ref={panelRef}
         role="dialog"
         tabIndex={-1}
@@ -57,7 +61,7 @@ export function Sheet({
             ) : null}
           </div>
           <button
-            aria-label="Close"
+            aria-label={closeLabel}
             className="ui-sheet__close"
             onClick={onClose}
             type="button"

@@ -31,6 +31,7 @@ NutriPal 支持用户管理饮食偏好、查看个性化推荐、规划每周�
 - F04 Context-Aware Proactive Assistance
 - F05 Notification Control & Explanation
 - F06 AI Food Recognition & Calorie Estimation
+- F07 Recipe Detail & Ingredient Swaps
 - 完成上述页面所需的 Mock 数据、仓储接口、API 契约和路由。
 
 不包含：
@@ -258,6 +259,7 @@ classDiagram
 | F04 | 展示情境化主动建议及原因 | Nudges | Mock Nudge fixture + NotificationScheduler | 模拟 |
 | F05 | 开关建议、延后、频率、免打扰、解释最近提醒 | Nudges | MockNudgeRepository | 基线 |
 | F06 | 识别/模拟识别食物、调整份量、加入当天记录 | Food Scan | MockFoodScanProvider | 模拟 |
+| F07a–l | 展示菜谱详情并对 Mapo Tofu 演示低/高热量替换、应用/撤销与过敏过滤 | Recipe Detail | RecipeRepository + getRecipeDetail | 基线，Mapo 完整状态流 |
 | Me | 个人资料、偏好/通知入口、语言、大字号、预览提醒和隐私说明 | Display / Profile | MockProfileRepository + DisplayPreferenceRepository | v1.1 独立页面 |
 
 以下能力仍是设计缺口，不新增页面：
@@ -265,6 +267,7 @@ classDiagram
 - F02 的 `See all` 仅在同一页面内展开更多推荐，不创建未设计的新路由。
 - F06 的 `Edit dish`、F05 的反馈入口、`Order for delivery` 和真实系统推送不在首版功能范围；UI 应显示明确的演示态说明，不能静默失败。
 - F04 的真实 GPS/后台触发、F06 的真实图像识别仅保留 Provider 接口。
+- F07 替换仅保存在菜谱页面内，不写回餐单、购物清单或 Home 汇总；其他菜谱不生成虚构替换项。
 
 ## 6. API 契约
 
@@ -565,6 +568,8 @@ Figma 中出现的具体数值用于视觉回归和演示，不作为真实健�
 | 保存偏好（首次） | 设置 `onboardingCompleted=true`，进入 `/home` 并刷新推荐 |
 | 从 Me 编辑偏好 | 复用 `/preferences?mode=edit`；保存后返回来源页，取消则保留原值 |
 | F02 See all | 在 F02 内展开更多推荐，不新增路由 |
+| F02 菜谱卡 / 搜索结果 | 进入 `/recipe/:recipeId`；无效 ID 返回 `/home` |
+| F07 替换 / 撤销 | 只更新当前菜谱页面状态；离开页面后重置 |
 | F03 生成/替换餐单 | 写入 MealPlan；成功后刷新 ShoppingList，失败保留旧计划 |
 | F03b 勾选采购 | 只写入 `purchased`，不改变预算计算 |
 | F04 接受/推迟/关闭 | 更新 Nudge 状态；`Start cooking` 跳到 `/plan` 并定位对应餐次 |

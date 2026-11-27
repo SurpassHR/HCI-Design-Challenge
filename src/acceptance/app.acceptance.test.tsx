@@ -7,6 +7,7 @@ import {
   DISPLAY_PREFERENCES_STORAGE_KEY,
 } from "../data/display-preference-repository";
 import { PROFILE_STORAGE_KEY } from "../data/profile-repository";
+import { LANGUAGE_STORAGE_KEY } from "../i18n/language";
 
 function renderApp(route: string) {
   return render(
@@ -16,7 +17,13 @@ function renderApp(route: string) {
   );
 }
 
-function seedOnboardedProfile() {
+function seedOnboardedProfile({
+  avoidAllergens = ["Nuts", "Shellfish"],
+  dailyCalories = 1900,
+}: {
+  avoidAllergens?: string[];
+  dailyCalories?: number;
+} = {}) {
   const now = new Date().toISOString();
   localStorage.setItem(
     PROFILE_STORAGE_KEY,
@@ -28,11 +35,11 @@ function seedOnboardedProfile() {
       preferences: {
         cuisines: ["Chinese", "Indian", "Mediterr."],
         dietStyles: ["Halal", "High-protein"],
-        avoidAllergens: ["Nuts", "Shellfish"],
+        avoidAllergens,
         updatedAt: now,
       },
       healthTargets: {
-        dailyCalories: 1900,
+        dailyCalories,
         proteinTargetG: 110,
         weeklyBudget: 35,
         maxCookMinutes: 30,
@@ -61,6 +68,7 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     expect(screen.getByRole("group", { name: "Avoid & allergies" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Mediterr." })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "High-protein" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Egg" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Shellfish" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /continue/i })).toBeInTheDocument();
     expect(
@@ -110,7 +118,7 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     expect(stored.preferences.dietStyles).toContain("Halal");
   });
 
-  it("opens recipe sheets from curated recommendations", async () => {
+  it("opens full recipe details from curated recommendations", async () => {
     const user = userEvent.setup();
     seedOnboardedProfile();
     renderApp("/home");
@@ -122,33 +130,176 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     );
 
     expect(
-      await screen.findByRole("dialog", {
+      await screen.findByRole("heading", {
         name: /mapo tofu & brown rice/i,
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /simple steps/i }),
-    ).toBeInTheDocument();
+      screen.queryByRole("navigation", { name: /primary navigation/i }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /let.s cook/i })).toBeInTheDocument();
     expect(
-      screen.getByText(/cook the brown rice according/i),
+      screen.getByText(/heat 150 g cooked brown rice/i),
     ).toBeInTheDocument();
 
-    await user.keyboard("{Escape}");
-    await waitFor(() =>
-      expect(screen.queryByRole("dialog")).not.toBeInTheDocument(),
-    );
+    await user.click(screen.getByRole("button", { name: /home/i }));
 
     await user.click(
-      screen.getByRole("button", {
+      await screen.findByRole("button", {
         name: /open recipe: halloumi quinoa bowl/i,
       }),
     );
 
     expect(
-      await screen.findByRole("dialog", {
+      await screen.findByRole("heading", {
         name: /halloumi quinoa bowl/i,
       }),
     ).toBeInTheDocument();
+  });
+
+  it("previews and applies the lower-calorie Mapo swap with undo", async () => {
+    const user = userEvent.setup();
+    seedOnboardedProfile();
+    renderApp("/recipe/local-mapo-tofu");
+
+    expect(
+      await screen.findByRole("heading", {
+        name: /mapo tofu & brown rice/i,
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /lower calories/i }),
+    ).toHaveAttribute("aria-pressed", "true");
+
+    await user.click(screen.getByRole("button", { name: /view swaps/i }));
+    const dialog = await screen.findByRole("dialog", {
+      name: /swap an ingredient/i,
+    });
+    const apply = within(dialog).getByRole("button", { name: /apply swap/i });
+    expect(apply).toBeDisabled();
+
+    await user.click(
+      within(dialog).getByRole("radio", { name: /cauliflower rice/i }),
+    );
+    expect(apply).toBeEnabled();
+    await user.click(apply);
+
+    expect(
+      await screen.findByRole("heading", {
+        name: /mapo tofu & cauliflower rice/i,
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/your meal is now 400 kcal/i)).toBeInTheDocument();
+    expect(screen.getByText("Cauliflower rice")).toBeInTheDocument();
+    expect(
+      screen.getByText(/sauté 200 g cauliflower rice/i),
+    ).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: /undo/i }));
+    expect(
+      await screen.findByRole("heading", {
+        name: /mapo tofu & brown rice/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it("supports higher swaps and dismissed suggestions", async () => {
+    const user = userEvent.setup();
+    seedOnboardedProfile();
+    renderApp("/recipe/local-mapo-tofu");
+
+    await user.click(
+      await screen.findByRole("button", { name: /higher calories/i }),
+    );
+    await user.click(screen.getByRole("button", { name: /view swaps/i }));
+    const dialog = await screen.findByRole("dialog", {
+      name: /swap an ingredient/i,
+    });
+    await user.click(
+      within(dialog).getByRole("radio", { name: /egg fried rice/i }),
+    );
+    await user.click(
+      within(dialog).getByRole("button", { name: /apply swap/i }),
+    );
+    expect(
+      await screen.findByRole("heading", {
+        name: /mapo tofu & egg fried rice/i,
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/your meal is now 610 kcal/i)).toBeInTheDocument();
+    expect(screen.getByText("Egg fried rice")).toBeInTheDocument();
+    expect(
+      screen.getByText(/stir-fry 150 g cooked rice with 1 egg/i),
+    ).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: /undo/i }));
+    await user.click(
+      screen.getByRole("button", { name: /dismiss suggestion/i }),
+    );
+    expect(
+      screen.getByRole("heading", { name: /make this meal your own/i }),
+    ).toBeInTheDocument();
+  });
+
+  it("filters egg-based swaps by dietary preference", async () => {
+    const user = userEvent.setup();
+    seedOnboardedProfile({ avoidAllergens: ["Egg"] });
+    renderApp("/recipe/local-mapo-tofu");
+    expect(
+      await screen.findByRole("heading", { name: /adjust this meal/i }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/filtered for your egg allergy/i)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /higher calories/i }));
+    await user.click(screen.getByRole("button", { name: /view swaps/i }));
+    const dialog = await screen.findByRole("dialog", {
+      name: /swap an ingredient/i,
+    });
+    expect(
+      within(dialog).getByRole("heading", {
+        name: /no suitable swaps/i,
+      }),
+    ).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole("button", { name: /apply swap/i }),
+    ).toBeDisabled();
+
+    await user.click(
+      within(dialog).getByRole("button", { name: /lower calories/i }),
+    );
+    expect(
+      within(dialog).getByRole("radio", { name: /cauliflower rice/i }),
+    ).toBeInTheDocument();
+  });
+
+  it("shows the no-calorie-goal recipe state", async () => {
+    seedOnboardedProfile({ dailyCalories: 0 });
+    renderApp("/recipe/local-mapo-tofu");
+
+    expect(
+      await screen.findByRole("heading", { name: /adjust this meal/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /lower calories/i }),
+    ).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("button", { name: /view swaps/i })).toBeDisabled();
+    expect(
+      screen.getByText(/choose a direction to see ingredient swaps/i),
+    ).toBeInTheDocument();
+  });
+
+  it("localizes the full recipe detail flow", async () => {
+    seedOnboardedProfile();
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, "zh");
+    renderApp("/recipe/local-mapo-tofu");
+
+    expect(
+      await screen.findByRole("heading", { name: "麻婆豆腐配糙米饭" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("每份估算 · 1 人份")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "更低热量" }),
+    ).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("heading", { name: "开始烹饪" })).toBeInTheDocument();
   });
 
   it("searches the mock Supabase recipe database with multiple queries", async () => {
@@ -176,15 +327,14 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
       screen.getByRole("button", { name: /fettuccine alfredo/i }),
     );
     expect(
-      screen.getByRole("dialog", { name: /fettuccine alfredo/i }),
+      await screen.findByRole("heading", { name: /fettuccine alfredo/i }),
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: /view source/i }),
-    ).toHaveAttribute("href", expect.stringContaining("themealdb.com"));
-    await user.keyboard("{Escape}");
+    await user.click(screen.getByRole("button", { name: /home/i }));
 
-    await user.clear(search);
-    await user.type(search, "tou");
+    const homeSearch = await screen.findByRole("searchbox", {
+      name: /search dishes/i,
+    });
+    await user.type(homeSearch, "tou");
     expect(
       await screen.findByRole("heading", { name: /close matches/i }),
     ).toBeInTheDocument();
@@ -192,8 +342,8 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
       await screen.findByText("Ma Po Tofu"),
     ).toBeInTheDocument();
 
-    await user.clear(search);
-    await user.type(search, "nothing-matches");
+    await user.clear(homeSearch);
+    await user.type(homeSearch, "nothing-matches");
     expect(
       await screen.findByText(/no exact match for/i),
     ).toBeInTheDocument();

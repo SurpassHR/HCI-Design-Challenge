@@ -141,14 +141,14 @@ flowchart TB
 - 展示当天热量与蛋白质/碳水/脂肪摘要。
 - 展示 1–3 个个性化推荐及“为什么推荐”的解释。
 - 提供基于 Supabase 兼容 Mock 的菜品搜索（91 道双语菜谱）；title 为 en/zh 对象，按标题、关键词/食材、分类/地区分层排序，结果按当前语言显示。查询会折叠变音符号，并支持 3 个字符起的拉丁拼写容错与中文单字，例如 tou/toufu → tofu、pabellon → Pabellón、鸡 → 鸡肉菜谱。
-- 详情 Sheet 展示食材与 4 步双语简化做法；5 道内置菜谱使用定制步骤，其余按类别生成，不复制 TheMealDB 完整做法。
-- 在页面内展开更多推荐；不新增食谱详情路由。
+- 精选卡与搜索结果进入独立 `/recipe/:recipeId`；F07 菜谱页展示营养、详细食材与双语简化做法，Mapo Tofu 额外提供完整食材替换流程。
+- 在页面内展开更多推荐；离开 Home 后通过返回按钮回到 `/home`。
 
 **交互规则**
 
 - 首次加载显示骨架/加载态；完成后显示卡路里和推荐列表。
 - `See all` 以 `limit=10` 重新请求；成功后在同一页面展开，再次点击收起。
-- 推荐卡片是信息展示；不在缺少设计稿时创建“加入餐单”或详情页。
+- 推荐卡与搜索结果均打开 F07 菜谱页；不创建“加入餐单”动作。
 - 营养摘要来自 FoodLogEntry 汇总；无记录时显示 `0 / target` 和空状态引导。
 - Provider 失败时显示已缓存内容或明确的“推荐暂不可用”，不伪造新推荐。
 
@@ -156,7 +156,7 @@ flowchart TB
 
 - `GET /recommendations` 返回 `RecommendationBundle`；不直接读取 RecipeProvider。
 - 偏好保存后重新请求；不自行合并本地偏好。
-- 搜索通过 RecipeRepository 查询本地 recipes 表；返回双语菜名、分类、地区、食材与来源，不伪造营养数据。
+- 搜索通过 RecipeRepository 查询本地 recipes 表；详情通过 `getRecipeDetail` 补全 Mapo Tofu 的用量、替换项和步骤，其他菜谱使用只读降级数据，不伪造替换项。
 
 **验收**
 
@@ -379,7 +379,7 @@ interface DisplayPreferenceRepository {
 - 颜色对比达到 WCAG AA；状态同时使用文本/图形，不只靠颜色。
 - UI 文字默认 `user-select: none`；输入框、文本域和可编辑区域显式恢复 `text`，保证输入与复制不受影响。
 - 响应式：shell 在所有视口下流体扩展（最大 1200px）；600px 起应用桌面内边距并限宽导航；640px 起 Me 双列；900px 起 Home 双列；底部导航限宽居中；底部 Sheet 手机全宽、宽屏最大 680px。
-- F01 菜系使用 Figma emoji；F02–F06/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
+- F01 菜系使用 Figma emoji；F02–F07/F03b 使用 Figma 导出的 SVG 资产；不自行绘制替代图标。
 
 ### M10 Display and Accessibility Preferences
 
@@ -400,8 +400,35 @@ interface DisplayPreferenceRepository {
 **验收**
 
 - 刷新后保持大字号。
-- 所有 8 个路由在两种字号下均可访问。
+- 所有 9 个路由在两种字号下均可访问。
 - 关闭大字号恢复默认 token。
+
+### M11 Recipe Detail and Ingredient Swaps
+
+**页面**：F07a–F07l、`/recipe/:recipeId`。
+
+**职责**
+
+- 按 ID 加载菜谱，展示标题、营养摘要、详细食材和步骤；无效 ID 返回 Home。
+- Mapo Tofu 提供 Lower/Higher 热量方向、替换浏览/预览、Apply/Undo、提示关闭和过敏过滤。
+- 其他菜谱使用通用只读详情；不生成虚构替换项。
+
+**交互规则**
+
+- 有热量目标且无相关过敏时默认 Lower；无目标或存在过敏过滤时初始不选方向并禁用 View swaps。
+- 替换 Sheet 中必须先选替换项才能 Apply；切换方向会清空预览，Cancel 不修改菜谱。
+- Apply 后更新标题、热量、食材与步骤；Undo 恢复 520 kcal 基础菜谱。
+- Dismiss 只在当前页面访问内隐藏推荐；Egg 过敏隐藏蛋炒饭选项，Higher 方向显示无合适替换。
+
+**数据读取**
+
+- 菜谱基础信息来自 RecipeRepository；Mapo 详细用量、替换项和热量差来自 `getRecipeDetail`。
+- 替换只保存在页面组件内，不写入餐单、购物清单或 Home 营养摘要。
+
+**验收**
+
+- F07a–F07l 的状态均可达；返回 Home 后状态重置。
+- 页面在 390/530/926px 与大小字号下无横向溢出。
 
 ## 4. 跨模块状态与失效规则
 
@@ -445,7 +472,7 @@ interface DisplayPreferenceRepository {
 | F06 `Edit dish` 无目标页 | 本地候选菜品 Bottom Sheet |
 | F03b `Order for delivery` 无流程 | 作为 Share 之后的次级演示按钮，不创建订单/支付 |
 | F04 真实后台触发无来源 | 只做预览与模拟；Provider 接口预留 |
-| 食谱详情无页面 | 首版不创建详情页，推荐卡只显示摘要与理由 |
+| F07 仅 Mapo 有完整替换数据 | 其他菜谱显示只读详情，不伪造替换项 |
 | 真实通知/相机权限未设计 | 首版不请求权限；真实能力需单独设计隐私与失败流程 |
 
 这些决定保持首版范围可控，并避免用“临时页面”掩盖缺失的交互设计。
@@ -454,7 +481,7 @@ interface DisplayPreferenceRepository {
 
 ### 7.1 当前文档验收
 
-- 8 个页面（默认/大字号共 16 个 Frame）均有路由、模块、数据来源和验收条目。
+- 8 个核心页面与 F07a–F07l 详情流均有路由、模块、数据来源和验收条目。
 - 所有路由与导航状态在系统设计和模块设计中一致。
 - 所有 DTO 在 API 契约、Repository 和模块状态中使用相同名称。
 - Mermaid 图可渲染；Markdown 链接有效；没有将 Mock 能力写成真实已实现。
@@ -474,9 +501,10 @@ interface DisplayPreferenceRepository {
 10. Mock 超时、空数据、Provider 不可用时，页面均可恢复且不展示虚假数据。
 11. F02 搜索 Tofu/Sushi、无结果和清除搜索均可用。
 12. F02 输入 chi 时仅返回标题包含 Chicken/Chilli 的菜谱，不混入 Mapo Tofu 等分类命中项。
-13. Me 大字号开关持久化，8 个路由在两种字号下均可访问。
+13. Me 大字号开关持久化，9 个路由在两种字号下均可访问。
 14. 中文界面输入“鸡肉/麻婆豆腐/鸡”可搜索并显示中文菜名；英文界面输入 tou、toufu、pabellon 可得到相近菜谱。
-15. 点击 F02 精选大卡或次级推荐卡均打开对应菜谱 Sheet，显示食材与 4 步简单做法；Sheet 在 530px 视口全宽，在 926px 视口限宽 680px。
+15. 点击 F02 精选大卡、次级推荐卡或搜索结果均进入 F07 全屏详情，显示食材与简单做法，并可返回 Home。
+16. Mapo Tofu 完整覆盖 F07a–F07l：Lower/Higher、浏览/预览、Apply/Undo、Dismiss、无目标及 Egg 过敏过滤。
 
 ### 7.3 模块完成标准
 
