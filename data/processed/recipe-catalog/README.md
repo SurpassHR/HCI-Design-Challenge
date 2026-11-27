@@ -55,6 +55,7 @@
 - 支持链式 select / ilike / or / limit 和 thenable 结果，模拟 PostgREST 查询形态。
 - 表名固定为 recipes；字段同时接受 SQL 风格 search_text 与前端 camelCase。
 - 替换真实 Supabase 时，只需把 mock client 替换为 createClient(...)，并保持 recipes 表结构与查询字段。
+- 菜谱 Sheet 的 4 步“简单做法”由 [recipe-steps.ts](../../../src/data/recipe-steps.ts) 提供：5 道 NutriPal 内置菜谱使用定制步骤，其余按菜品类别生成；不复制 TheMealDB 完整做法。
 
 ## 4. 搜索行为
 

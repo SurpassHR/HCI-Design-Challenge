@@ -18,6 +18,7 @@ import {
   recipeDatabaseInfo,
   searchRecipes,
 } from "../data/recipe-repository";
+import { getRecipeSteps } from "../data/recipe-steps";
 import type { FoodGlyphName } from "../domain/food-glyph";
 import type { Recipe, RecipeSearchResponse } from "../domain/recipe";
 import { useI18n } from "../i18n/useI18n";
@@ -632,6 +633,7 @@ function RecipeSheet({
     recipe.minutes !== undefined ||
     recipe.calories !== undefined ||
     recipe.price !== undefined;
+  const steps = getRecipeSteps(recipe);
 
   return (
     <Sheet
@@ -707,6 +709,16 @@ function RecipeSheet({
           ))}
         </div>
 
+        <h3>{t("Simple steps", "简单做法")}</h3>
+        <ol className="recipe-steps">
+          {steps.map((step, index) => (
+            <li key={step.en}>
+              <span aria-hidden="true">{index + 1}</span>
+              <p>{isChinese ? step.zh : step.en}</p>
+            </li>
+          ))}
+        </ol>
+
         {recipe.reason ? (
           <p className="why-card">
             <FigmaIcon name="bulb" size={14} />
@@ -717,12 +729,12 @@ function RecipeSheet({
         <p className="recipe-attribution">
           {recipe.origin === "themealdb"
             ? t(
-                "Recipe metadata from TheMealDB; instructions are not copied into this prototype.",
-                "菜谱元数据来自 TheMealDB；原型未复制完整做法。",
+                "Simple prototype steps are suggested from the listed ingredients; the publisher’s full method is not copied.",
+                "原型根据所列食材给出简化做法，未复制原站完整步骤。",
               )
             : t(
-                "Prototype recommendation prepared for NutriPal.",
-                "NutriPal 原型内置推荐。",
+                "Simple prototype cooking steps prepared for NutriPal.",
+                "NutriPal 原型提供的简化做法。",
               )}
         </p>
       </div>

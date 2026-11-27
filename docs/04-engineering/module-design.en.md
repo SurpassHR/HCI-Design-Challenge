@@ -141,6 +141,7 @@ flowchart TB
 - Show today’s calorie and protein/carbohydrate/fat summary.
 - Show 1–3 personalised recommendations with a “why recommended” explanation.
 - Provide search through a Supabase-compatible mock with 91 bilingual recipes. Titles are en/zh objects, ranked by title, then keyword/ingredient, then category/area, and displayed in the current UI language. Queries fold diacritics and tolerate Latin spelling variants from three characters as well as single Chinese characters, for example tou/toufu → tofu, pabellon → Pabellón, and 鸡 → chicken recipes.
+- The detail sheet shows ingredients and four bilingual simple steps; the five built-in recipes use tailored steps, while other recipes use category templates rather than copying TheMealDB’s full method.
 - Expand more recommendations on the same page; no new recipe-detail route.
 
 **Interaction rules**
@@ -474,7 +475,7 @@ These decisions keep the first version bounded and avoid hiding missing interact
 12. Me large text persists, and all eight routes work in both sizes.
 13. F02 chi returns only titles containing Chicken/Chilli, not category-only matches such as Mapo Tofu.
 14. In the Chinese UI, entering “鸡肉/麻婆豆腐/鸡” searches and shows Chinese dish names; in the English UI, tou, toufu and pabellon return close matches.
-15. Clicking either the featured F02 card or a secondary recommendation opens its recipe sheet; the sheet is full-width at 530px and capped at 680px at 926px.
+15. Clicking either the featured F02 card or a secondary recommendation opens its recipe sheet with ingredients and four simple steps; the sheet is full-width at 530px and capped at 680px at 926px.
 
 ### 7.3 Module definition of done
 

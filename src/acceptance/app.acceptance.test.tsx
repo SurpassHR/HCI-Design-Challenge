@@ -126,6 +126,12 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
         name: /mapo tofu & brown rice/i,
       }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /simple steps/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/cook the brown rice according/i),
+    ).toBeInTheDocument();
 
     await user.keyboard("{Escape}");
     await waitFor(() =>

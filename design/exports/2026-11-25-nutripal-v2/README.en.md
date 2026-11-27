@@ -43,7 +43,7 @@ Implementation comparison: [default](implementation/screens-gallery.png) · [lar
 - `implementation/screens-gallery.png`: v1.1 default-size overview.
 - `implementation/screens-gallery-large-text.png`: v1.1 large-text overview.
 - `implementation/comparison-gallery.png`: Figma on the left and v1.1 implementation on the right for every screen.
-- `implementation/F02-search-gallery.png`: mock recipe results, detail sheet and no-match suggestions; `F02-search-tou-zh.png` shows close matches for tou; `F02-recipe-sheet-530.png` / `F02-recipe-sheet-926.png` verify curated-card sheet opening and responsive widths at 530px / 926px.
+- `implementation/F02-search-gallery.png`: mock recipe results, detail sheet and no-match suggestions; `F02-search-tou-zh.png` shows close matches for tou; `F02-recipe-sheet-530.png` / `F02-recipe-sheet-926.png` verify curated-card opening, ingredients, four cooking steps and responsive widths at 530px / 926px.
 - Figma SVG nodes used by F02–F06/F03b are exported unchanged to `public/figma-icons/`; see `public/figma-icons/manifest.json`.
 - `implementation/responsive-gallery.png`: responsive checks at 926px; `responsive-home-584.png` covers the reported 584px fluid width, and `responsive-me-660.png` covers Me at a 660px medium width.
 - Implementation captures omit the Figma status bar/phone frame; Me is longer than the design.

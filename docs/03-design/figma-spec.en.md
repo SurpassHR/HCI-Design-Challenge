@@ -30,7 +30,7 @@ Use a clickable mobile web prototype to validate the core task flows, proactive-
 
 - Unified visual tokens, components and bottom navigation.
 - Clickable flows for core tasks, with buttons connected to real screens or documented sheets/demo states.
-- F02 search backed by a Supabase-compatible mock with 91 web/prototype recipes, including English, Chinese, multi-word, diacritic-free, tolerant Latin spelling, single-character Chinese, closest-match and suggestion states.
+- F02 search backed by a Supabase-compatible mock with 91 web/prototype recipes, including English, Chinese, multi-word, diacritic-free, tolerant Latin spelling, single-character Chinese, closest-match and suggestion states; the detail sheet shows ingredients and four simple cooking steps.
 - F01 custom avoidance, saving and edit-mode return to Me.
 - Me large-text toggle, language switch, preference and notification entries.
 - Accept, postpone, dismiss and explanation controls for proactive suggestions.

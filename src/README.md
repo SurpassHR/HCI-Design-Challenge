@@ -30,7 +30,7 @@ npm run preview
 - Fixed mobile zoom: pinch zoom disabled; form controls use at least 16px type to prevent iOS focus zoom
 - Onboarding redirect for new users
 - F01 preference capture, custom avoidance sheet and Me edit mode with local Mock persistence
-- F02 recommendations with curated-card recipe sheets, 91-recipe bilingual mock Supabase search with diacritic folding, tolerant Latin spelling and single-character Chinese queries
+- F02 recommendations with curated-card recipe sheets, bilingual simple cooking steps, and 91-recipe mock Supabase search with diacritic folding, tolerant Latin spelling and single-character Chinese queries
 - F03 meal plan with day selection, pantry editing, swaps and regeneration
 - F03b shopping checklist, budget summary, sharing hand-off and order demo
 - F04 contextual nudge preview with alternate ideas and dismissal

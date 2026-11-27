@@ -319,6 +319,42 @@
   font-weight: 800;
 }
 
+.recipe-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe-steps li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  align-items: start;
+  gap: 9px;
+}
+
+.recipe-steps li > span {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--purple-soft);
+  color: var(--purple);
+  font-size: calc(11px + var(--text-boost));
+  font-weight: 900;
+}
+
+.recipe-steps p {
+  padding-top: 3px;
+  color: var(--ink);
+  font-size: calc(13px + var(--text-boost));
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .recipe-attribution {
   color: var(--muted);
   font-size: calc(10px + var(--text-boost));
