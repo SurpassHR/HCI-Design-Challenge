@@ -143,7 +143,7 @@ describe("ATDD NutriPal v1.1 acceptance", () => {
     await user.keyboard("{Escape}");
 
     await user.clear(search);
-    await user.type(search, "toufu");
+    await user.type(search, "tou");
     expect(
       await screen.findByRole("heading", { name: /close matches/i }),
     ).toBeInTheDocument();

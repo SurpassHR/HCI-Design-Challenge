@@ -60,6 +60,12 @@ describe("mock Supabase recipe search", () => {
       "Ma Po Tofu",
     );
 
+    const tou = await searchRecipes("tou");
+    expect(tou.mode).toBe("partial");
+    expect(tou.recipes.map((recipe) => recipe.title.en)).toContain(
+      "Ma Po Tofu",
+    );
+
     const pabellon = await searchRecipes("pabellon");
     expect(pabellon.recipes.map((recipe) => recipe.title.en)).toContain(
       "Arepa Pabellón",

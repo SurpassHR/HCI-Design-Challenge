@@ -61,7 +61,7 @@
 1. 规范化查询：NFKD、去除变音符号、折叠 æ/ø/ß 等拉丁连字、小写、标点和空格归一化。
 2. 搜索覆盖英中标题、关键词、食材、分类、地区和 searchText，不依赖单一语言字段。
 3. 英文短前缀优先匹配菜名词边界（chi → Chicken/Chilli），避免分类/食材泛匹配。
-4. 拉丁词支持 1–2 个字符的拼写容错，例如 toufu → tofu、pabellon → Pabellón、farikal → Fårikål。
+4. 3 个字符起的拉丁词支持 1 个字符的拼写容错，7 个字符起最多允许 2 个字符，例如 tou/toufu → tofu、pabellon → Pabellón、farikal → Fårikål。
 5. 中文查询同时匹配中文标题、关键词与食材，并允许单字查询（如“鸡”），结果按标题优先排序并显示中文菜名。
 6. 仍无结果时返回 4 条推荐菜谱作为可操作建议。
 7. 中文别名覆盖常见食材、分类和地区，例如 豆腐、寿司、鸡肉、咖喱、意大利、日本。
@@ -69,7 +69,7 @@
 ## 5. 验证
 
 - 91 条记录均有唯一 ID、标题、分类、地区、食材和 searchText。
-- 英文与转写查询：tofu、toufu、sushi、chicken、pasta、curry 均有结果。
+- 英文、短前缀与转写查询：tofu、tou、toufu、sushi、chicken、pasta、curry 均有结果。
 - 中文查询：豆腐、寿司、鸡肉、咖喱均有结果。
 - 变音符号缺省查询：pabellon、aebleskiver、farikal 均能匹配归档菜名。
 - 每个菜谱的 title 同时包含英文与中文名称；搜索和结果展示按当前 UI 语言切换。

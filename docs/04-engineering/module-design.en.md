@@ -140,7 +140,7 @@ flowchart TB
 
 - Show today’s calorie and protein/carbohydrate/fat summary.
 - Show 1–3 personalised recommendations with a “why recommended” explanation.
-- Provide search through a Supabase-compatible mock with 91 bilingual recipes. Titles are en/zh objects, ranked by title, then keyword/ingredient, then category/area, and displayed in the current UI language. Queries fold diacritics and tolerate Latin spelling variants and single Chinese characters, for example toufu → tofu, pabellon → Pabellón, and 鸡 → chicken recipes.
+- Provide search through a Supabase-compatible mock with 91 bilingual recipes. Titles are en/zh objects, ranked by title, then keyword/ingredient, then category/area, and displayed in the current UI language. Queries fold diacritics and tolerate Latin spelling variants from three characters as well as single Chinese characters, for example tou/toufu → tofu, pabellon → Pabellón, and 鸡 → chicken recipes.
 - Expand more recommendations on the same page; no new recipe-detail route.
 
 **Interaction rules**
@@ -473,7 +473,7 @@ These decisions keep the first version bounded and avoid hiding missing interact
 11. F02 Tofu/Sushi search, empty results and clear search all work.
 12. Me large text persists, and all eight routes work in both sizes.
 13. F02 chi returns only titles containing Chicken/Chilli, not category-only matches such as Mapo Tofu.
-14. In the Chinese UI, entering “鸡肉/麻婆豆腐/鸡” searches and shows Chinese dish names; in the English UI, toufu and pabellon return close matches.
+14. In the Chinese UI, entering “鸡肉/麻婆豆腐/鸡” searches and shows Chinese dish names; in the English UI, tou, toufu and pabellon return close matches.
 
 ### 7.3 Module definition of done
 

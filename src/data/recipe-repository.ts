@@ -89,7 +89,7 @@ function editDistanceWithin(left: string, right: string, maximum: number) {
 
 function fuzzyLimit(token: string) {
   if (token.length >= 7) return 2;
-  return token.length >= 4 ? 1 : 0;
+  return token.length >= 3 ? 1 : 0;
 }
 
 type TokenMatch = "exact" | "fuzzy";
