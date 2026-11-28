@@ -1,0 +1,372 @@
+{
+  "source": {
+    "fileKey": "QHOOV8NcB4Ev499ycoRtZq",
+    "fileName": "NutriPal – Healthy Eating App (Copy)",
+    "pageId": "0:1",
+    "pageName": "App Screens"
+  },
+  "frameSize": {
+    "width": 390,
+    "height": 844,
+    "note": "Both F02 variants are 390 × 936."
+  },
+  "frames": [
+    {
+      "id": "3:6",
+      "name": "F01 · Dietary & Cultural Preferences",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F01 · Dietary & Cultural Preferences.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "3:87",
+      "name": "F02 · Personalised Meal Recommendations",
+      "width": 390,
+      "height": 936,
+      "variant": "default",
+      "screenshot": "screens/F02 · Personalised Meal Recommendations.png",
+      "captureSize": {
+        "width": 490,
+        "height": 1036
+      }
+    },
+    {
+      "id": "4:62",
+      "name": "F03 · Practical Meal Planning",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F03 · Practical Meal Planning.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "4:193",
+      "name": "F04 · Context-Aware Proactive Assistance",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F04 · Context-Aware Proactive Assistance.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "5:112",
+      "name": "F05 · Notification Control & Explanation",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F05 · Notification Control & Explanation.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "5:226",
+      "name": "F06 · AI Food Recognition & Calorie Estimation",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F06 · AI Food Recognition & Calorie Estimation.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "26:209",
+      "name": "F03b · Shopping List",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/F03b · Shopping List.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2014:269",
+      "name": "Me · Profile & Settings",
+      "width": 390,
+      "height": 844,
+      "variant": "default",
+      "screenshot": "screens/Me · Profile & Settings.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2021:310",
+      "name": "Me · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/Me · Large text.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2025:723",
+      "name": "F01 · Dietary & Cultural Preferences · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F01 · Dietary & Cultural Preferences · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2025:762",
+      "name": "F02 · Personalised Meal Recommendations · Large text",
+      "width": 390,
+      "height": 936,
+      "variant": "large-text",
+      "screenshot": "screens/F02 · Personalised Meal Recommendations · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 1036
+      }
+    },
+    {
+      "id": "2025:827",
+      "name": "F03 · Practical Meal Planning · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F03 · Practical Meal Planning · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2025:912",
+      "name": "F04 · Context-Aware Proactive Assistance · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F04 · Context-Aware Proactive Assistance · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2025:955",
+      "name": "F05 · Notification Control & Explanation · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F05 · Notification Control & Explanation · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2025:1017",
+      "name": "F06 · AI Food Recognition & Calorie Estimation · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F06 · AI Food Recognition & Calorie Estimation · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2025:1075",
+      "name": "F03b · Shopping List · Large text",
+      "width": 390,
+      "height": 844,
+      "variant": "large-text",
+      "screenshot": "screens/F03b · Shopping List · Large text.png",
+      "captureSize": {
+        "width": 490,
+        "height": 944
+      }
+    },
+    {
+      "id": "2113:621",
+      "name": "F07a · Lower calories · 520",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07a · Lower calories · 520.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:622",
+      "name": "F07b · Lower swaps · Browse",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07b · Lower swaps · Browse.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:623",
+      "name": "F07c · Lower swaps · Preview",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07c · Lower swaps · Preview.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:624",
+      "name": "F07d · Swap applied · 400",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07d · Swap applied · 400.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:625",
+      "name": "F07e · Higher calories · 520",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07e · Higher calories · 520.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:626",
+      "name": "F07f · Higher swaps · Browse",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07f · Higher swaps · Browse.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:627",
+      "name": "F07g · Higher swaps · Preview",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07g · Higher swaps · Preview.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:628",
+      "name": "F07h · Swap applied · 610",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07h · Swap applied · 610.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:629",
+      "name": "F07i · Hint dismissed · 520",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07i · Hint dismissed · 520.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:630",
+      "name": "F07j · No calorie goal · 520",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07j · No calorie goal · 520.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:631",
+      "name": "F07k · Dietary preferences · 520",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": "screens/F07k · Dietary preferences · 520.png",
+      "captureSize": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "2113:632",
+      "name": "F07l · No suitable swaps",
+      "width": 390,
+      "height": 844,
+      "variant": "recipe-detail",
+      "screenshot": null
+    }
+  ],
+  "languageSelector": {
+    "id": "2150:1000",
+    "name": "Me / Language selector",
+    "width": 2760,
+    "height": 1730,
+    "languages": [
+      "English",
+      "Chinese",
+      "Spanish",
+      "French",
+      "German",
+      "Arabic",
+      "Japanese"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "states": [
+      "Closed",
+      "Open"
+    ],
+    "variantCount": 28,
+    "screenshot": null
+  }
+}
